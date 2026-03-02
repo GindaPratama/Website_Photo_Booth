@@ -1,0 +1,29 @@
+<svg width="376" height="456" viewBox="0 0 376 456" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_133_192)">
+<g clip-path="url(#paint0_diamond_133_192_clip_path)" data-figma-skip-parse="true"><g transform="matrix(0.085119 0.21816 -0.182358 0.0711501 304.678 292.362)"><rect x="0" y="0" width="1004.27" height="1090.7" fill="url(#paint0_diamond_133_192)" opacity="0.6" shape-rendering="crispEdges"/><rect x="0" y="0" width="1004.27" height="1090.7" transform="scale(1 -1)" fill="url(#paint0_diamond_133_192)" opacity="0.6" shape-rendering="crispEdges"/><rect x="0" y="0" width="1004.27" height="1090.7" transform="scale(-1 1)" fill="url(#paint0_diamond_133_192)" opacity="0.6" shape-rendering="crispEdges"/><rect x="0" y="0" width="1004.27" height="1090.7" transform="scale(-1)" fill="url(#paint0_diamond_133_192)" opacity="0.6" shape-rendering="crispEdges"/></g></g><circle cx="312.557" cy="312.557" r="212.5" transform="rotate(-21.3141 312.557 312.557)" data-figma-gradient-fill="{&#34;type&#34;:&#34;GRADIENT_DIAMOND&#34;,&#34;stops&#34;:[{&#34;color&#34;:{&#34;r&#34;:0.90980392694473267,&#34;g&#34;:0.80392158031463623,&#34;b&#34;:0.95294117927551270,&#34;a&#34;:1.0},&#34;position&#34;:0.0},{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:0.54807692766189575,&#34;b&#34;:0.83429479598999023,&#34;a&#34;:1.0},&#34;position&#34;:1.0}],&#34;stopsVar&#34;:[{&#34;color&#34;:{&#34;r&#34;:0.90980392694473267,&#34;g&#34;:0.80392158031463623,&#34;b&#34;:0.95294117927551270,&#34;a&#34;:1.0},&#34;position&#34;:0.0},{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:0.54807692766189575,&#34;b&#34;:0.83429479598999023,&#34;a&#34;:1.0},&#34;position&#34;:1.0}],&#34;transform&#34;:{&#34;m00&#34;:170.23793029785156,&#34;m01&#34;:-364.71560668945312,&#34;m02&#34;:401.916503906250,&#34;m10&#34;:436.32022094726562,&#34;m11&#34;:142.30014038085938,&#34;m12&#34;:3.0520823001861572},&#34;opacity&#34;:0.60000002384185791,&#34;blendMode&#34;:&#34;NORMAL&#34;,&#34;visible&#34;:true}"/>
+</g>
+<g filter="url(#filter1_d_133_192)">
+<path d="M360.24 139.523C360.24 139.523 290.153 166.869 302.08 289.335C227.916 191.152 157.829 218.498 157.829 218.498C136.382 226.865 125.741 251.337 134.218 273.063L158.823 336.126C174.291 375.77 213.634 398.783 253.592 395.222C247.558 407.492 246.375 422.259 251.824 436.226C262.007 462.325 291.15 475.338 316.942 465.275C342.734 455.212 347.107 404.739 330.593 362.415C347.107 404.739 384.506 438.914 410.298 428.851C436.09 418.787 448.719 389.476 438.536 363.377C433.142 349.551 422.27 339.487 409.466 334.405C441.332 310.105 454.639 266.387 439.172 226.743L414.566 163.68C406.09 141.954 381.827 131.101 360.24 139.523Z" fill="#FEFEFE"/>
+</g>
+<defs>
+<filter id="filter0_f_133_192" x="0" y="0" width="625.114" height="625.114" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur_133_192"/>
+</filter>
+<clipPath id="paint0_diamond_133_192_clip_path"><circle cx="312.557" cy="312.557" r="212.5" transform="rotate(-21.3141 312.557 312.557)"/></clipPath><filter id="filter1_d_133_192" x="126.301" y="135.669" width="324.32" height="342.009" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.698039 0 0 0 0 0.764706 0 0 0 0 0.976471 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_133_192"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_133_192" result="shape"/>
+</filter>
+<linearGradient id="paint0_diamond_133_192" x1="0" y1="0" x2="500" y2="500" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E8CDF3"/>
+<stop offset="1" stop-color="#FF8CD5"/>
+</linearGradient>
+</defs>
+</svg>
