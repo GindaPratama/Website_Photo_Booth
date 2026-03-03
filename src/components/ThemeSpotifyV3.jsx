@@ -1,19 +1,148 @@
 import React from "react";
 
-export default function ThemeSpotifyV3() {
+export default function ThemeSpotifyV3({ layoutId }) {
+  const getOrnamentPos = (name) => {
+    const isHorizontal = layoutId === "2-horizontal";
+    const isGrid = ["4-grid", "6-grid", "9-grid"].includes(layoutId);
+
+    if (isHorizontal) {
+      switch (name) {
+        // SAMAIN KAYAK V2 BIAR TINGGINYA PAS
+        case "container":
+          return "top-[30px] left-[10px] right-[10px] bottom-[20px]";
+        case "logo":
+          return "hidden";
+        case "star1":
+        case "star2":
+        case "star3":
+        case "star4":
+        case "star5":
+          return "hidden";
+        case "choco":
+          return "top-[10%] right-[2%] w-[50px] -rotate-12";
+        case "coffee":
+          return "top-[8%] left-[0%] w-[50px] -rotate-6";
+
+        // --- BUNGKUS UTAMA PLAYER ---
+        case "playerWrapper":
+          return "bottom-[20px]";
+
+        // --- ECERAN PLAYER ---
+        case "teksLagu":
+          return "";
+        case "progressBar":
+          return "top-[20%]";
+        case "grupKontrol":
+          return "";
+        case "btnPrev":
+          return "";
+        case "btnPlay":
+          return "";
+        case "btnNext":
+          return "";
+        case "grupVolume":
+          return "hidden";
+
+        // --- FOOTER ---
+        case "footerWrapper":
+          return "hidden";
+      }
+    } else if (isGrid) {
+      switch (name) {
+        case "container":
+          return "inset-x-3 top-[44px] bottom-[55px]";
+        case "logo":
+          return "top-[35px] right-[15px]";
+        case "star1":
+          return "top-[23%] left-[5px]";
+        case "choco":
+          return "top-[26%] right-[15px] w-[60px] -rotate-12";
+        case "coffee":
+          return "top-[48%] left-[5px] w-[50px] -rotate-6";
+        case "star2":
+          return "top-[50%] right-[15px]";
+        case "star3":
+          return "top-[54%] right-[10px]";
+        case "star4":
+          return "top-[65%] left-[2px]";
+        case "star5":
+          return "top-[70%] left-[10px]";
+
+        case "playerWrapper":
+          return "bottom-[68px]";
+        case "teksLagu":
+          return "";
+        case "progressBar":
+          return "";
+        case "grupKontrol":
+          return "";
+        case "btnPrev":
+          return "";
+        case "btnPlay":
+          return "";
+        case "btnNext":
+          return "";
+        case "grupVolume":
+          return "";
+        case "footerWrapper":
+          return "";
+      }
+    }
+
+    // Default (3-Vertical & 4-Vertical)
+    switch (name) {
+      case "container":
+        return "inset-x-2 top-[44px] bottom-[55px]";
+      case "logo":
+        return "top-[35px] right-[10px]";
+      case "star1":
+        return "top-[23%] left-[5px]";
+      case "choco":
+        return "top-[26%] right-[10px] w-[60px] -rotate-12";
+      case "coffee":
+        return "top-[48%] left-[5px] w-[50px] -rotate-6";
+      case "star2":
+        return "top-[50%] right-[10px]";
+      case "star3":
+        return "top-[54%] right-[5px]";
+      case "star4":
+        return "top-[65%] left-[2px]";
+      case "star5":
+        return "top-[70%] left-[10px]";
+
+      case "playerWrapper":
+        return "bottom-[68px]";
+      case "teksLagu":
+        return "";
+      case "progressBar":
+        return "";
+      case "grupKontrol":
+        return "";
+      case "btnPrev":
+        return "";
+      case "btnPlay":
+        return "";
+      case "btnNext":
+        return "";
+      case "grupVolume":
+        return "";
+      case "footerWrapper":
+        return "";
+    }
+    return "";
+  };
+
   return (
     <>
-      {/* BACKGROUND SPLIT COKLAT */}
       <div className="absolute inset-0 z-0 flex pointer-events-none rounded-2xl overflow-hidden">
         <div className="w-[45%] bg-[#cca88a] h-full" />
         <div className="w-[55%] bg-[#3a130e] h-full" />
       </div>
+      <div
+        className={`absolute ${getOrnamentPos("container")} z-0 bg-[#824a41] rounded-[1.2rem] shadow-md pointer-events-none`}
+      />
 
-      {/* DIV 2 (DALAM): Kotak Coklat ditaruh di belakang foto (z-0) */}
-      <div className="absolute inset-x-2 top-[44px] bottom-[55px] z-0 bg-[#824a41] rounded-[1.2rem] shadow-md pointer-events-none" />
-
-      {/* HEADER (Atas) */}
-      <div className="absolute top-4 inset-x-5 z-20 flex justify-between items-center pointer-events-none">
+      <div className="absolute top-2 inset-x-5 z-20 flex justify-between items-center pointer-events-none">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6 drop-shadow-sm text-white transition-colors"
@@ -40,8 +169,9 @@ export default function ThemeSpotifyV3() {
         </svg>
       </div>
 
-      {/* Logo Spotify Kanan atas */}
-      <div className="absolute top-[35px] right-[10px] w-[46px] h-[46px] bg-[#cca88a] rounded-full flex items-center justify-center z-30 shadow-md pointer-events-none">
+      <div
+        className={`absolute ${getOrnamentPos("logo")} w-[46px] h-[46px] bg-[#cca88a] rounded-full flex items-center justify-center z-30 shadow-md pointer-events-none`}
+      >
         <img
           src="/public/spotify/3/SpotifyIconBrown.svg"
           className="w-[28px] h-[28px]"
@@ -49,40 +179,55 @@ export default function ThemeSpotifyV3() {
         />
       </div>
 
-      {/* ORNAMEN */}
-      <div className="absolute top-[23%] left-[5px] z-30 drop-shadow-md pointer-events-none">
+      <div
+        className={`absolute ${getOrnamentPos("star1")} z-30 drop-shadow-md pointer-events-none`}
+      >
         <img src="/public/spotify/3/Star.svg" className="w-[45px]" alt="Star" />
       </div>
-      <div className="absolute top-[26%] right-[10px] z-30 drop-shadow-md pointer-events-none hover:rotate-12 transition-transform">
+      <div
+        className={`absolute ${getOrnamentPos("choco")} z-30 drop-shadow-md pointer-events-none`}
+      >
         <img
           src="/public/spotify/3/Chocolate.svg"
-          className="w-[60px] -rotate-12"
+          className={getOrnamentPos("choco")}
           alt="Chocolate"
         />
       </div>
-      <div className="absolute top-[48%] left-[5px] z-30 drop-shadow-md pointer-events-none">
+      <div
+        className={`absolute ${getOrnamentPos("coffee")} z-30 drop-shadow-md pointer-events-none`}
+      >
         <img
           src="/public/spotify/3/Coffee.svg"
-          className="w-[50px] -rotate-6"
+          className={getOrnamentPos("coffee")}
           alt="Coffee"
         />
       </div>
-      <div className="absolute top-[50%] right-[10px] z-30 drop-shadow-md pointer-events-none">
+      <div
+        className={`absolute ${getOrnamentPos("star2")} z-30 drop-shadow-md pointer-events-none`}
+      >
         <img src="/public/spotify/3/Star.svg" className="w-[30px]" alt="Star" />
       </div>
-      <div className="absolute top-[54%] right-[5px] z-30 drop-shadow-md pointer-events-none">
+      <div
+        className={`absolute ${getOrnamentPos("star3")} z-30 drop-shadow-md pointer-events-none`}
+      >
         <img src="/public/spotify/3/Star.svg" className="w-[15px]" alt="Star" />
       </div>
-      <div className="absolute top-[65%] left-[2px] z-30 drop-shadow-md pointer-events-none">
+      <div
+        className={`absolute ${getOrnamentPos("star4")} z-30 drop-shadow-md pointer-events-none`}
+      >
         <img src="/public/spotify/3/Star.svg" className="w-[45px]" alt="Star" />
       </div>
-      <div className="absolute top-[70%] left-[px] z-30 drop-shadow-md pointer-events-none">
+      <div
+        className={`absolute ${getOrnamentPos("star5")} z-30 drop-shadow-md pointer-events-none`}
+      >
         <img src="/public/spotify/3/Star.svg" className="w-[20px]" alt="Star" />
       </div>
 
-      {/* PLAYER AREA */}
-      <div className="absolute bottom-[68px] inset-x-6 z-20 flex flex-col pointer-events-none">
-        <div className="mb-1">
+      {/* --- BUNGKUS UTAMA PLAYER --- */}
+      <div
+        className={`absolute ${getOrnamentPos("playerWrapper")} inset-x-6 z-20 flex flex-col pointer-events-none`}
+      >
+        <div className={`mb-5 ${getOrnamentPos("teksLagu")}`}>
           <h2 className="pb-2 font-extrabold text-[15px] text-white leading-none drop-shadow-md">
             Menua Bersama
           </h2>
@@ -90,31 +235,39 @@ export default function ThemeSpotifyV3() {
             Anggis Devaki
           </p>
         </div>
-
-        <div className="mb-3 mt-1 w-full flex justify-center z-30 drop-shadow-md">
+        <div
+          className={`mb-3 mt-1 w-full flex justify-center z-30 drop-shadow-md ${getOrnamentPos("progressBar")}`}
+        >
           <img
             src="/public/spotify/3/Progress.svg"
-            className="w-30 h-2"
+            className="w-[350px]"
             alt="Progress Music"
           />
         </div>
-
-        <div className="flex items-center justify-center gap-7 mb-3 pointer-events-auto">
-          <button className="hover:opacity-80 transition-opacity cursor-pointer">
+        <div
+          className={`flex items-center justify-center gap-7 mb-3 pointer-events-auto ${getOrnamentPos("grupKontrol")}`}
+        >
+          <button
+            className={`hover:opacity-80 transition-opacity cursor-pointer ${getOrnamentPos("btnPrev")}`}
+          >
             <img
               src="/public/spotify/3/Previous.svg"
               alt="Previous"
               className="w-5 h-5"
             />
           </button>
-          <button className="hover:opacity-80 transition-opacity cursor-pointer">
+          <button
+            className={`hover:opacity-80 transition-opacity cursor-pointer ${getOrnamentPos("btnPlay")}`}
+          >
             <img
               src="/public/spotify/3/Play.svg"
               alt="Play"
               className="w-8 h-8"
             />
           </button>
-          <button className="hover:opacity-80 transition-opacity cursor-pointer">
+          <button
+            className={`hover:opacity-80 transition-opacity cursor-pointer ${getOrnamentPos("btnNext")}`}
+          >
             <img
               src="/public/spotify/3/Next.svg"
               alt="Next"
@@ -122,8 +275,9 @@ export default function ThemeSpotifyV3() {
             />
           </button>
         </div>
-
-        <div className="flex items-center justify-between w-full z-30">
+        <div
+          className={`flex items-center justify-between w-full z-30 ${getOrnamentPos("grupVolume")}`}
+        >
           <img
             src="/public/spotify/3/NoSound.svg"
             alt="Mute"
@@ -142,9 +296,10 @@ export default function ThemeSpotifyV3() {
         </div>
       </div>
 
-      {/* SPOTIFY & SOUNDWAVE AREA */}
-      {/* Centering diperbaiki biar ga mencong */}
-      <div className="absolute bottom-3 inset-x-0 z-20 flex items-center justify-center gap-3 pointer-events-none">
+      {/* --- FOOTER --- */}
+      <div
+        className={`absolute bottom-3 inset-x-0 z-20 flex items-center justify-center gap-3 pointer-events-none ${getOrnamentPos("footerWrapper")}`}
+      >
         <div className="w-[30px] h-[30px] bg-white rounded-full flex items-center justify-center shrink-0">
           <img
             src="/public/spotify/3/SpotifyIconWhite.svg"

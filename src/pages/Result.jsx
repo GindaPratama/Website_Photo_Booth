@@ -8,8 +8,6 @@ import ThemeNailongV1 from "../components/ThemeNailongV1";
 import ThemeMyBoyfriend from "../components/ThemeMyBoyfriend";
 import { toPng, toJpeg } from "html-to-image";
 
-// ─── KONSTANTA ────────────────────────────────────────────────────────────────
-
 const FILTER_CLASSES = {
   Normal: "",
   Lembut: "contrast-75 brightness-110 saturate-50",
@@ -125,11 +123,6 @@ const STICKER_LIST = [
   "💌",
 ];
 
-// ─── HELPER: PADDING STRIP ────────────────────────────────────────────────────
-// pt = ruang header tema | pb = ruang footer (player/teks/ornamen bawah)
-// Untuk layout wide (non-vertikal), pb dikurangi sedikit karena strip lebih lebar & pendek
-
-// Padding vertikal (3-vertical, 4-vertical)
 const THEME_PADDING_CONFIG = {
   themespotifyv1: { pt: 40, pb: 130, rounded: "rounded-lg" },
   themespotifyv2: { pt: 56, pb: 200, rounded: "rounded-2xl" },
@@ -138,18 +131,16 @@ const THEME_PADDING_CONFIG = {
   thememybf: { pt: 56, pb: 80, rounded: "rounded-2xl" },
 };
 
-// Padding untuk 2-horizontal (strip lebar & pendek, foto tidak boleh terhimpit)
 const THEME_PADDING_HORIZONTAL = {
-  themespotifyv1: { pt: 100, pb: 100, rounded: "rounded-lg" },
-  themespotifyv2: { pt: 44, pb: 150, rounded: "rounded-2xl" },
-  themespotifyv3: { pt: 44, pb: 150, rounded: "rounded-2xl" },
-  themenailongv1: { pt: 36, pb: 100, rounded: "rounded-lg" },
-  thememybf: { pt: 44, pb: 65, rounded: "rounded-2xl" },
+  themespotifyv1: { pt: 50, pb: 140, rounded: "rounded-lg" },
+  themespotifyv2: { pt: 50, pb: 160, rounded: "rounded-lg" },
+  themespotifyv3: { pt: 50, pb: 160, rounded: "rounded-lg" },
+  themenailongv1: { pt: 50, pb: 160, rounded: "rounded-lg" },
+  thememybf: { pt: 50, pb: 160, rounded: "rounded-lg" },
 };
 
-// Padding untuk grid (4-grid, 6-grid, 9-grid)
 const THEME_PADDING_GRID = {
-  themespotifyv1: { pt: 38, pb: 110, rounded: "rounded-lg" },
+  themespotifyv1: { pt: 50, pb: 110, rounded: "" },
   themespotifyv2: { pt: 48, pb: 170, rounded: "rounded-2xl" },
   themespotifyv3: { pt: 48, pb: 170, rounded: "rounded-2xl" },
   themenailongv1: { pt: 40, pb: 110, rounded: "rounded-lg" },
@@ -163,24 +154,31 @@ const getStripPadding = (activeTheme, layoutId) => {
     cfgMap = THEME_PADDING_GRID;
 
   const cfg = cfgMap[activeTheme];
-  if (!cfg) return "p-3 pb-12 rounded-md";
-  return `p-3 pt-[${cfg.pt}px] pb-[${cfg.pb}px] ${cfg.rounded}`;
+  if (!cfg) return { className: "p-3 pb-12 rounded-md", style: {} };
+
+  // FUNGSI SAKTI: Tambahin px-6 buat dorong foto ke tengah biar gak mepet pinggir
+  const paddingClass = layoutId === "2-horizontal" ? "px-4 py-3" : "p-3";
+
+  return {
+    className: `${paddingClass} ${cfg.rounded}`,
+    style: { paddingTop: `${cfg.pt}px`, paddingBottom: `${cfg.pb}px` },
+  };
 };
 
 const getPhotoWidthClass = (activeTheme, layoutId) => {
-  // Layout horizontal selalu full width agar foto tidak mengecil
-  if (layoutId === "2-horizontal") return "w-full";
-  return [
-    "themespotifyv2",
-    "themespotifyv3",
-    "themenailongv1",
-    "thememybf",
-  ].includes(activeTheme)
-    ? "w-[88%]"
-    : "w-full";
+  // Foto otomatis dikecilin jadi w-[90%] buat layout horizontal biar pas di dalam container tema
+  if (
+    [
+      "themespotifyv2",
+      "themespotifyv3",
+      "themenailongv1",
+      "thememybf",
+    ].includes(activeTheme)
+  ) {
+    return layoutId === "2-horizontal" ? "w-[100%]" : "w-[88%]";
+  }
+  return "w-full";
 };
-
-// ─── KOMPONEN UTAMA ───────────────────────────────────────────────────────────
 
 const Result = () => {
   const location = useLocation();
@@ -265,7 +263,7 @@ const Result = () => {
   const getStripLayoutClass = () => {
     switch (layoutId) {
       case "2-horizontal":
-        return "grid grid-cols-2 gap-2 w-[400px]";
+        return "grid grid-cols-2 gap-3 w-[400px] max-w-full justify-center";
       case "3-vertical":
       case "4-vertical":
         return "flex flex-col gap-2 w-[240px]";
@@ -285,7 +283,6 @@ const Result = () => {
     if (THEME_META[newTheme]) setFrameColor(THEME_META[newTheme].defaultColor);
   };
 
-  // Empty state
   if (!capturedImages || capturedImages.length === 0) {
     return (
       <div
@@ -316,7 +313,7 @@ const Result = () => {
     { id: "stiker", label: "Stiker", icon: "🎀" },
   ];
 
-  const stripPaddingClass = getStripPadding(activeTheme, layoutId);
+  const stripPadding = getStripPadding(activeTheme, layoutId);
   const photoWidthClass = getPhotoWidthClass(activeTheme, layoutId);
 
   return (
@@ -329,7 +326,6 @@ const Result = () => {
     >
       <Navbar />
 
-      {/* PAGE TITLE */}
       <div className="w-full text-center mt-20 mb-2 z-10 px-4">
         <h1 className="text-lg font-black text-gray-800 tracking-tight">
           ✨ Hasil Foto Strip Kamu
@@ -340,12 +336,8 @@ const Result = () => {
       </div>
 
       <main className="flex-1 flex flex-col md:flex-row items-start justify-center gap-6 md:gap-10 px-4 md:px-8 py-6 max-w-6xl mx-auto w-full z-10">
-        {/* ═══════════════════════════
-            FOTO STRIP
-        ═══════════════════════════ */}
         <div className="w-full md:w-auto flex flex-col items-center gap-4 shrink-0">
           <div className="relative">
-            {/* Ambient glow */}
             <div
               className="absolute inset-0 -m-8 blur-3xl opacity-25 rounded-3xl pointer-events-none"
               style={{
@@ -353,16 +345,16 @@ const Result = () => {
               }}
             />
 
-            {/* Strip */}
             <div
               id="photo-strip"
               ref={stripRef}
-              className={`relative transition-all duration-300 overflow-hidden shadow-2xl ${getStripLayoutClass()} ${stripPaddingClass} ${frameColor.startsWith("bg-") ? frameColor : ""}`}
-              style={
-                !frameColor.startsWith("bg-")
+              className={`relative transition-all duration-300 overflow-hidden shadow-2xl ${getStripLayoutClass()} ${stripPadding.className} ${frameColor.startsWith("bg-") ? frameColor : ""}`}
+              style={{
+                ...stripPadding.style,
+                ...(!frameColor.startsWith("bg-")
                   ? { backgroundColor: frameColor }
-                  : {}
-              }
+                  : {}),
+              }}
             >
               {capturedImages.map((src, i) => (
                 <div
@@ -370,6 +362,7 @@ const Result = () => {
                   className={`mx-auto aspect-[4/3] overflow-hidden shadow-sm transition-all duration-300 relative z-10 ${photoWidthClass} ${!THEME_PADDING_CONFIG[activeTheme] ? "bg-gray-200" : ""}`}
                   style={getDynamicPhotoStyle(i, capturedImages.length)}
                 >
+                  {/* DI SINI object-contain BIKIN OBS NENGAH SEMPURNA */}
                   <img
                     src={src}
                     alt={`Foto ${i + 1}`}
@@ -379,12 +372,20 @@ const Result = () => {
               ))}
 
               {activeTheme === "themespotifyv1" && (
-                <ThemeSpotifyV1 frameColor={frameColor} />
+                <ThemeSpotifyV1 frameColor={frameColor} layoutId={layoutId} />
               )}
-              {activeTheme === "themespotifyv2" && <ThemeSpotifyV2 />}
-              {activeTheme === "themespotifyv3" && <ThemeSpotifyV3 />}
-              {activeTheme === "themenailongv1" && <ThemeNailongV1 />}
-              {activeTheme === "thememybf" && <ThemeMyBoyfriend />}
+              {activeTheme === "themespotifyv2" && (
+                <ThemeSpotifyV2 layoutId={layoutId} />
+              )}
+              {activeTheme === "themespotifyv3" && (
+                <ThemeSpotifyV3 layoutId={layoutId} />
+              )}
+              {activeTheme === "themenailongv1" && (
+                <ThemeNailongV1 layoutId={layoutId} />
+              )}
+              {activeTheme === "thememybf" && (
+                <ThemeMyBoyfriend layoutId={layoutId} />
+              )}
 
               {placedStickers.map((s) => (
                 <div
@@ -429,11 +430,7 @@ const Result = () => {
           </div>
         </div>
 
-        {/* ═══════════════════════════
-            KONTROL PANEL
-        ═══════════════════════════ */}
         <div className="w-full md:w-[420px] shrink-0 flex flex-col bg-white/60 backdrop-blur-xl border border-white/80 rounded-3xl shadow-xl shadow-pink-100/40 overflow-hidden">
-          {/* Tab Bar */}
           <div className="grid grid-cols-4 border-b border-gray-100/80">
             {TABS.map((tab) => (
               <button
@@ -451,19 +448,16 @@ const Result = () => {
             ))}
           </div>
 
-          {/* Panel Content */}
           <div
             className="p-5 overflow-y-auto"
             style={{ maxHeight: "calc(100vh - 280px)", scrollbarWidth: "none" }}
           >
-            {/* ── WARNA ── */}
             {activeSection === "warna" && (
               <div>
                 <p className="text-[11px] text-gray-400 font-bold mb-3 uppercase tracking-widest">
                   Warna Frame
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {/* Rainbow picker */}
                   <div
                     className={`relative w-9 h-9 rounded-full shadow-sm transition-transform hover:scale-110 shrink-0 cursor-pointer overflow-hidden ${!frameColor.startsWith("bg-") ? "ring-2 ring-offset-2 ring-rose-400 scale-110" : "border border-black/5"}`}
                   >
@@ -504,10 +498,8 @@ const Result = () => {
               </div>
             )}
 
-            {/* ── DESAIN ── */}
             {activeSection === "desain" && (
               <div>
-                {/* Tema spesial */}
                 <p className="text-[11px] text-gray-400 font-bold mb-3 uppercase tracking-widest">
                   Tema Spesial
                 </p>
@@ -518,11 +510,7 @@ const Result = () => {
                       <button
                         key={key}
                         onClick={() => handleThemeSelect(key)}
-                        className={`relative flex items-center gap-3 px-3.5 py-3 rounded-2xl border-2 text-left transition-all duration-200 hover:scale-[1.02] ${
-                          isActive
-                            ? "border-rose-400 shadow-md shadow-rose-100 scale-[1.02]"
-                            : "border-gray-100 bg-white/70 hover:border-rose-200"
-                        }`}
+                        className={`relative flex items-center gap-3 px-3.5 py-3 rounded-2xl border-2 text-left transition-all duration-200 hover:scale-[1.02] ${isActive ? "border-rose-400 shadow-md shadow-rose-100 scale-[1.02]" : "border-gray-100 bg-white/70 hover:border-rose-200"}`}
                         style={isActive ? { background: `${meta.bg}18` } : {}}
                       >
                         <div
@@ -547,14 +535,9 @@ const Result = () => {
                       </button>
                     );
                   })}
-                  {/* Tanpa tema */}
                   <button
                     onClick={() => setActiveTheme("none")}
-                    className={`flex items-center gap-3 px-3.5 py-3 rounded-2xl border-2 transition-all hover:scale-[1.02] ${
-                      activeTheme === "none"
-                        ? "border-gray-400 bg-gray-50 shadow-sm"
-                        : "border-gray-100 bg-white/70 hover:border-gray-300"
-                    }`}
+                    className={`flex items-center gap-3 px-3.5 py-3 rounded-2xl border-2 transition-all hover:scale-[1.02] ${activeTheme === "none" ? "border-gray-400 bg-gray-50 shadow-sm" : "border-gray-100 bg-white/70 hover:border-gray-300"}`}
                   >
                     <div className="w-9 h-9 rounded-xl bg-gray-100 flex items-center justify-center text-xl shrink-0">
                       🚫
@@ -565,7 +548,6 @@ const Result = () => {
                   </button>
                 </div>
 
-                {/* Pola / Tekstur */}
                 <p className="text-[11px] text-gray-400 font-bold mb-3 uppercase tracking-widest">
                   Pola / Tekstur
                 </p>
@@ -584,7 +566,6 @@ const Result = () => {
               </div>
             )}
 
-            {/* ── BENTUK ── */}
             {activeSection === "bentuk" && (
               <div>
                 <p className="text-[11px] text-gray-400 font-bold mb-3 uppercase tracking-widest">
@@ -604,11 +585,7 @@ const Result = () => {
                     <button
                       key={opt.id}
                       onClick={() => setShapeType(opt.id)}
-                      className={`flex flex-col items-center gap-2 py-3 rounded-2xl border-2 transition-all ${
-                        shapeType === opt.id
-                          ? "border-rose-400 bg-rose-50 shadow-sm"
-                          : "border-gray-100 bg-white/70 hover:border-rose-200"
-                      }`}
+                      className={`flex flex-col items-center gap-2 py-3 rounded-2xl border-2 transition-all ${shapeType === opt.id ? "border-rose-400 bg-rose-50 shadow-sm" : "border-gray-100 bg-white/70 hover:border-rose-200"}`}
                     >
                       <div
                         className={`w-8 h-8 bg-gradient-to-br from-rose-300 to-pink-400 border-2 ${opt.cls} ${shapeType === opt.id ? "border-rose-400" : "border-rose-200"}`}
@@ -650,7 +627,6 @@ const Result = () => {
               </div>
             )}
 
-            {/* ── STIKER ── */}
             {activeSection === "stiker" && (
               <div>
                 <div className="flex items-center justify-between mb-3">
@@ -686,7 +662,6 @@ const Result = () => {
             )}
           </div>
 
-          {/* Panel Footer */}
           <div className="p-4 border-t border-gray-100/80 bg-white/40 flex gap-3">
             <button
               onClick={() => navigate("/capture")}

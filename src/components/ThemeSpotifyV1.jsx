@@ -2,7 +2,6 @@ import React from "react";
 
 const isLightBackground = (colorStr) => {
   if (!colorStr) return false;
-
   const darkClasses = [
     "bg-black",
     "bg-[#000000]",
@@ -15,29 +14,31 @@ const isLightBackground = (colorStr) => {
     "bg-gradient-to-bl from-gray-700 to-black",
   ];
   if (darkClasses.includes(colorStr)) return false;
-
   const hexMatch = colorStr.match(/#([0-9a-fA-F]{3,6})/);
   if (hexMatch) {
     let hex = hexMatch[1];
-    if (hex.length === 3) {
+    if (hex.length === 3)
       hex = hex
         .split("")
-        .map((char) => char + char)
+        .map((c) => c + c)
         .join("");
-    }
     const r = parseInt(hex.substring(0, 2), 16) || 0;
     const g = parseInt(hex.substring(2, 4), 16) || 0;
     const b = parseInt(hex.substring(4, 6), 16) || 0;
-
-    const luminance = 0.299 * r + 0.587 * g + 0.114 * b;
-    return luminance > 128;
+    return 0.299 * r + 0.587 * g + 0.114 * b > 128;
   }
-
   return true;
 };
 
-export default function ThemeSpotifyV1({ frameColor }) {
+export default function ThemeSpotifyV1({ frameColor, layoutId }) {
   const isLight = isLightBackground(frameColor);
+
+  // Fungsi penentu posisi player
+  const getPlayerPos = () => {
+    if (layoutId === "2-horizontal") return "bottom-6";
+    if (["4-grid", "6-grid", "9-grid"].includes(layoutId)) return "bottom-4";
+    return "bottom-5"; // Default (Vertical)
+  };
 
   const textMain = isLight ? "text-gray-900" : "text-white";
   const textSub = isLight ? "text-gray-600" : "text-gray-400";
@@ -50,8 +51,7 @@ export default function ThemeSpotifyV1({ frameColor }) {
 
   return (
     <>
-      {/* HEADER SPOTIFY */}
-      <div className="absolute top-4 left-0 w-full flex justify-between items-center px-4 z-20">
+      <div className="absolute top-4 left-0 w-full flex justify-between items-center px-5 z-20 pointer-events-none">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className={`h-5 w-5 drop-shadow-sm transition-colors ${textMain}`}
@@ -78,13 +78,13 @@ export default function ThemeSpotifyV1({ frameColor }) {
         </svg>
       </div>
 
-      {/* MUSIC PLAYER */}
-      <div className="absolute bottom-3 left-0 w-full px-5 z-20 flex flex-col gap-1">
-        {/* Judul + Ikon Love */}
-        <div className="flex justify-between items-center mb-3">
-          <div className="flex flex-col text-left gap-0.5">
+      <div
+        className={`absolute ${getPlayerPos()} left-0 w-full px-5 z-20 flex flex-col`}
+      >
+        <div className="flex justify-between items-center mb-1">
+          <div className="flex flex-col text-left gap-1.5">
             <span
-              className={`font-extrabold text-[15px] leading-none drop-shadow-sm transition-colors ${textMain}`}
+              className={`font-extrabold text-[15px] leading-normal drop-shadow-sm transition-colors ${textMain}`}
             >
               I LOVE YOU SO
             </span>
@@ -95,33 +95,26 @@ export default function ThemeSpotifyV1({ frameColor }) {
             </span>
           </div>
           <img
-            src="../public/spotify/1/Love.svg"
+            src="/public/spotify/1/Love.svg"
             alt="Love"
             className="w-5 h-5 drop-shadow-sm hover:scale-110 transition-transform cursor-pointer"
           />
         </div>
 
-        {/* Progress Bar */}
         <div
-          className={`w-full h-1 rounded-full mb-4 relative flex items-center cursor-pointer transition-colors ${barBg}`}
+          className={`w-full h-1 rounded-full mb-3 relative flex items-center cursor-pointer transition-colors ${barBg}`}
         >
           <div className="h-full bg-[#1DB954] w-[45%] rounded-full relative">
             <div className="w-2.5 h-2.5 bg-[#1DB954] rounded-full absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 shadow-sm" />
           </div>
         </div>
 
-        {/* Kontrol Playback */}
-        <div className="flex justify-between items-center px-1">
+        <div
+          className={`flex justify-center ${layoutId === "2-horizontal" ? "gap-8" : "gap-6"} items-center px-1 pb-1`}
+        >
           <button className="hover:scale-110 transition-transform">
             <img
-              src="../public/spotify/1/Shuffle.svg"
-              alt="Shuffle"
-              className={`w-4 h-4 transition-all ${iconClass}`}
-            />
-          </button>
-          <button className="hover:scale-110 transition-transform">
-            <img
-              src="../public/spotify/1/Previous.svg"
+              src="/public/spotify/1/Previous.svg"
               alt="Prev"
               className={`w-4 h-4 transition-all ${iconClass}`}
             />
@@ -130,22 +123,15 @@ export default function ThemeSpotifyV1({ frameColor }) {
             className={`w-8 h-8 rounded-full flex items-center justify-center shadow-md hover:scale-105 transition-all ${playCircleBg}`}
           >
             <img
-              src="../public/spotify/1/Pause.svg"
-              alt="Pause"
+              src="/public/spotify/2/Stop.svg"
+              alt="Stop"
               className={`w-4 h-4 ${playIconClass}`}
             />
           </button>
           <button className="hover:scale-110 transition-transform">
             <img
-              src="../public/spotify/1/Next.svg"
+              src="/public/spotify/1/Next.svg"
               alt="Next"
-              className={`w-4 h-4 transition-all ${iconClass}`}
-            />
-          </button>
-          <button className="hover:scale-110 transition-transform">
-            <img
-              src="../public/spotify/1/Repeat.svg"
-              alt="Repeat"
               className={`w-4 h-4 transition-all ${iconClass}`}
             />
           </button>
