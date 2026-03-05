@@ -81,7 +81,7 @@ const Hero = () => {
         style={{ animation: "fadeInUp 0.7s ease 0.2s both" }}
       >
         Buat foto strip cantik dalam hitungan menit. Gratis, mudah, dan tanpa
-        perlu aplikasi.
+        perlu aplikasi
       </p>
 
       {/* CTA Buttons */}
