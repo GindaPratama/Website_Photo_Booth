@@ -80,8 +80,8 @@ const Hero = () => {
         className="relative z-10 text-gray-500 text-sm sm:text-lg md:text-xl mb-8 sm:mb-10 max-w-xs sm:max-w-xl mx-auto leading-relaxed font-medium"
         style={{ animation: "fadeInUp 0.7s ease 0.2s both" }}
       >
-        Jepret, edit, dan download foto strip estetikmu dalam hitungan menit.
-        Seperti di photobooth sungguhan — tapi di browser kamu!
+        Buat foto strip cantik dalam hitungan menit. Gratis, mudah, dan tanpa
+        perlu aplikasi.
       </p>
 
       {/* CTA Buttons */}
