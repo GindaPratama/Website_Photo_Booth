@@ -1,8 +1,8 @@
-import FAQ from "/components/FAQ";
-import Footer from "/components/Footer";
-import Hero from "/components/Hero";
-import HowItWorks from "/components/HowItWorks";
-import Navbar from "/components/Navbar";
+import FAQ from "../components/FAQ";
+import Footer from "../components/Footer";
+import Hero from "../components/Hero";
+import HowItWorks from "../components/HowItWorks";
+import Navbar from "../components/Navbar";
 
 function App() {
   return (
