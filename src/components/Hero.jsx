@@ -32,15 +32,6 @@ const Hero = () => {
         <div className="absolute top-48 sm:top-64 left-[8%] sm:left-[12%] w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-purple-300 opacity-50" />
       </div>
 
-      {/* Badge */}
-      <div
-        className="relative z-10 inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-rose-100 text-rose-500 text-[10px] sm:text-xs font-bold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-sm mb-6 sm:mb-8"
-        style={{ animation: "fadeInDown 0.6s ease both" }}
-      >
-        <span className="w-1.5 h-1.5 rounded-full bg-rose-400 animate-pulse" />
-        100% Gratis · Tanpa Login · Langsung di Browser
-      </div>
-
       {/* Headline */}
       <h1
         className="relative z-10 text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-[1.05] mb-4 sm:mb-6 tracking-tight px-2"

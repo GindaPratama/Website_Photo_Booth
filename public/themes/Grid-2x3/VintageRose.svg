@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 340">
+<defs>
+  <linearGradient id="vr-bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#efebe9"/>
+    <stop offset="100%" stop-color="#d7ccc8"/>
+  </linearGradient>
+  <filter id="vr-glow">
+    <feGaussianBlur stdDeviation="1.5" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<path fill-rule="evenodd" fill="url(#vr-bg)" d="
+  M 0 0 H 280 V 340 H 0 Z
+  M 12 12 V 116 H 134 V 12 Z
+  M 146 12 V 116 H 268 V 12 Z
+  M 12 128 V 232 H 134 V 128 Z
+  M 146 128 V 232 H 268 V 128 Z
+  M 12 244 V 328 H 134 V 244 Z
+  M 146 244 V 328 H 268 V 244 Z
+"/>
+<rect x="0" y="0" width="280" height="2" fill="#b71c1c" opacity="0.5"/>
+<rect x="0" y="338" width="280" height="2" fill="#b71c1c" opacity="0.5"/>
+<rect x="0" y="0" width="2" height="340" fill="#b71c1c" opacity="0.5"/>
+<rect x="278" y="0" width="2" height="340" fill="#b71c1c" opacity="0.5"/>
+
+<!-- BIG rose top-left -->
+<g transform="translate(7, 7)" filter="url(#vr-glow)">
+  <!-- Rose petals -->
+  <circle cx="0" cy="-12" r="10" fill="#c62828" opacity="0.7"/>
+  <circle cx="10.4" cy="-6" r="10" fill="#e53935" opacity="0.7"/>
+  <circle cx="10.4" cy="6" r="10" fill="#c62828" opacity="0.7"/>
+  <circle cx="0" cy="12" r="10" fill="#e53935" opacity="0.7"/>
+  <circle cx="-10.4" cy="6" r="10" fill="#c62828" opacity="0.7"/>
+  <circle cx="-10.4" cy="-6" r="10" fill="#e53935" opacity="0.7"/>
+  <!-- Rose center -->
+  <circle cx="0" cy="0" r="8" fill="#b71c1c"/>
+  <circle cx="0" cy="0" r="5" fill="#c62828"/>
+  <ellipse cx="0" cy="-2" rx="4" ry="3" fill="#e57373" opacity="0.6"/>
+  <!-- Leaves -->
+  <ellipse cx="-15" cy="15" rx="8" ry="4" fill="#388e3c" opacity="0.7" transform="rotate(-35 -15 15)"/>
+  <ellipse cx="15" cy="15" rx="8" ry="4" fill="#2e7d32" opacity="0.7" transform="rotate(35 15 15)"/>
+</g>
+<!-- BIG rose top-right -->
+<g transform="translate(273, 7)" filter="url(#vr-glow)">
+  <circle cx="0" cy="-12" r="10" fill="#c62828" opacity="0.7"/>
+  <circle cx="10.4" cy="-6" r="10" fill="#e53935" opacity="0.7"/>
+  <circle cx="10.4" cy="6" r="10" fill="#c62828" opacity="0.7"/>
+  <circle cx="0" cy="12" r="10" fill="#e53935" opacity="0.7"/>
+  <circle cx="-10.4" cy="6" r="10" fill="#c62828" opacity="0.7"/>
+  <circle cx="-10.4" cy="-6" r="10" fill="#e53935" opacity="0.7"/>
+  <circle cx="0" cy="0" r="8" fill="#b71c1c"/>
+  <circle cx="0" cy="0" r="5" fill="#c62828"/>
+  <ellipse cx="0" cy="-2" rx="4" ry="3" fill="#e57373" opacity="0.6"/>
+  <ellipse cx="-15" cy="15" rx="8" ry="4" fill="#388e3c" opacity="0.7" transform="rotate(-35 -15 15)"/>
+  <ellipse cx="15" cy="15" rx="8" ry="4" fill="#2e7d32" opacity="0.7" transform="rotate(35 15 15)"/>
+</g>
+
+<!-- BIG rose between row 1-2 left -->
+<g transform="translate(7, 122)" filter="url(#vr-glow)">
+  <circle cx="0" cy="-10" r="8" fill="#e53935" opacity="0.65"/>
+  <circle cx="8.7" cy="-5" r="8" fill="#c62828" opacity="0.65"/>
+  <circle cx="8.7" cy="5" r="8" fill="#e53935" opacity="0.65"/>
+  <circle cx="0" cy="10" r="8" fill="#c62828" opacity="0.65"/>
+  <circle cx="-8.7" cy="5" r="8" fill="#e53935" opacity="0.65"/>
+  <circle cx="-8.7" cy="-5" r="8" fill="#c62828" opacity="0.65"/>
+  <circle cx="0" cy="0" r="7" fill="#b71c1c"/>
+  <circle cx="0" cy="0" r="4" fill="#c62828"/>
+</g>
+<!-- BIG rose between row 1-2 right -->
+<g transform="translate(273, 122)" filter="url(#vr-glow)">
+  <circle cx="0" cy="-10" r="8" fill="#e53935" opacity="0.65"/>
+  <circle cx="8.7" cy="-5" r="8" fill="#c62828" opacity="0.65"/>
+  <circle cx="8.7" cy="5" r="8" fill="#e53935" opacity="0.65"/>
+  <circle cx="0" cy="10" r="8" fill="#c62828" opacity="0.65"/>
+  <circle cx="-8.7" cy="5" r="8" fill="#e53935" opacity="0.65"/>
+  <circle cx="-8.7" cy="-5" r="8" fill="#c62828" opacity="0.65"/>
+  <circle cx="0" cy="0" r="7" fill="#b71c1c"/>
+  <circle cx="0" cy="0" r="4" fill="#c62828"/>
+</g>
+
+<!-- BIG rose between row 2-3 left -->
+<g transform="translate(7, 238)" filter="url(#vr-glow)">
+  <circle cx="0" cy="-10" r="8" fill="#e53935" opacity="0.65"/>
+  <circle cx="8.7" cy="-5" r="8" fill="#c62828" opacity="0.65"/>
+  <circle cx="8.7" cy="5" r="8" fill="#e53935" opacity="0.65"/>
+  <circle cx="0" cy="10" r="8" fill="#c62828" opacity="0.65"/>
+  <circle cx="-8.7" cy="5" r="8" fill="#e53935" opacity="0.65"/>
+  <circle cx="-8.7" cy="-5" r="8" fill="#c62828" opacity="0.65"/>
+  <circle cx="0" cy="0" r="7" fill="#b71c1c"/>
+  <circle cx="0" cy="0" r="4" fill="#c62828"/>
+</g>
+<!-- BIG rose between row 2-3 right -->
+<g transform="translate(273, 238)" filter="url(#vr-glow)">
+  <circle cx="0" cy="-10" r="8" fill="#e53935" opacity="0.65"/>
+  <circle cx="8.7" cy="-5" r="8" fill="#c62828" opacity="0.65"/>
+  <circle cx="8.7" cy="5" r="8" fill="#e53935" opacity="0.65"/>
+  <circle cx="0" cy="10" r="8" fill="#c62828" opacity="0.65"/>
+  <circle cx="-8.7" cy="5" r="8" fill="#e53935" opacity="0.65"/>
+  <circle cx="-8.7" cy="-5" r="8" fill="#c62828" opacity="0.65"/>
+  <circle cx="0" cy="0" r="7" fill="#b71c1c"/>
+  <circle cx="0" cy="0" r="4" fill="#c62828"/>
+</g>
+
+<!-- Bottom corner roses -->
+<g transform="translate(7, 333)" filter="url(#vr-glow)">
+  <circle cx="0" cy="-10" r="8" fill="#c62828" opacity="0.65"/>
+  <circle cx="8.7" cy="-5" r="8" fill="#e53935" opacity="0.65"/>
+  <circle cx="8.7" cy="5" r="8" fill="#c62828" opacity="0.65"/>
+  <circle cx="0" cy="10" r="8" fill="#e53935" opacity="0.65"/>
+  <circle cx="-8.7" cy="5" r="8" fill="#c62828" opacity="0.65"/>
+  <circle cx="-8.7" cy="-5" r="8" fill="#e53935" opacity="0.65"/>
+  <circle cx="0" cy="0" r="7" fill="#b71c1c"/>
+  <circle cx="0" cy="0" r="4" fill="#c62828"/>
+</g>
+<g transform="translate(273, 333)" filter="url(#vr-glow)">
+  <circle cx="0" cy="-10" r="8" fill="#c62828" opacity="0.65"/>
+  <circle cx="8.7" cy="-5" r="8" fill="#e53935" opacity="0.65"/>
+  <circle cx="8.7" cy="5" r="8" fill="#c62828" opacity="0.65"/>
+  <circle cx="0" cy="10" r="8" fill="#e53935" opacity="0.65"/>
+  <circle cx="-8.7" cy="5" r="8" fill="#c62828" opacity="0.65"/>
+  <circle cx="-8.7" cy="-5" r="8" fill="#e53935" opacity="0.65"/>
+  <circle cx="0" cy="0" r="7" fill="#b71c1c"/>
+  <circle cx="0" cy="0" r="4" fill="#c62828"/>
+</g>
+
+<!-- Grid divider lines -->
+<rect x="140.5" y="2" width="5" height="336" fill="#b71c1c" opacity="0.15"/>
+<rect x="2" y="122.5" width="276" height="5" fill="#b71c1c" opacity="0.15"/>
+<rect x="2" y="238.5" width="276" height="5" fill="#b71c1c" opacity="0.15"/>
+</svg>

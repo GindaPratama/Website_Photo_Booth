@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <defs>
+    <linearGradient id="i" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fce4ec"/>
+      <stop offset="50%" stop-color="#f3e5f5"/>
+      <stop offset="100%" stop-color="#e8eaf6"/>
+    </linearGradient>
+    <filter id="g"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="60" height="60" rx="8" fill="url(#i)"/>
+  <!-- Quadrant corner fills -->
+  <rect x="0" y="0" width="10" height="10" rx="2" fill="#f48fb1" opacity="0.7"/>
+  <rect x="50" y="0" width="10" height="10" rx="2" fill="#ce93d8" opacity="0.7"/>
+  <rect x="0" y="50" width="10" height="10" rx="2" fill="#90caf9" opacity="0.7"/>
+  <rect x="50" y="50" width="10" height="10" rx="2" fill="#a5d6a7" opacity="0.7"/>
+  <!-- Big flower center -->
+  <g transform="translate(30,30)" filter="url(#g)">
+    <ellipse cx="0" cy="-13" rx="7.5" ry="12" fill="#f48fb1" opacity="0.8"/>
+    <ellipse cx="0" cy="-13" rx="7.5" ry="12" fill="#ce93d8" opacity="0.7" transform="rotate(72)"/>
+    <ellipse cx="0" cy="-13" rx="7.5" ry="12" fill="#90caf9" opacity="0.8" transform="rotate(144)"/>
+    <ellipse cx="0" cy="-13" rx="7.5" ry="12" fill="#a5d6a7" opacity="0.7" transform="rotate(216)"/>
+    <ellipse cx="0" cy="-13" rx="7.5" ry="12" fill="#fff59d" opacity="0.8" transform="rotate(288)"/>
+    <circle cx="0" cy="0" r="6" fill="#fff9c4"/>
+    <circle cx="0" cy="0" r="3" fill="#ffa000"/>
+  </g>
+  <!-- Grid lines -->
+  <rect x="28.5" y="0" width="3" height="60" fill="white" opacity="0.5"/>
+  <rect x="0" y="28.5" width="60" height="3" fill="white" opacity="0.5"/>
+</svg>

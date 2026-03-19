@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+<defs>
+  <radialGradient id="ag-glow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0%" stop-color="#fff" stop-opacity="0.3"/>
+    <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="ag-bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#1a0533"/>
+    <stop offset="50%" stop-color="#0d1a2e"/>
+    <stop offset="100%" stop-color="#001428"/>
+  </linearGradient>
+  <filter id="ag-glow-f">
+    <feGaussianBlur stdDeviation="2.5" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<path fill-rule="evenodd" fill="url(#ag-bg)" d="
+  M 0 0 H 240 V 240 H 0 Z
+  M 12 12 V 117 H 117 V 12 Z
+  M 123 12 V 117 H 228 V 12 Z
+  M 12 123 V 228 H 117 V 123 Z
+  M 123 123 V 228 H 228 V 123 Z
+"/>
+<!-- Aurora color strip borders -->
+<rect x="0" y="0" width="60" height="2" fill="#7c00ff" opacity="0.9"/>
+<rect x="60" y="0" width="60" height="2" fill="#00bfff" opacity="0.9"/>
+<rect x="120" y="0" width="60" height="2" fill="#00ffaa" opacity="0.9"/>
+<rect x="180" y="0" width="60" height="2" fill="#ff69b4" opacity="0.9"/>
+<rect x="0" y="238" width="60" height="2" fill="#ff69b4" opacity="0.9"/>
+<rect x="60" y="238" width="60" height="2" fill="#00ffaa" opacity="0.9"/>
+<rect x="120" y="238" width="60" height="2" fill="#00bfff" opacity="0.9"/>
+<rect x="180" y="238" width="60" height="2" fill="#7c00ff" opacity="0.9"/>
+<rect x="0" y="0" width="2" height="60" fill="#7c00ff" opacity="0.9"/>
+<rect x="0" y="60" width="2" height="60" fill="#00bfff" opacity="0.9"/>
+<rect x="0" y="120" width="2" height="60" fill="#00ffaa" opacity="0.9"/>
+<rect x="0" y="180" width="2" height="60" fill="#ff69b4" opacity="0.9"/>
+<rect x="238" y="0" width="2" height="60" fill="#ff69b4" opacity="0.9"/>
+<rect x="238" y="60" width="2" height="60" fill="#00ffaa" opacity="0.9"/>
+<rect x="238" y="120" width="2" height="60" fill="#00bfff" opacity="0.9"/>
+<rect x="238" y="180" width="2" height="60" fill="#7c00ff" opacity="0.9"/>
+
+<!-- TOP-LEFT: Big aurora snowflake -->
+<g transform="translate(12, 7)" filter="url(#ag-glow-f)">
+  <line x1="0" y1="-12" x2="0" y2="12" stroke="#7c00ff" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="-12" y1="0" x2="12" y2="0" stroke="#7c00ff" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="-8.5" y1="-8.5" x2="8.5" y2="8.5" stroke="#7c00ff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="8.5" y1="-8.5" x2="-8.5" y2="8.5" stroke="#7c00ff" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="0" cy="0" r="3" fill="#7c00ff" opacity="0.9"/>
+  <circle cx="0" cy="-12" r="2" fill="#b070ff"/>
+  <circle cx="0" cy="12" r="2" fill="#b070ff"/>
+  <circle cx="-12" cy="0" r="2" fill="#b070ff"/>
+  <circle cx="12" cy="0" r="2" fill="#b070ff"/>
+</g>
+<!-- TOP-RIGHT: Big aurora snowflake -->
+<g transform="translate(228, 7)" filter="url(#ag-glow-f)">
+  <line x1="0" y1="-12" x2="0" y2="12" stroke="#00bfff" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="-12" y1="0" x2="12" y2="0" stroke="#00bfff" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="-8" y1="-8" x2="8" y2="8" stroke="#00bfff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="8" y1="-8" x2="-8" y2="8" stroke="#00bfff" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="0" cy="0" r="3" fill="#00bfff"/>
+  <circle cx="0" cy="-12" r="2" fill="#70dfff"/>
+  <circle cx="0" cy="12" r="2" fill="#70dfff"/>
+  <circle cx="-12" cy="0" r="2" fill="#70dfff"/>
+  <circle cx="12" cy="0" r="2" fill="#70dfff"/>
+</g>
+<!-- CENTER GRID decoration -->
+<g transform="translate(120, 120)">
+  <path d="M 0 -14 L 14 0 L 0 14 L -14 0 Z" fill="#7c00ff" opacity="0.3" filter="url(#ag-glow-f)"/>
+  <path d="M 0 -14 L 14 0" stroke="#7c00ff" stroke-width="1.5" opacity="0.7"/>
+  <path d="M 14 0 L 0 14" stroke="#00bfff" stroke-width="1.5" opacity="0.7"/>
+  <path d="M 0 14 L -14 0" stroke="#00ffaa" stroke-width="1.5" opacity="0.7"/>
+  <path d="M -14 0 L 0 -14" stroke="#ff69b4" stroke-width="1.5" opacity="0.7"/>
+  <path d="M 0 -6 L 1.5 -1.5 L 6 0 L 1.5 1.5 L 0 6 L -1.5 1.5 L -6 0 L -1.5 -1.5 Z" fill="white" opacity="0.7"/>
+</g>
+<!-- BOTTOM-LEFT: Green snowflake -->
+<g transform="translate(12, 233)" filter="url(#ag-glow-f)">
+  <line x1="0" y1="-12" x2="0" y2="12" stroke="#00ffaa" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="-12" y1="0" x2="12" y2="0" stroke="#00ffaa" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="-8" y1="-8" x2="8" y2="8" stroke="#00ffaa" stroke-width="2" stroke-linecap="round"/>
+  <line x1="8" y1="-8" x2="-8" y2="8" stroke="#00ffaa" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="0" cy="0" r="3" fill="#00ffaa"/>
+  <circle cx="0" cy="-12" r="2" fill="#70ffcc"/>
+  <circle cx="0" cy="12" r="2" fill="#70ffcc"/>
+  <circle cx="-12" cy="0" r="2" fill="#70ffcc"/>
+  <circle cx="12" cy="0" r="2" fill="#70ffcc"/>
+</g>
+<!-- BOTTOM-RIGHT: Pink snowflake -->
+<g transform="translate(228, 233)" filter="url(#ag-glow-f)">
+  <line x1="0" y1="-12" x2="0" y2="12" stroke="#ff69b4" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="-12" y1="0" x2="12" y2="0" stroke="#ff69b4" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="-8" y1="-8" x2="8" y2="8" stroke="#ff69b4" stroke-width="2" stroke-linecap="round"/>
+  <line x1="8" y1="-8" x2="-8" y2="8" stroke="#ff69b4" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="0" cy="0" r="3" fill="#ff69b4"/>
+  <circle cx="0" cy="-12" r="2" fill="#ffb0d4"/>
+  <circle cx="0" cy="12" r="2" fill="#ffb0d4"/>
+  <circle cx="-12" cy="0" r="2" fill="#ffb0d4"/>
+  <circle cx="12" cy="0" r="2" fill="#ffb0d4"/>
+</g>
+<!-- Left/Right mid star accents - NO text -->
+<g transform="translate(7, 120)" filter="url(#ag-glow-f)">
+  <path d="M 0 -8 L 2 -2 L 8 0 L 2 2 L 0 8 L -2 2 L -8 0 L -2 -2 Z" fill="#00ffaa" opacity="0.8"/>
+</g>
+<g transform="translate(233, 120)" filter="url(#ag-glow-f)">
+  <path d="M 0 -8 L 2 -2 L 8 0 L 2 2 L 0 8 L -2 2 L -8 0 L -2 -2 Z" fill="#00ffaa" opacity="0.8"/>
+</g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+  <defs>
+    <pattern id="sparkles" width="50" height="50" patternUnits="userSpaceOnUse">
+      <rect width="50" height="50" fill="white" opacity="0"/>
+      <!-- 4-point sparkle big -->
+      <path d="M25,5 L27,22 L44,25 L27,28 L25,45 L23,28 L6,25 L23,22Z" fill="#fbbf24" opacity="0.55"/>
+      <!-- 4-point sparkle small corner tl -->
+      <path d="M0,0 L1,5.5 L6.5,7 L1,8.5 L0,14 L-1,8.5 L-6.5,7 L-1,5.5Z" transform="translate(5,5)" fill="#fde68a" opacity="0.4"/>
+      <!-- 4-point sparkle small corner br -->
+      <path d="M0,0 L1,5.5 L6.5,7 L1,8.5 L0,14 L-1,8.5 L-6.5,7 L-1,5.5Z" transform="translate(45,40)" fill="#fde68a" opacity="0.4"/>
+      <!-- Dots -->
+      <circle cx="10" cy="35" r="2" fill="#fbbf24" opacity="0.3"/>
+      <circle cx="40" cy="10" r="2" fill="#fbbf24" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="400" fill="url(#sparkles)"/>
+</svg>

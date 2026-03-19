@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <defs>
+    <linearGradient id="i" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff5f7"/>
+      <stop offset="100%" stop-color="#fce4ec"/>
+    </linearGradient>
+    <filter id="g"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="60" height="60" rx="8" fill="url(#i)"/>
+  <rect x="0" y="0" width="60" height="60" rx="8" fill="none" stroke="#f06292" stroke-width="1.5" opacity="0.5"/>
+  <!-- Envelope / Be Mine card -->
+  <g transform="translate(30,30)" filter="url(#g)">
+    <rect x="-20" y="-12" width="40" height="26" rx="3" fill="white" stroke="#f06292" stroke-width="1.5"/>
+    <!-- Envelope V-fold -->
+    <path d="M -20 -12 L 0 4 L 20 -12 Z" fill="#f48fb1" opacity="0.6"/>
+    <!-- Heart inside -->
+    <path d="M 0 10 C -1.5 7,-8 5,-8 0 C -8 -4,-4 -6,0 -3 C 4 -6,8 -4,8 0 C 8 5,1.5 7,0 10 Z" fill="#e91e63"/>
+  </g>
+  <!-- Stars around -->
+  <path d="M0-6 1.5-1.5 6 0 1.5 1.5 0 6-1.5 1.5-6 0-1.5-1.5Z" fill="#f06292" opacity="0.7" transform="translate(10,10) scale(0.8)"/>
+  <path d="M0-6 1.5-1.5 6 0 1.5 1.5 0 6-1.5 1.5-6 0-1.5-1.5Z" fill="#f06292" opacity="0.7" transform="translate(50,10) scale(0.8)"/>
+  <path d="M0-6 1.5-1.5 6 0 1.5 1.5 0 6-1.5 1.5-6 0-1.5-1.5Z" fill="#f06292" opacity="0.7" transform="translate(10,50) scale(0.8)"/>
+  <path d="M0-6 1.5-1.5 6 0 1.5 1.5 0 6-1.5 1.5-6 0-1.5-1.5Z" fill="#f06292" opacity="0.7" transform="translate(50,50) scale(0.8)"/>
+</svg>

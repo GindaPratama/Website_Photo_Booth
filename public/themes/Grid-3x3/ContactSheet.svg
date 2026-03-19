@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 281">
+  <defs>
+    <linearGradient id="cs-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+  </defs>
+  <path fill-rule="evenodd" fill="url(#cs-bg)" d="
+    M 0 0 H 280 V 281 H 0 Z
+    M 12 12 V 94.67 H 94.67 V 12 Z
+    M 98.67 12 V 94.67 H 181.33 V 12 Z
+    M 185.33 12 V 94.67 H 268 V 12 Z
+    M 12 99.33 V 182 H 94.67 V 99.33 Z
+    M 98.67 99.33 V 182 H 181.33 V 99.33 Z
+    M 185.33 99.33 V 182 H 268 V 99.33 Z
+    M 12 186.67 V 269.33 H 94.67 V 186.67 Z
+    M 98.67 186.67 V 269.33 H 181.33 V 186.67 Z
+    M 185.33 186.67 V 269.33 H 268 V 186.67 Z
+  "/>
+  <!-- Film top/bottom borders -->
+  <rect x="0" y="0" width="280" height="11" fill="#111"/>
+  <rect x="0" y="270" width="280" height="11" fill="#111"/>
+  <rect x="0" y="0" width="11" height="281" fill="#111"/>
+  <rect x="269" y="0" width="11" height="281" fill="#111"/>
+  <!-- BIG sprocket holes along left strip -->
+  <rect x="2" y="14" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="24" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="34" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="44" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="54" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="64" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="74" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="85" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="101" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="111" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="121" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="131" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="141" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="151" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="161" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="171" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="188" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="198" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="208" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="218" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="228" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="238" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="248" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="2" y="258" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <!-- Right sprocket holes -->
+  <rect x="270" y="14" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="24" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="34" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="44" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="54" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="64" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="74" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="85" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="101" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="111" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="121" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="131" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="141" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="151" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="161" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="171" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="188" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="198" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="208" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="218" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="228" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="238" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="248" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="270" y="258" width="8" height="6" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <!-- Top sprocket holes row -->
+  <rect x="18" y="2" width="6" height="7" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="30" y="2" width="6" height="7" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="108" y="2" width="6" height="7" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="120" y="2" width="6" height="7" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="196" y="2" width="6" height="7" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="208" y="2" width="6" height="7" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <!-- Bottom sprocket holes -->
+  <rect x="18" y="272" width="6" height="7" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="30" y="272" width="6" height="7" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="108" y="272" width="6" height="7" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="120" y="272" width="6" height="7" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="196" y="272" width="6" height="7" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <rect x="208" y="272" width="6" height="7" rx="1" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <!-- Frame numbers -->
+  <text x="53" y="9" font-size="5" fill="#666" font-family="monospace" text-anchor="middle">1A</text>
+  <text x="140" y="9" font-size="5" fill="#666" font-family="monospace" text-anchor="middle">2A</text>
+  <text x="227" y="9" font-size="5" fill="#666" font-family="monospace" text-anchor="middle">3A</text>
+  <text x="53" y="276" font-size="5" fill="#666" font-family="monospace" text-anchor="middle">1B</text>
+  <text x="140" y="276" font-size="5" fill="#666" font-family="monospace" text-anchor="middle">2B</text>
+  <text x="227" y="276" font-size="5" fill="#666" font-family="monospace" text-anchor="middle">3B</text>
+  <!-- Grid lines -->
+  <rect x="95.67" y="11" width="3" height="259" fill="#222" opacity="0.8"/>
+  <rect x="182.33" y="11" width="3" height="259" fill="#222" opacity="0.8"/>
+  <rect x="11" y="96.33" width="258" height="3" fill="#222" opacity="0.8"/>
+  <rect x="11" y="183" width="258" height="3" fill="#222" opacity="0.8"/>
+</svg>

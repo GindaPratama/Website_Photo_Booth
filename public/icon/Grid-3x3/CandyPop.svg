@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <defs>
+    <linearGradient id="i" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fce4ec"/>
+      <stop offset="50%" stop-color="#e8f5e9"/>
+      <stop offset="100%" stop-color="#e3f2fd"/>
+    </linearGradient>
+    <filter id="g"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="60" height="60" rx="8" fill="url(#i)"/>
+  <!-- Rainbow top border segments -->
+  <rect x="0" y="0" width="10" height="2" fill="#ff8a80" rx="1"/>
+  <rect x="10" y="0" width="10" height="2" fill="#ffab40" rx="1"/>
+  <rect x="20" y="0" width="10" height="2" fill="#ffd740" rx="1"/>
+  <rect x="30" y="0" width="10" height="2" fill="#69f0ae" rx="1"/>
+  <rect x="40" y="0" width="10" height="2" fill="#40c4ff" rx="1"/>
+  <rect x="50" y="0" width="10" height="2" fill="#7c4dff" rx="1"/>
+  <rect x="0" y="58" width="10" height="2" fill="#7c4dff" rx="1"/>
+  <rect x="10" y="58" width="10" height="2" fill="#40c4ff" rx="1"/>
+  <rect x="20" y="58" width="10" height="2" fill="#69f0ae" rx="1"/>
+  <rect x="30" y="58" width="10" height="2" fill="#ffd740" rx="1"/>
+  <rect x="40" y="58" width="10" height="2" fill="#ffab40" rx="1"/>
+  <rect x="50" y="58" width="10" height="2" fill="#ff8a80" rx="1"/>
+  <!-- Big lollipop center -->
+  <g transform="translate(30,26)" filter="url(#g)">
+    <!-- Candy circle -->
+    <circle cx="0" cy="0" r="16" fill="white" opacity="0.85" stroke="#f06292" stroke-width="2"/>
+    <!-- Spiral stripes -->
+    <path d="M 0 -14 A 14 14 0 0 1 14 0" fill="none" stroke="#ff8a80" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 14 0 A 14 14 0 0 1 0 14" fill="none" stroke="#ffd740" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 0 14 A 14 14 0 0 1 -14 0" fill="none" stroke="#69f0ae" stroke-width="5" stroke-linecap="round"/>
+    <path d="M -14 0 A 14 14 0 0 1 0 -14" fill="none" stroke="#40c4ff" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <!-- Lollipop stick -->
+  <rect x="28" y="40" width="4" height="16" rx="2" fill="#8d6e63"/>
+  <!-- Candy stars scattered -->
+  <path d="M0-5 1.5-1.5 5 0 1.5 1.5 0 5-1.5 1.5-5 0-1.5-1.5Z" fill="#ff8a80" opacity="0.8" transform="translate(8,12)"/>
+  <path d="M0-5 1.5-1.5 5 0 1.5 1.5 0 5-1.5 1.5-5 0-1.5-1.5Z" fill="#7c4dff" opacity="0.8" transform="translate(50,12)"/>
+  <circle cx="8" cy="50" r="3.5" fill="#ffd740" opacity="0.7"/>
+  <circle cx="52" cy="50" r="3.5" fill="#69f0ae" opacity="0.7"/>
+</svg>

@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 281">
+<defs>
+  <linearGradient id="cp-bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#fce4ec"/>
+    <stop offset="50%" stop-color="#e8f5e9"/>
+    <stop offset="100%" stop-color="#e3f2fd"/>
+  </linearGradient>
+  <filter id="cp-glow">
+    <feGaussianBlur stdDeviation="1.5" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<path fill-rule="evenodd" fill="url(#cp-bg)" d="
+  M 0 0 H 280 V 281 H 0 Z
+  M 12 12 V 94.67 H 94.67 V 12 Z
+  M 98.67 12 V 94.67 H 181.33 V 12 Z
+  M 185.33 12 V 94.67 H 268 V 12 Z
+  M 12 99.33 V 182 H 94.67 V 99.33 Z
+  M 98.67 99.33 V 182 H 181.33 V 99.33 Z
+  M 185.33 99.33 V 182 H 268 V 99.33 Z
+  M 12 186.67 V 269.33 H 94.67 V 186.67 Z
+  M 98.67 186.67 V 269.33 H 181.33 V 186.67 Z
+  M 185.33 186.67 V 269.33 H 268 V 186.67 Z
+"/>
+<!-- Rainbow top border segments -->
+<rect x="0" y="0" width="40" height="2" fill="#ff8a80" opacity="0.85"/>
+<rect x="40" y="0" width="40" height="2" fill="#ffab40" opacity="0.85"/>
+<rect x="80" y="0" width="40" height="2" fill="#ffd740" opacity="0.85"/>
+<rect x="120" y="0" width="40" height="2" fill="#69f0ae" opacity="0.85"/>
+<rect x="160" y="0" width="40" height="2" fill="#40c4ff" opacity="0.85"/>
+<rect x="200" y="0" width="40" height="2" fill="#7c4dff" opacity="0.85"/>
+<rect x="240" y="0" width="40" height="2" fill="#ff4081" opacity="0.85"/>
+<!-- Rainbow bottom -->
+<rect x="0" y="279" width="40" height="2" fill="#ff4081" opacity="0.85"/>
+<rect x="40" y="279" width="40" height="2" fill="#7c4dff" opacity="0.85"/>
+<rect x="80" y="279" width="40" height="2" fill="#40c4ff" opacity="0.85"/>
+<rect x="120" y="279" width="40" height="2" fill="#69f0ae" opacity="0.85"/>
+<rect x="160" y="279" width="40" height="2" fill="#ffd740" opacity="0.85"/>
+<rect x="200" y="279" width="40" height="2" fill="#ffab40" opacity="0.85"/>
+<rect x="240" y="279" width="40" height="2" fill="#ff8a80" opacity="0.85"/>
+<!-- Left/right rainbow borders -->
+<rect x="0" y="0" width="2" height="70" fill="#ff8a80" opacity="0.85"/>
+<rect x="0" y="70" width="2" height="70" fill="#ffd740" opacity="0.85"/>
+<rect x="0" y="140" width="2" height="70" fill="#69f0ae" opacity="0.85"/>
+<rect x="0" y="210" width="2" height="71" fill="#40c4ff" opacity="0.85"/>
+<rect x="278" y="0" width="2" height="70" fill="#ff4081" opacity="0.85"/>
+<rect x="278" y="70" width="2" height="70" fill="#7c4dff" opacity="0.85"/>
+<rect x="278" y="140" width="2" height="70" fill="#ff8a80" opacity="0.85"/>
+<rect x="278" y="210" width="2" height="71" fill="#ffab40" opacity="0.85"/>
+<!-- Grid lines -->
+<rect x="95.67" y="0" width="2" height="281" fill="white" opacity="0.6"/>
+<rect x="182.33" y="0" width="2" height="281" fill="white" opacity="0.6"/>
+<rect x="0" y="96.33" width="280" height="2" fill="white" opacity="0.6"/>
+<rect x="0" y="183" width="280" height="2" fill="white" opacity="0.6"/>
+<!-- BIG candy at grid intersections -->
+<g transform="translate(96.67, 97.33)" filter="url(#cp-glow)">
+  <circle cx="0" cy="0" r="9" fill="#ff8a80" opacity="0.85"/>
+  <circle cx="0" cy="0" r="5" fill="white" opacity="0.7"/>
+  <circle cx="0" cy="0" r="2.5" fill="#ff4081"/>
+</g>
+<g transform="translate(183.33, 97.33)" filter="url(#cp-glow)">
+  <circle cx="0" cy="0" r="9" fill="#ffd740" opacity="0.85"/>
+  <circle cx="0" cy="0" r="5" fill="white" opacity="0.7"/>
+  <circle cx="0" cy="0" r="2.5" fill="#ffa000"/>
+</g>
+<g transform="translate(96.67, 184)" filter="url(#cp-glow)">
+  <circle cx="0" cy="0" r="9" fill="#69f0ae" opacity="0.85"/>
+  <circle cx="0" cy="0" r="5" fill="white" opacity="0.7"/>
+  <circle cx="0" cy="0" r="2.5" fill="#00c853"/>
+</g>
+<g transform="translate(183.33, 184)" filter="url(#cp-glow)">
+  <circle cx="0" cy="0" r="9" fill="#40c4ff" opacity="0.85"/>
+  <circle cx="0" cy="0" r="5" fill="white" opacity="0.7"/>
+  <circle cx="0" cy="0" r="2.5" fill="#0091ea"/>
+</g>
+<!-- BIG flower corner top-left -->
+<g transform="translate(7, 7)" filter="url(#cp-glow)">
+  <ellipse cx="0" cy="-10" rx="6" ry="9" fill="#ff8a80" opacity="0.8"/>
+  <ellipse cx="0" cy="-10" rx="6" ry="9" fill="#ff4081" opacity="0.7" transform="rotate(72)"/>
+  <ellipse cx="0" cy="-10" rx="6" ry="9" fill="#ff8a80" opacity="0.8" transform="rotate(144)"/>
+  <ellipse cx="0" cy="-10" rx="6" ry="9" fill="#ff4081" opacity="0.7" transform="rotate(216)"/>
+  <ellipse cx="0" cy="-10" rx="6" ry="9" fill="#ff8a80" opacity="0.8" transform="rotate(288)"/>
+  <circle cx="0" cy="0" r="4" fill="#fff9c4"/>
+  <circle cx="0" cy="0" r="2" fill="#ffd740"/>
+</g>
+<!-- BIG star corner top-right -->
+<g transform="translate(273, 7)" filter="url(#cp-glow)">
+  <path d="M 0 -12 L 3 -3 L 12 0 L 3 3 L 0 12 L -3 3 L -12 0 L -3 -3 Z" fill="#ff4081" opacity="0.85"/>
+  <circle cx="0" cy="0" r="3.5" fill="#ff8a80"/>
+</g>
+<!-- BIG star corner bottom-left -->
+<g transform="translate(7, 274)" filter="url(#cp-glow)">
+  <path d="M 0 -12 L 3 -3 L 12 0 L 3 3 L 0 12 L -3 3 L -12 0 L -3 -3 Z" fill="#7c4dff" opacity="0.85"/>
+  <circle cx="0" cy="0" r="3.5" fill="#b388ff"/>
+</g>
+<!-- BIG flower corner bottom-right -->
+<g transform="translate(273, 274)" filter="url(#cp-glow)">
+  <ellipse cx="0" cy="-10" rx="6" ry="9" fill="#ffab40" opacity="0.8"/>
+  <ellipse cx="0" cy="-10" rx="6" ry="9" fill="#ff6d00" opacity="0.7" transform="rotate(72)"/>
+  <ellipse cx="0" cy="-10" rx="6" ry="9" fill="#ffab40" opacity="0.8" transform="rotate(144)"/>
+  <ellipse cx="0" cy="-10" rx="6" ry="9" fill="#ff6d00" opacity="0.7" transform="rotate(216)"/>
+  <ellipse cx="0" cy="-10" rx="6" ry="9" fill="#ffab40" opacity="0.8" transform="rotate(288)"/>
+  <circle cx="0" cy="0" r="4" fill="#fff9c4"/>
+  <circle cx="0" cy="0" r="2" fill="#ffd740"/>
+</g>
+<!-- Mid-border big dots -->
+<circle cx="53" cy="7" r="6" fill="#ffab40" opacity="0.65"/>
+<circle cx="140" cy="7" r="6" fill="#69f0ae" opacity="0.65"/>
+<circle cx="227" cy="7" r="6" fill="#7c4dff" opacity="0.65"/>
+<circle cx="53" cy="274" r="6" fill="#40c4ff" opacity="0.65"/>
+<circle cx="140" cy="274" r="6" fill="#ff8a80" opacity="0.65"/>
+<circle cx="227" cy="274" r="6" fill="#ffd740" opacity="0.65"/>
+<circle cx="7" cy="140" r="6" fill="#69f0ae" opacity="0.65"/>
+<circle cx="273" cy="140" r="6" fill="#ff4081" opacity="0.65"/>
+</svg>

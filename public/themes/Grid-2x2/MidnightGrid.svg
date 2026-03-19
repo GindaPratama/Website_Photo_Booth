@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+<defs>
+  <linearGradient id="mg-nav" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0a0f1e"/>
+    <stop offset="100%" stop-color="#121824"/>
+  </linearGradient>
+  <filter id="mg-gf">
+    <feGaussianBlur stdDeviation="2.5" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<path fill-rule="evenodd" fill="url(#mg-nav)" d="
+  M 0 0 H 240 V 240 H 0 Z
+  M 12 12 V 117 H 117 V 12 Z
+  M 123 12 V 117 H 228 V 12 Z
+  M 12 123 V 228 H 117 V 123 Z
+  M 123 123 V 228 H 228 V 123 Z
+"/>
+<!-- Gold borders -->
+<rect x="0" y="0" width="240" height="2" fill="#c9a84c"/>
+<rect x="0" y="238" width="240" height="2" fill="#c9a84c"/>
+<rect x="0" y="0" width="2" height="240" fill="#c9a84c"/>
+<rect x="238" y="0" width="2" height="240" fill="#c9a84c"/>
+<!-- BIG gold star corners -->
+<g transform="translate(7, 7)" filter="url(#mg-gf)">
+  <path d="M 0 -16 L 4 -4 L 16 0 L 4 4 L 0 16 L -4 4 L -16 0 L -4 -4 Z" fill="#ffd700" opacity="0.9"/>
+</g>
+<g transform="translate(233, 7)" filter="url(#mg-gf)">
+  <path d="M 0 -16 L 4 -4 L 16 0 L 4 4 L 0 16 L -4 4 L -16 0 L -4 -4 Z" fill="#ffd700" opacity="0.9"/>
+</g>
+<g transform="translate(7, 233)" filter="url(#mg-gf)">
+  <path d="M 0 -16 L 4 -4 L 16 0 L 4 4 L 0 16 L -4 4 L -16 0 L -4 -4 Z" fill="#ffd700" opacity="0.9"/>
+</g>
+<g transform="translate(233, 233)" filter="url(#mg-gf)">
+  <path d="M 0 -16 L 4 -4 L 16 0 L 4 4 L 0 16 L -4 4 L -16 0 L -4 -4 Z" fill="#ffd700" opacity="0.9"/>
+</g>
+<!-- BIG center ornament -->
+<g transform="translate(120, 120)" filter="url(#mg-gf)">
+  <path d="M 0 -18 L 4.5 -4.5 L 18 0 L 4.5 4.5 L 0 18 L -4.5 4.5 L -18 0 L -4.5 -4.5 Z" fill="#c9a84c" opacity="0.85"/>
+  <circle cx="0" cy="0" r="6" fill="#0a0f1e"/>
+  <circle cx="0" cy="0" r="3" fill="#ffd700"/>
+</g>
+<!-- Gold filigree grid lines -->
+<rect x="117.5" y="2" width="5" height="236" fill="#c9a84c" opacity="0.25"/>
+<rect x="2" y="117.5" width="236" height="5" fill="#c9a84c" opacity="0.25"/>
+<!-- Mid-border stars -->
+<g transform="translate(120, 7)" filter="url(#mg-gf)">
+  <path d="M 0 -10 L 2.5 -2.5 L 10 0 L 2.5 2.5 L 0 10 L -2.5 2.5 L -10 0 L -2.5 -2.5 Z" fill="#ffd700" opacity="0.8"/>
+</g>
+<g transform="translate(120, 233)" filter="url(#mg-gf)">
+  <path d="M 0 -10 L 2.5 -2.5 L 10 0 L 2.5 2.5 L 0 10 L -2.5 2.5 L -10 0 L -2.5 -2.5 Z" fill="#ffd700" opacity="0.8"/>
+</g>
+<g transform="translate(7, 120)" filter="url(#mg-gf)">
+  <path d="M 0 -10 L 2.5 -2.5 L 10 0 L 2.5 2.5 L 0 10 L -2.5 2.5 L -10 0 L -2.5 -2.5 Z" fill="#ffd700" opacity="0.8"/>
+</g>
+<g transform="translate(233, 120)" filter="url(#mg-gf)">
+  <path d="M 0 -10 L 2.5 -2.5 L 10 0 L 2.5 2.5 L 0 10 L -2.5 2.5 L -10 0 L -2.5 -2.5 Z" fill="#ffd700" opacity="0.8"/>
+</g>
+<!-- Inner thin gold border -->
+<rect x="5" y="5" width="230" height="0.7" fill="#c9a84c" opacity="0.35"/>
+<rect x="5" y="234.3" width="230" height="0.7" fill="#c9a84c" opacity="0.35"/>
+</svg>

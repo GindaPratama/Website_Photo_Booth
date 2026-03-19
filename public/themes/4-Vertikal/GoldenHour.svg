@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 510">
+<defs>
+  <linearGradient id="gh-bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#ff8f00"/>
+    <stop offset="50%" stop-color="#f57c00"/>
+    <stop offset="100%" stop-color="#e65100"/>
+  </linearGradient>
+  <filter id="gh-glow">
+    <feGaussianBlur stdDeviation="2.5" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<path fill-rule="evenodd" fill="url(#gh-bg)" d="
+  M 0 0 H 180 V 510 H 0 Z
+  M 12 12 V 129 H 168 V 12 Z
+  M 12 135 V 252 H 168 V 135 Z
+  M 12 258 V 375 H 168 V 258 Z
+  M 12 381 V 498 H 168 V 381 Z
+"/>
+<rect x="0" y="0" width="180" height="1.5" fill="#ffe082" opacity="0.7"/>
+<rect x="0" y="508.5" width="180" height="1.5" fill="#ffe082" opacity="0.7"/>
+<rect x="0" y="0" width="1.5" height="510" fill="#ffe082" opacity="0.7"/>
+<rect x="178.5" y="0" width="1.5" height="510" fill="#ffe082" opacity="0.7"/>
+
+<!-- BIG sun left top -->
+<g transform="translate(7, 8)" filter="url(#gh-glow)">
+  <circle cx="0" cy="0" r="20" fill="#ffe082" opacity="0.8"/>
+  <circle cx="0" cy="0" r="13" fill="#ffca28"/>
+  <line x1="0" y1="-24" x2="0" y2="-28" stroke="#ffe082" stroke-width="3" stroke-linecap="round"/>
+  <line x1="0" y1="24" x2="0" y2="28" stroke="#ffe082" stroke-width="3" stroke-linecap="round"/>
+  <line x1="-24" y1="0" x2="-28" y2="0" stroke="#ffe082" stroke-width="3" stroke-linecap="round"/>
+  <line x1="24" y1="0" x2="28" y2="0" stroke="#ffe082" stroke-width="3" stroke-linecap="round"/>
+  <line x1="-17" y1="-17" x2="-20" y2="-20" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="17" y1="17" x2="20" y2="20" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="-17" y1="17" x2="-20" y2="20" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="17" y1="-17" x2="20" y2="-20" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+</g>
+<!-- BIG sun right top -->
+<g transform="translate(173, 8)" filter="url(#gh-glow)">
+  <circle cx="0" cy="0" r="16" fill="#ffe082" opacity="0.75"/>
+  <circle cx="0" cy="0" r="10" fill="#ffca28"/>
+  <line x1="0" y1="-20" x2="0" y2="-23" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="0" y1="20" x2="0" y2="23" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="-20" y1="0" x2="-23" y2="0" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="20" y1="0" x2="23" y2="0" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="-14" y1="-14" x2="-16" y2="-16" stroke="#ffe082" stroke-width="2" stroke-linecap="round"/>
+  <line x1="14" y1="14" x2="16" y2="16" stroke="#ffe082" stroke-width="2" stroke-linecap="round"/>
+  <line x1="-14" y1="14" x2="-16" y2="16" stroke="#ffe082" stroke-width="2" stroke-linecap="round"/>
+  <line x1="14" y1="-14" x2="16" y2="-16" stroke="#ffe082" stroke-width="2" stroke-linecap="round"/>
+</g>
+
+<!-- Big sunburst between photos left -->
+<g transform="translate(7, 131)" filter="url(#gh-glow)">
+  <path d="M 0 -16 L 3.5 -3.5 L 16 0 L 3.5 3.5 L 0 16 L -3.5 3.5 L -16 0 L -3.5 -3.5 Z" fill="#ffe082" opacity="0.85"/>
+  <circle cx="0" cy="0" r="4" fill="#ff8f00"/>
+</g>
+<g transform="translate(173, 131)" filter="url(#gh-glow)">
+  <path d="M 0 -16 L 3.5 -3.5 L 16 0 L 3.5 3.5 L 0 16 L -3.5 3.5 L -16 0 L -3.5 -3.5 Z" fill="#ffe082" opacity="0.85"/>
+  <circle cx="0" cy="0" r="4" fill="#ff8f00"/>
+</g>
+<g transform="translate(7, 254)" filter="url(#gh-glow)">
+  <path d="M 0 -14 L 3.5 -3.5 L 14 0 L 3.5 3.5 L 0 14 L -3.5 3.5 L -14 0 L -3.5 -3.5 Z" fill="#ffca28" opacity="0.85"/>
+  <circle cx="0" cy="0" r="3.5" fill="#f57c00"/>
+</g>
+<g transform="translate(173, 254)" filter="url(#gh-glow)">
+  <path d="M 0 -14 L 3.5 -3.5 L 14 0 L 3.5 3.5 L 0 14 L -3.5 3.5 L -14 0 L -3.5 -3.5 Z" fill="#ffca28" opacity="0.85"/>
+  <circle cx="0" cy="0" r="3.5" fill="#f57c00"/>
+</g>
+<g transform="translate(7, 377)" filter="url(#gh-glow)">
+  <path d="M 0 -12 L 3 -3 L 12 0 L 3 3 L 0 12 L -3 3 L -12 0 L -3 -3 Z" fill="#ffe082" opacity="0.8"/>
+  <circle cx="0" cy="0" r="3" fill="#e65100"/>
+</g>
+<g transform="translate(173, 377)" filter="url(#gh-glow)">
+  <path d="M 0 -12 L 3 -3 L 12 0 L 3 3 L 0 12 L -3 3 L -12 0 L -3 -3 Z" fill="#ffe082" opacity="0.8"/>
+  <circle cx="0" cy="0" r="3" fill="#e65100"/>
+</g>
+
+<!-- Mid-strip suns -->
+<g transform="translate(7, 70)" filter="url(#gh-glow)">
+  <circle cx="0" cy="0" r="10" fill="#ffe082" opacity="0.7"/>
+  <circle cx="0" cy="0" r="6" fill="#ffca28" opacity="0.8"/>
+</g>
+<g transform="translate(173, 193)" filter="url(#gh-glow)">
+  <circle cx="0" cy="0" r="10" fill="#ffe082" opacity="0.65"/>
+  <circle cx="0" cy="0" r="6" fill="#ffca28" opacity="0.75"/>
+</g>
+<g transform="translate(7, 316)" filter="url(#gh-glow)">
+  <circle cx="0" cy="0" r="10" fill="#ffe082" opacity="0.65"/>
+  <circle cx="0" cy="0" r="6" fill="#ffca28" opacity="0.75"/>
+</g>
+<g transform="translate(173, 440)" filter="url(#gh-glow)">
+  <circle cx="0" cy="0" r="9" fill="#ffe082" opacity="0.6"/>
+  <circle cx="0" cy="0" r="5" fill="#ffca28" opacity="0.7"/>
+</g>
+<g transform="translate(7, 440)" filter="url(#gh-glow)">
+  <circle cx="0" cy="0" r="9" fill="#ffe082" opacity="0.6"/>
+  <circle cx="0" cy="0" r="5" fill="#ffca28" opacity="0.7"/>
+</g>
+<g transform="translate(173, 316)" filter="url(#gh-glow)">
+  <circle cx="0" cy="0" r="10" fill="#ffe082" opacity="0.65"/>
+  <circle cx="0" cy="0" r="6" fill="#ffca28" opacity="0.75"/>
+</g>
+
+<!-- Bottom corners -->
+<g transform="translate(7, 502)" filter="url(#gh-glow)">
+  <circle cx="0" cy="0" r="14" fill="#ffe082" opacity="0.7"/>
+  <circle cx="0" cy="0" r="8" fill="#ffca28"/>
+  <line x1="0" y1="-17" x2="0" y2="-20" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="0" y1="17" x2="0" y2="20" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="-17" y1="0" x2="-20" y2="0" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="17" y1="0" x2="20" y2="0" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+</g>
+<g transform="translate(173, 502)" filter="url(#gh-glow)">
+  <circle cx="0" cy="0" r="14" fill="#ffe082" opacity="0.7"/>
+  <circle cx="0" cy="0" r="8" fill="#ffca28"/>
+  <line x1="0" y1="-17" x2="0" y2="-20" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="0" y1="17" x2="0" y2="20" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="-17" y1="0" x2="-20" y2="0" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="17" y1="0" x2="20" y2="0" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+</g>
+</svg>

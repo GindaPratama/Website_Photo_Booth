@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 510">
+<defs>
+  <linearGradient id="nb-bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#050010"/>
+    <stop offset="100%" stop-color="#0a0020"/>
+  </linearGradient>
+  <filter id="nb-glow-pink">
+    <feGaussianBlur stdDeviation="3" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="nb-glow-cyan">
+    <feGaussianBlur stdDeviation="3" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<path fill-rule="evenodd" fill="url(#nb-bg)" d="
+  M 0 0 H 180 V 510 H 0 Z
+  M 12 12 V 129 H 168 V 12 Z
+  M 12 135 V 252 H 168 V 135 Z
+  M 12 258 V 375 H 168 V 258 Z
+  M 12 381 V 498 H 168 V 381 Z
+"/>
+<rect x="0" y="0" width="180" height="2" fill="#ff00cc" filter="url(#nb-glow-pink)" opacity="0.9"/>
+<rect x="0" y="508" width="180" height="2" fill="#ff00cc" filter="url(#nb-glow-pink)" opacity="0.9"/>
+<rect x="0" y="0" width="2" height="510" fill="#00ffff" filter="url(#nb-glow-cyan)" opacity="0.9"/>
+<rect x="178" y="0" width="2" height="510" fill="#00ffff" filter="url(#nb-glow-cyan)" opacity="0.9"/>
+<path d="M 90 2 L 98 -6 L 94 2 L 102 -2 L 90 8 L 97 0 L 86 5 Z" fill="#ff00cc" filter="url(#nb-glow-pink)" transform="translate(0,4)" opacity="0.95"/>
+<path d="M 90 2 L 100 7 L 90 12 L 80 7 Z" fill="#00ffff" filter="url(#nb-glow-cyan)" opacity="0.85"/>
+<g transform="translate(14, 7)" filter="url(#nb-glow-pink)">
+  <path d="M 0 -10 L 2.5 -2.5 L 10 0 L 2.5 2.5 L 0 10 L -2.5 2.5 L -10 0 L -2.5 -2.5 Z" fill="#ff00cc" opacity="0.9"/>
+</g>
+<g transform="translate(166, 7)" filter="url(#nb-glow-cyan)">
+  <path d="M 0 -10 L 2.5 -2.5 L 10 0 L 2.5 2.5 L 0 10 L -2.5 2.5 L -10 0 L -2.5 -2.5 Z" fill="#00ffff" opacity="0.9"/>
+</g>
+<path d="M 7 65 L 11 48 L 9 65 L 14 53 L 7 80 L 11 67 L 5 77 Z" fill="#ff00cc" filter="url(#nb-glow-pink)" opacity="0.9"/>
+<g transform="translate(7, 131)" filter="url(#nb-glow-cyan)">
+  <rect x="-2" y="-12" width="4" height="24" fill="#00ffff" rx="2" opacity="0.85"/>
+  <rect x="-12" y="-2" width="24" height="4" fill="#00ffff" rx="2" opacity="0.85"/>
+</g>
+<g transform="translate(7, 254)" filter="url(#nb-glow-pink)">
+  <path d="M 0 -11 L 3 -3 L 11 0 L 3 3 L 0 11 L -3 3 L -11 0 L -3 -3 Z" fill="#ff00cc" opacity="0.9"/>
+</g>
+<path d="M 7 378 L 11 363 L 9 378 L 14 366 L 7 392 L 11 380 L 5 390 Z" fill="#00ffff" filter="url(#nb-glow-cyan)" opacity="0.9"/>
+<g transform="translate(7, 193)" filter="url(#nb-glow-cyan)">
+  <path d="M 0 -10 L 2.5 -2.5 L 10 0 L 2.5 2.5 L 0 10 L -2.5 2.5 L -10 0 L -2.5 -2.5 Z" fill="#00ffff" opacity="0.7"/>
+</g>
+<g transform="translate(7, 440)" filter="url(#nb-glow-pink)">
+  <path d="M 0 -10 L 2.5 -2.5 L 10 0 L 2.5 2.5 L 0 10 L -2.5 2.5 L -10 0 L -2.5 -2.5 Z" fill="#ff00cc" opacity="0.7"/>
+</g>
+<path d="M 173 65 L 177 48 L 175 65 L 180 53 L 173 80 L 177 67 L 171 77 Z" fill="#00ffff" filter="url(#nb-glow-cyan)" opacity="0.9"/>
+<g transform="translate(173, 131)" filter="url(#nb-glow-pink)">
+  <rect x="-2" y="-12" width="4" height="24" fill="#ff00cc" rx="2" opacity="0.85"/>
+  <rect x="-12" y="-2" width="24" height="4" fill="#ff00cc" rx="2" opacity="0.85"/>
+</g>
+<g transform="translate(173, 254)" filter="url(#nb-glow-cyan)">
+  <path d="M 0 -11 L 3 -3 L 11 0 L 3 3 L 0 11 L -3 3 L -11 0 L -3 -3 Z" fill="#00ffff" opacity="0.9"/>
+</g>
+<path d="M 173 378 L 177 363 L 175 378 L 180 366 L 173 392 L 177 380 L 171 390 Z" fill="#ff00cc" filter="url(#nb-glow-pink)" opacity="0.9"/>
+<g transform="translate(173, 193)" filter="url(#nb-glow-pink)">
+  <path d="M 0 -10 L 2.5 -2.5 L 10 0 L 2.5 2.5 L 0 10 L -2.5 2.5 L -10 0 L -2.5 -2.5 Z" fill="#ff00cc" opacity="0.7"/>
+</g>
+<g transform="translate(173, 440)" filter="url(#nb-glow-cyan)">
+  <path d="M 0 -10 L 2.5 -2.5 L 10 0 L 2.5 2.5 L 0 10 L -2.5 2.5 L -10 0 L -2.5 -2.5 Z" fill="#00ffff" opacity="0.7"/>
+</g>
+<!-- Bottom decorations - NO text -->
+<g transform="translate(90, 503)" filter="url(#nb-glow-pink)">
+  <path d="M 0 -8 L 2 -2 L 8 0 L 2 2 L 0 8 L -2 2 L -8 0 L -2 -2 Z" fill="#ff00cc" opacity="0.9"/>
+</g>
+<path d="M 90 501 L 98 505 L 90 509 L 82 505 Z" fill="#00ffff" filter="url(#nb-glow-cyan)" opacity="0.85"/>
+<g transform="translate(14, 503)" filter="url(#nb-glow-cyan)">
+  <path d="M 0 -8 L 2 -2 L 8 0 L 2 2 L 0 8 L -2 2 L -8 0 L -2 -2 Z" fill="#00ffff" opacity="0.9"/>
+</g>
+<g transform="translate(166, 503)" filter="url(#nb-glow-pink)">
+  <path d="M 0 -8 L 2 -2 L 8 0 L 2 2 L 0 8 L -2 2 L -8 0 L -2 -2 Z" fill="#ff00cc" opacity="0.9"/>
+</g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+  <defs>
+    <pattern id="hearts" width="50" height="50" patternUnits="userSpaceOnUse">
+      <rect width="50" height="50" fill="white" opacity="0"/>
+      <path d="M25 40 C25 40,10 28,10 19 C10 13,14 9,19 9 C22 9,24.5 11,25 14 C25.5 11,28 9,31 9 C36 9,40 13,40 19 C40 28,25 40,25 40Z"
+            fill="#ff8fab" opacity="0.55"/>
+      <path d="M6 8 C6 8,2 5,2 3 C2 1.5,3 1,4 1 C4.5 1,5 1.5,5 2 C5 1.5,5.5 1,6 1 C7 1,8 1.5,8 3 C8 5,6 8,6 8Z" transform="translate(0,0)" fill="#ffc8dd" opacity="0.4"/>
+      <path d="M6 8 C6 8,2 5,2 3 C2 1.5,3 1,4 1 C4.5 1,5 1.5,5 2 C5 1.5,5.5 1,6 1 C7 1,8 1.5,8 3 C8 5,6 8,6 8Z" transform="translate(38,35)" fill="#ffc8dd" opacity="0.4"/>
+      <path d="M6 8 C6 8,2 5,2 3 C2 1.5,3 1,4 1 C4.5 1,5 1.5,5 2 C5 1.5,5.5 1,6 1 C7 1,8 1.5,8 3 C8 5,6 8,6 8Z" transform="translate(38,0)" fill="#ffc8dd" opacity="0.4"/>
+      <path d="M6 8 C6 8,2 5,2 3 C2 1.5,3 1,4 1 C4.5 1,5 1.5,5 2 C5 1.5,5.5 1,6 1 C7 1,8 1.5,8 3 C8 5,6 8,6 8Z" transform="translate(0,35)" fill="#ffc8dd" opacity="0.4"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="400" fill="url(#hearts)"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+  <defs>
+    <pattern id="stripes" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="20" height="20" fill="white" opacity="0"/>
+      <rect width="8" height="20" fill="#bfdbfe" opacity="0.55"/>
+      <rect x="12" width="8" height="20" fill="#ddd6fe" opacity="0.4"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="400" fill="url(#stripes)"/>
+</svg>

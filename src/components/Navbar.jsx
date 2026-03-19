@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 import { Link, useLocation } from "react-router-dom";
 import BeautySnapIcon from "../assets/BeautySnapIcon.svg";
 import { useState, useEffect } from "react";
@@ -65,7 +66,6 @@ const Navbar = () => {
               Beauty<span className="text-rose-500">Snap</span>
             </span>
           </Link>
-
           {/* ── Desktop Nav Links ── */}
           <div className="hidden md:flex items-center gap-1">
             {NAV_LINKS.map((item) => {
@@ -91,18 +91,6 @@ const Navbar = () => {
                 </Link>
               );
             })}
-          </div>
-
-          {/* ── Desktop CTA ── */}
-          <div className="hidden md:block">
-            <Link to="/capture">
-              <button className="relative overflow-hidden bg-gradient-to-r from-rose-500 to-pink-500 text-white px-5 py-2 rounded-full font-bold text-sm shadow-lg shadow-rose-200 hover:shadow-rose-300 hover:scale-105 transition-all duration-300 group">
-                <span className="relative z-10 flex items-center gap-1.5">
-                  <span>📸</span> Mulai Foto
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-rose-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </button>
-            </Link>
           </div>
 
           {/* ── Mobile: CTA kecil + Hamburger ── */}

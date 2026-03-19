@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+  <defs>
+    <pattern id="zigzag" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect width="40" height="20" fill="white" opacity="0"/>
+      <polyline points="0,10 10,0 20,10 30,0 40,10" fill="none" stroke="#f9a8d4" stroke-width="2.5" opacity="0.6"/>
+      <polyline points="0,20 10,10 20,20 30,10 40,20" fill="none" stroke="#c084fc" stroke-width="2" opacity="0.45"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="400" fill="url(#zigzag)"/>
+</svg>

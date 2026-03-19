@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 340">
+<defs>
+  <linearGradient id="nn-bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0a0010"/>
+    <stop offset="100%" stop-color="#050008"/>
+  </linearGradient>
+  <filter id="nn-pink">
+    <feGaussianBlur stdDeviation="3" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="nn-cyan">
+    <feGaussianBlur stdDeviation="3" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<path fill-rule="evenodd" fill="url(#nn-bg)" d="
+  M 0 0 H 280 V 340 H 0 Z
+  M 12 12 V 116 H 134 V 12 Z
+  M 146 12 V 116 H 268 V 12 Z
+  M 12 128 V 232 H 134 V 128 Z
+  M 146 128 V 232 H 268 V 128 Z
+  M 12 244 V 328 H 134 V 244 Z
+  M 146 244 V 328 H 268 V 244 Z
+"/>
+<rect x="0" y="0" width="280" height="2" fill="#ff00cc" filter="url(#nn-pink)" opacity="0.85"/>
+<rect x="0" y="338" width="280" height="2" fill="#ff00cc" filter="url(#nn-pink)" opacity="0.85"/>
+<rect x="0" y="0" width="2" height="340" fill="#00ffff" filter="url(#nn-cyan)" opacity="0.85"/>
+<rect x="278" y="0" width="2" height="340" fill="#00ffff" filter="url(#nn-cyan)" opacity="0.85"/>
+
+<!-- BIG neon top-left star -->
+<g transform="translate(7, 7)" filter="url(#nn-pink)">
+  <path d="M 0 -14 L 3.5 -3.5 L 14 0 L 3.5 3.5 L 0 14 L -3.5 3.5 L -14 0 L -3.5 -3.5 Z" fill="#ff00cc" opacity="0.9"/>
+  <circle cx="0" cy="0" r="3.5" fill="#ff69b4"/>
+</g>
+<!-- BIG neon top-right star -->
+<g transform="translate(273, 7)" filter="url(#nn-cyan)">
+  <path d="M 0 -14 L 3.5 -3.5 L 14 0 L 3.5 3.5 L 0 14 L -3.5 3.5 L -14 0 L -3.5 -3.5 Z" fill="#00ffff" opacity="0.9"/>
+  <circle cx="0" cy="0" r="3.5" fill="#80ffff"/>
+</g>
+
+<!-- BIG neon cross between rows 1-2 left -->
+<g transform="translate(7, 122)" filter="url(#nn-pink)">
+  <rect x="-3" y="-16" width="6" height="32" fill="#ff00cc" rx="3" opacity="0.85"/>
+  <rect x="-16" y="-3" width="32" height="6" fill="#ff00cc" rx="3" opacity="0.85"/>
+</g>
+<!-- BIG neon diamond right row 1-2 -->
+<g transform="translate(273, 122)" filter="url(#nn-cyan)">
+  <path d="M 0 -16 L 16 0 L 0 16 L -16 0 Z" fill="none" stroke="#00ffff" stroke-width="2" opacity="0.85"/>
+  <path d="M 0 -8 L 8 0 L 0 8 L -8 0 Z" fill="#00ffff" opacity="0.6"/>
+</g>
+
+<!-- BIG neon cross between rows 2-3 right -->
+<g transform="translate(273, 238)" filter="url(#nn-pink)">
+  <rect x="-3" y="-16" width="6" height="32" fill="#ff00cc" rx="3" opacity="0.85"/>
+  <rect x="-16" y="-3" width="32" height="6" fill="#ff00cc" rx="3" opacity="0.85"/>
+</g>
+<!-- BIG neon diamond left row 2-3 -->
+<g transform="translate(7, 238)" filter="url(#nn-cyan)">
+  <path d="M 0 -16 L 16 0 L 0 16 L -16 0 Z" fill="none" stroke="#00ffff" stroke-width="2" opacity="0.85"/>
+  <path d="M 0 -8 L 8 0 L 0 8 L -8 0 Z" fill="#00ffff" opacity="0.6"/>
+</g>
+
+<!-- Bottom stars -->
+<g transform="translate(7, 333)" filter="url(#nn-cyan)">
+  <path d="M 0 -12 L 3 -3 L 12 0 L 3 3 L 0 12 L -3 3 L -12 0 L -3 -3 Z" fill="#00ffff" opacity="0.85"/>
+</g>
+<g transform="translate(273, 333)" filter="url(#nn-pink)">
+  <path d="M 0 -12 L 3 -3 L 12 0 L 3 3 L 0 12 L -3 3 L -12 0 L -3 -3 Z" fill="#ff00cc" opacity="0.85"/>
+</g>
+<!-- Neon grid lines -->
+<rect x="140.5" y="2" width="5" height="336" fill="#ff00cc" opacity="0.12"/>
+<rect x="2" y="122.5" width="276" height="5" fill="#00ffff" opacity="0.12"/>
+<rect x="2" y="238.5" width="276" height="5" fill="#ff00cc" opacity="0.12"/>
+<!-- Mid column decorations -->
+<g transform="translate(140, 64)" filter="url(#nn-pink)">
+  <path d="M 0 -8 L 2 -2 L 8 0 L 2 2 L 0 8 L -2 2 L -8 0 L -2 -2 Z" fill="#ff00cc" opacity="0.7"/>
+</g>
+<g transform="translate(140, 180)" filter="url(#nn-cyan)">
+  <path d="M 0 -8 L 2 -2 L 8 0 L 2 2 L 0 8 L -2 2 L -8 0 L -2 -2 Z" fill="#00ffff" opacity="0.7"/>
+</g>
+<g transform="translate(140, 286)" filter="url(#nn-pink)">
+  <path d="M 0 -8 L 2 -2 L 8 0 L 2 2 L 0 8 L -2 2 L -8 0 L -2 -2 Z" fill="#ff00cc" opacity="0.7"/>
+</g>
+</svg>

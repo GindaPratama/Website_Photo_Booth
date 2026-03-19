@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+  <defs>
+    <pattern id="stars" width="50" height="50" patternUnits="userSpaceOnUse">
+      <rect width="50" height="50" fill="white" opacity="0"/>
+      <!-- Big star center -->
+      <polygon points="25,5 27.9,18.5 40,18.5 30.5,27 33.4,40.5 25,33 16.6,40.5 19.5,27 10,18.5 22.1,18.5"
+               fill="#ffd700" opacity="0.6"/>
+      <!-- Tiny stars corners -->
+      <polygon points="4,2 4.7,4.5 7,4.5 5.2,5.8 5.9,8.3 4,7 2.1,8.3 2.8,5.8 1,4.5 3.3,4.5" fill="#ffd700" opacity="0.35"/>
+      <polygon points="4,2 4.7,4.5 7,4.5 5.2,5.8 5.9,8.3 4,7 2.1,8.3 2.8,5.8 1,4.5 3.3,4.5" transform="translate(42,40)" fill="#ffd700" opacity="0.35"/>
+      <polygon points="4,2 4.7,4.5 7,4.5 5.2,5.8 5.9,8.3 4,7 2.1,8.3 2.8,5.8 1,4.5 3.3,4.5" transform="translate(42,0)" fill="#ffd700" opacity="0.35"/>
+      <polygon points="4,2 4.7,4.5 7,4.5 5.2,5.8 5.9,8.3 4,7 2.1,8.3 2.8,5.8 1,4.5 3.3,4.5" transform="translate(0,40)" fill="#ffd700" opacity="0.35"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="400" fill="url(#stars)"/>
+</svg>

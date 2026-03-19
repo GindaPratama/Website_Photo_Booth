@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 125">
+  <defs>
+    <linearGradient id="sc-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff7043"/>
+      <stop offset="50%" stop-color="#ff8a65"/>
+      <stop offset="100%" stop-color="#ffab40"/>
+    </linearGradient>
+    <filter id="sc-glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Frame base -->
+  <path fill-rule="evenodd" fill="url(#sc-grad)" d="
+    M 0 0 H 300 V 125 H 0 Z
+    M 12 12 V 113 H 146 V 12 Z
+    M 154 12 V 113 H 288 V 12 Z
+  "/>
+  <rect x="0" y="0" width="300" height="1.5" fill="white" opacity="0.6"/>
+  <rect x="0" y="123.5" width="300" height="1.5" fill="white" opacity="0.6"/>
+  <rect x="0" y="0" width="1.5" height="125" fill="white" opacity="0.6"/>
+  <rect x="298.5" y="0" width="1.5" height="125" fill="white" opacity="0.6"/>
+
+  <!-- BIG sun left strip -->
+  <g transform="translate(7, 62)" filter="url(#sc-glow)">
+    <circle cx="0" cy="0" r="18" fill="#ffe082" opacity="0.85"/>
+    <circle cx="0" cy="0" r="12" fill="#ffca28"/>
+    <!-- Sun rays -->
+    <line x1="0" y1="-22" x2="0" y2="-26" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="0" y1="22" x2="0" y2="26" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-22" y1="0" x2="-26" y2="0" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="22" y1="0" x2="26" y2="0" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-15.5" y1="-15.5" x2="-18" y2="-18" stroke="#ffe082" stroke-width="2" stroke-linecap="round"/>
+    <line x1="15.5" y1="15.5" x2="18" y2="18" stroke="#ffe082" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-15.5" y1="15.5" x2="-18" y2="18" stroke="#ffe082" stroke-width="2" stroke-linecap="round"/>
+    <line x1="15.5" y1="-15.5" x2="18" y2="-18" stroke="#ffe082" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <!-- BIG sun right strip -->
+  <g transform="translate(293, 62)" filter="url(#sc-glow)">
+    <circle cx="0" cy="0" r="16" fill="#ffe082" opacity="0.85"/>
+    <circle cx="0" cy="0" r="10" fill="#ffca28"/>
+    <line x1="0" y1="-20" x2="0" y2="-23" stroke="#ffe082" stroke-width="2" stroke-linecap="round"/>
+    <line x1="0" y1="20" x2="0" y2="23" stroke="#ffe082" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-20" y1="0" x2="-23" y2="0" stroke="#ffe082" stroke-width="2" stroke-linecap="round"/>
+    <line x1="20" y1="0" x2="23" y2="0" stroke="#ffe082" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-14" y1="-14" x2="-16" y2="-16" stroke="#ffe082" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="14" y1="14" x2="16" y2="16" stroke="#ffe082" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="-14" y1="14" x2="-16" y2="16" stroke="#ffe082" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="14" y1="-14" x2="16" y2="-16" stroke="#ffe082" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <!-- Big wave top border -->
+  <path d="M 0 7 Q 10 2, 20 7 Q 30 12, 40 7 Q 50 2, 60 7 Q 70 12, 80 7 Q 90 2, 100 7 Q 110 12, 120 7 Q 130 2, 140 7" fill="none" stroke="white" stroke-width="1.5" opacity="0.5"/>
+  <path d="M 160 7 Q 170 2,180 7 Q 190 12, 200 7 Q 210 2, 220 7 Q 230 12, 240 7 Q 250 2, 260 7 Q 270 12, 280 7 Q 290 2, 300 7" fill="none" stroke="white" stroke-width="1.5" opacity="0.5"/>
+  <!-- Big wave bottom border -->
+  <path d="M 0 118 Q 10 113, 20 118 Q 30 123, 40 118 Q 50 113, 60 118 Q 70 123, 80 118 Q 90 113, 100 118 Q 110 123, 120 118 Q 130 113, 140 118" fill="none" stroke="white" stroke-width="1.5" opacity="0.5"/>
+  <path d="M 160 118 Q 170 113, 180 118 Q 190 123, 200 118 Q 210 113, 220 118 Q 230 123, 240 118 Q 250 113, 260 118 Q 270 123, 280 118 Q 290 113, 300 118" fill="none" stroke="white" stroke-width="1.5" opacity="0.5"/>
+  <!-- Center divider coconut palm -->
+  <rect x="149.5" y="5" width="1" height="115" fill="white" opacity="0.3"/>
+  <g transform="translate(150, 62)">
+    <rect x="-2" y="-15" width="4" height="30" fill="#795548" rx="1"/>
+    <!-- Palm leaves -->
+    <path d="M 0 -15 Q -20 -30, -10 -15 Q 0 -22, 0 -15 Z" fill="#4caf50" opacity="0.8"/>
+    <path d="M 0 -15 Q 20 -30, 10 -15 Q 0 -22, 0 -15 Z" fill="#388e3c" opacity="0.8"/>
+    <path d="M 0 -15 Q -15 -20, -15 -10 Q -5 -17, 0 -15 Z" fill="#4caf50" opacity="0.7"/>
+    <path d="M 0 -15 Q 15 -20, 15 -10 Q 5 -17, 0 -15 Z" fill="#388e3c" opacity="0.7"/>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <defs>
+    <linearGradient id="i" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#1a237e"/>
+    </linearGradient>
+    <filter id="g"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="60" height="60" rx="8" fill="url(#i)"/>
+  <rect x="0" y="0" width="60" height="60" rx="8" fill="none" stroke="#5c6bc0" stroke-width="1.5" opacity="0.7"/>
+  <!-- Crescent moon -->
+  <g transform="translate(18,22)" filter="url(#g)">
+    <circle cx="0" cy="0" r="16" fill="#fdd835" opacity="0.9"/>
+    <circle cx="7" cy="-5" r="12" fill="#0d1b2a"/>
+  </g>
+  <!-- Big snowflake right -->
+  <g transform="translate(45,40)" filter="url(#g)">
+    <line x1="0" y1="-14" x2="0" y2="14" stroke="#7986cb" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-14" y1="0" x2="14" y2="0" stroke="#7986cb" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-9.9" y1="-9.9" x2="9.9" y2="9.9" stroke="#5c6bc0" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="9.9" y1="-9.9" x2="-9.9" y2="9.9" stroke="#5c6bc0" stroke-width="1.8" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="3.5" fill="#3949ab"/>
+    <circle cx="0" cy="0" r="1.8" fill="#c5cae9"/>
+  </g>
+  <!-- Stars scattered -->
+  <g transform="translate(48,12)" filter="url(#g)">
+    <path d="M0-8 2-2 8 0 2 2 0 8-2 2-8 0-2-2Z" fill="#c5cae9" opacity="0.8"/>
+  </g>
+  <g transform="translate(10,48)" filter="url(#g)">
+    <path d="M0-6 1.5-1.5 6 0 1.5 1.5 0 6-1.5 1.5-6 0-1.5-1.5Z" fill="#fdd835" opacity="0.7"/>
+  </g>
+</svg>

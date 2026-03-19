@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 const LAYOUT_OPTIONS = [
   { id: "2-horizontal", label: "2 Side", max: 2 },
   { id: "3-vertical", label: "3 Down", max: 3 },
+  { id: "3-vertical-p", label: "3 Down (P)", max: 3 },
   { id: "4-vertical", label: "4 Down", max: 4 },
   { id: "4-grid", label: "2×2", max: 4 },
   { id: "6-grid", label: "2×3", max: 6 },
@@ -29,6 +30,8 @@ export const getAspectRatioClass = (layoutId) => {
       return "aspect-[4/3]";
     case "3-vertical":
       return "aspect-[4/3]";
+    case "3-vertical-p":
+      return "aspect-[3/4]";
     case "4-vertical":
       return "aspect-[4/3]";
     case "4-grid":
@@ -45,6 +48,8 @@ export const getAspectRatioClass = (layoutId) => {
 const getCameraMaxWidth = (layoutId) => {
   switch (layoutId) {
     case "6-grid":
+      return "max-w-[240px]";
+    case "3-vertical-p":
       return "max-w-[240px]";
     case "4-grid":
     case "9-grid":
@@ -69,6 +74,13 @@ const getLayoutIcon = (id, isActive) => {
         <rect x="1" y="1" width="12" height="5" rx="1.5" fill={fill} />
         <rect x="1" y="7.5" width="12" height="5" rx="1.5" fill={fill} />
         <rect x="1" y="14" width="12" height="5" rx="1.5" fill={fill} />
+      </svg>
+    ),
+    "3-vertical-p": (
+      <svg viewBox="0 0 14 20" className={size} fill="none">
+        <rect x="3" y="1" width="8" height="5" rx="1.5" fill={fill} />
+        <rect x="3" y="7.5" width="8" height="5" rx="1.5" fill={fill} />
+        <rect x="3" y="14" width="8" height="5" rx="1.5" fill={fill} />
       </svg>
     ),
     "4-vertical": (

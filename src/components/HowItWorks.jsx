@@ -1,3 +1,7 @@
+import Step1 from "../assets/thumbsnail/Step1.svg";
+// import Step2 from "../assets/thumbsnail/Step2.svg";
+// import Step3 from "../assets/thumbsnail/Step3.svg";
+
 const steps = [
   {
     number: "01",
@@ -8,6 +12,7 @@ const steps = [
     accent: "text-rose-500",
     title: "Ambil Foto",
     desc: "Pilih layout, atur filter favoritmu, lalu tekan Start. Timer 3 detik memberikan kamu waktu berpose. Foto diambil otomatis secara berurutan!",
+    src: Step1,
   },
   {
     number: "02",
@@ -54,10 +59,6 @@ const HowItWorks = () => (
           <br />
           <span className="text-rose-500">Foto Strip Impianmu</span>
         </h2>
-        <p className="text-gray-500 max-w-xs sm:max-w-md mx-auto text-sm sm:text-base leading-relaxed">
-          Dari kamera ke hasil jadi — semuanya selesai dalam hitungan menit,
-          langsung di browser kamu.
-        </p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 relative">
@@ -81,13 +82,21 @@ const HowItWorks = () => (
                 {step.number}
               </span>
             </div>
-
-            <div className="bg-white/70 rounded-2xl aspect-[4/3] mb-5 sm:mb-6 flex items-center justify-center border border-white shadow-sm">
-              <span className="text-gray-300 text-xs sm:text-sm font-medium">
-                Gambar Step {i + 1}
-              </span>
+            <div className="bg-white/70 rounded-2xl aspect-[4/3] mb-5 sm:mb-6 overflow-hidden border border-white shadow-sm">
+              {step.src ? (
+                <img
+                  src={step.src}
+                  alt={step.title}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center">
+                  <span className="text-gray-300 text-xs sm:text-sm font-medium">
+                    Gambar Step {i + 1}
+                  </span>
+                </div>
+              )}
             </div>
-
             <h3
               className={`text-lg sm:text-xl font-extrabold mb-2 sm:mb-3 ${step.accent}`}
             >
@@ -105,7 +114,7 @@ const HowItWorks = () => (
           href="/capture"
           className="inline-flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-rose-500 to-pink-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-bold text-sm sm:text-base shadow-xl shadow-rose-200 hover:-translate-y-1 hover:scale-105 transition-all duration-300"
         >
-          Coba Sekarang — Gratis! <span>✨</span>
+          Coba Sekarang — Gratis!
         </a>
       </div>
     </div>

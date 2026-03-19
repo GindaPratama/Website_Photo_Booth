@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 510">
+<defs>
+  <linearGradient id="pm-bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#1a0a2e"/>
+    <stop offset="100%" stop-color="#0d0120"/>
+  </linearGradient>
+  <filter id="pm-glow">
+    <feGaussianBlur stdDeviation="2.5" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<path fill-rule="evenodd" fill="url(#pm-bg)" d="
+  M 0 0 H 180 V 510 H 0 Z
+  M 12 12 V 129 H 168 V 12 Z
+  M 12 135 V 252 H 168 V 135 Z
+  M 12 258 V 375 H 168 V 258 Z
+  M 12 381 V 498 H 168 V 381 Z
+"/>
+<rect x="0" y="0" width="180" height="1.5" fill="#7c4dff" opacity="0.7"/>
+<rect x="0" y="508.5" width="180" height="1.5" fill="#7c4dff" opacity="0.7"/>
+<rect x="0" y="0" width="1.5" height="510" fill="#7c4dff" opacity="0.7"/>
+<rect x="178.5" y="0" width="1.5" height="510" fill="#7c4dff" opacity="0.7"/>
+
+<!-- BIG crescent moon top-left -->
+<g transform="translate(8, 8)" filter="url(#pm-glow)">
+  <circle cx="0" cy="0" r="18" fill="#fdd835" opacity="0.85"/>
+  <circle cx="8" cy="-6" r="14" fill="#1a0a2e"/>
+</g>
+<!-- BIG full star top-right -->
+<g transform="translate(172, 8)" filter="url(#pm-glow)">
+  <path d="M 0 -18 L 4.5 -4.5 L 18 0 L 4.5 4.5 L 0 18 L -4.5 4.5 L -18 0 L -4.5 -4.5 Z" fill="#e8eaf6" opacity="0.9"/>
+  <circle cx="0" cy="0" r="4.5" fill="#ce93d8"/>
+</g>
+
+<!-- BIG diamond between photo 1-2 left -->
+<g transform="translate(7, 131)" filter="url(#pm-glow)">
+  <path d="M 0 -18 L 14 0 L 0 18 L -14 0 Z" fill="#9575cd" opacity="0.5"/>
+  <path d="M 0 -18 L 14 0 L 0 18 L -14 0 Z" fill="none" stroke="#ce93d8" stroke-width="1.5"/>
+  <path d="M 0 -10 L 8 0 L 0 10 L -8 0 Z" fill="#ce93d8" opacity="0.7"/>
+  <circle cx="0" cy="0" r="3" fill="white" opacity="0.5"/>
+</g>
+<!-- BIG diamond between photo 1-2 right -->
+<g transform="translate(173, 131)" filter="url(#pm-glow)">
+  <path d="M 0 -18 L 14 0 L 0 18 L -14 0 Z" fill="#9575cd" opacity="0.5"/>
+  <path d="M 0 -18 L 14 0 L 0 18 L -14 0 Z" fill="none" stroke="#ce93d8" stroke-width="1.5"/>
+  <path d="M 0 -10 L 8 0 L 0 10 L -8 0 Z" fill="#ce93d8" opacity="0.7"/>
+  <circle cx="0" cy="0" r="3" fill="white" opacity="0.5"/>
+</g>
+
+<!-- BIG moon half left between photo 2-3 -->
+<g transform="translate(7, 254)" filter="url(#pm-glow)">
+  <path d="M 0 -16 A 16 16 0 0 0 0 16 A 8 16 0 0 1 0 -16 Z" fill="#fdd835" opacity="0.85"/>
+</g>
+<!-- BIG star right between photo 2-3 -->
+<g transform="translate(173, 254)" filter="url(#pm-glow)">
+  <path d="M 0 -14 L 3.5 -3.5 L 14 0 L 3.5 3.5 L 0 14 L -3.5 3.5 L -14 0 L -3.5 -3.5 Z" fill="#ffd740" opacity="0.85"/>
+  <circle cx="0" cy="0" r="3.5" fill="#fff176"/>
+</g>
+
+<!-- BIG 8-star between photo 3-4 left -->
+<g transform="translate(7, 377)" filter="url(#pm-glow)">
+  <path d="M 0 -16 L 4 -4 L 16 0 L 4 4 L 0 16 L -4 4 L -16 0 L -4 -4 Z" fill="#b39ddb" opacity="0.85"/>
+  <circle cx="0" cy="0" r="4" fill="#7e57c2"/>
+</g>
+<!-- BIG crescent right between photo 3-4 -->
+<g transform="translate(173, 377)" filter="url(#pm-glow)">
+  <circle cx="0" cy="0" r="16" fill="#fdd835" opacity="0.8"/>
+  <circle cx="7" cy="-5" r="12" fill="#0d0120"/>
+</g>
+
+<!-- BIG corner bottom -->
+<g transform="translate(8, 502)" filter="url(#pm-glow)">
+  <path d="M 0 -15 L 3.5 -3.5 L 15 0 L 3.5 3.5 L 0 15 L -3.5 3.5 L -15 0 L -3.5 -3.5 Z" fill="#e8eaf6" opacity="0.8"/>
+  <circle cx="0" cy="0" r="3.5" fill="#9575cd"/>
+</g>
+<g transform="translate(172, 502)" filter="url(#pm-glow)">
+  <circle cx="0" cy="0" r="14" fill="#fdd835" opacity="0.8"/>
+  <circle cx="6" cy="-4" r="10" fill="#1a0a2e"/>
+</g>
+
+<!-- Mid strip big stars -->
+<g transform="translate(7, 70)" filter="url(#pm-glow)">
+  <path d="M 0 -12 L 3 -3 L 12 0 L 3 3 L 0 12 L -3 3 L -12 0 L -3 -3 Z" fill="#ce93d8" opacity="0.7"/>
+</g>
+<g transform="translate(173, 70)" filter="url(#pm-glow)">
+  <path d="M 0 -12 L 3 -3 L 12 0 L 3 3 L 0 12 L -3 3 L -12 0 L -3 -3 Z" fill="#fdd835" opacity="0.65"/>
+</g>
+<g transform="translate(7, 193)" filter="url(#pm-glow)">
+  <path d="M 0 -10 L 2.5 -2.5 L 10 0 L 2.5 2.5 L 0 10 L -2.5 2.5 L -10 0 L -2.5 -2.5 Z" fill="#b39ddb" opacity="0.65"/>
+</g>
+<g transform="translate(173, 193)" filter="url(#pm-glow)">
+  <path d="M 0 -10 L 2.5 -2.5 L 10 0 L 2.5 2.5 L 0 10 L -2.5 2.5 L -10 0 L -2.5 -2.5 Z" fill="#ce93d8" opacity="0.65"/>
+</g>
+<g transform="translate(7, 440)" filter="url(#pm-glow)">
+  <path d="M 0 -10 L 2.5 -2.5 L 10 0 L 2.5 2.5 L 0 10 L -2.5 2.5 L -10 0 L -2.5 -2.5 Z" fill="#fdd835" opacity="0.6"/>
+</g>
+<g transform="translate(173, 440)" filter="url(#pm-glow)">
+  <path d="M 0 -10 L 2.5 -2.5 L 10 0 L 2.5 2.5 L 0 10 L -2.5 2.5 L -10 0 L -2.5 -2.5 Z" fill="#b39ddb" opacity="0.6"/>
+</g>
+</svg>
