@@ -1,4 +1,4 @@
-import iconKamera from "../assets/IconSnap.png";
+import PictStripIcon from "../assets/PictStripIcon.svg";
 import { Link } from "react-router-dom";
 
 const Footer = () => (
@@ -16,18 +16,18 @@ const Footer = () => (
         {/* Brand */}
         <div className="sm:col-span-2 lg:col-span-1">
           <Link to="/" className="flex items-center gap-2.5 mb-4 group w-fit">
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+            <div className="w-9 h-9 flex items-center justify-center shadow-lg shadow-pink-500/20 rounded-[10px] overflow-hidden group-hover:scale-110 transition-transform duration-300">
               <img
-                src={iconKamera}
+                src={PictStripIcon}
                 alt="Logo"
-                className="w-4 h-4 object-contain brightness-0 invert"
+                className="w-full h-full object-contain"
               />
             </div>
             <span
               className="text-lg font-black text-white tracking-tight"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
-              Pic<span className="text-rose-400">Strip</span>
+              Pict<span className="text-rose-400">Strip</span>
             </span>
           </Link>
           <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
@@ -61,7 +61,10 @@ const Footer = () => (
                   <Link
                     to={item.path}
                     onClick={(e) => {
-                      if (item.path === "/" && window.location.pathname === "/") {
+                      if (
+                        item.path === "/" &&
+                        window.location.pathname === "/"
+                      ) {
                         e.preventDefault();
                         window.scrollTo({ top: 0, behavior: "smooth" });
                       } else {

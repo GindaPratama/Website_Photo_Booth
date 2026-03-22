@@ -1,5 +1,5 @@
-import IconSnap from "../assets/IconSnap.png";
 import MockupHero from "../assets/MockupHero.png";
+import PictStripIcon from "../assets/PictStripIcon.svg";
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
@@ -85,9 +85,9 @@ const Hero = () => {
           className="w-full sm:w-auto group relative overflow-hidden bg-gradient-to-r from-rose-500 via-pink-500 to-rose-400 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-extrabold text-sm sm:text-base shadow-xl shadow-rose-200 hover:shadow-rose-300 hover:-translate-y-1 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3"
         >
           <img
-            src={IconSnap}
+            src={PictStripIcon}
             alt=""
-            className="w-5 h-5 object-contain brightness-0 invert"
+            className="w-6 h-6 object-contain rounded-md shadow-sm"
           />
           Start Capture Sekarang
           <span className="group-hover:translate-x-1 transition-transform duration-200">
@@ -139,7 +139,7 @@ const Hero = () => {
           />
           <img
             src={MockupHero}
-            alt="PicStrip Preview"
+            alt="PictStrip Preview"
             className="relative mx-auto w-full h-auto object-contain drop-shadow-2xl hover:scale-[1.02] transition-transform duration-700"
           />
         </div>

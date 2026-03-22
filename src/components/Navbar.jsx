@@ -1,12 +1,11 @@
 /* eslint-disable react-hooks/set-state-in-effect */
 import { Link, useLocation } from "react-router-dom";
-import BeautySnapIcon from "../assets/BeautySnapIcon.svg";
 import { useState, useEffect } from "react";
+import PictStripIcon from "../assets/PictStripIcon.svg";
 
 const NAV_LINKS = [
   { label: "Beranda", to: "/" },
   { label: "Tentang", to: "/tentang" },
-  { label: "Kontak", to: "/kontak" },
 ];
 
 const Navbar = () => {
@@ -52,18 +51,18 @@ const Navbar = () => {
             to="/"
             className="flex items-center gap-2 sm:gap-2.5 group shrink-0"
           >
-            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center shadow-md shadow-rose-200 group-hover:scale-110 transition-transform duration-300">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md shadow-pink-200/50 rounded-[10px] overflow-hidden">
               <img
-                src={BeautySnapIcon}
-                alt="PicStrip Logo"
-                className="w-4 h-4 sm:w-5 sm:h-5 object-contain brightness-0 invert"
+                src={PictStripIcon}
+                alt="PictStrip Logo"
+                className="w-full h-full object-contain"
               />
             </div>
             <span
               className="text-base sm:text-lg font-black tracking-tight text-gray-900"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
-              Pic<span className="text-rose-500">Strip</span>
+              Pict<span className="text-rose-500">Strip</span>
             </span>
           </Link>
           {/* ── Desktop Nav Links ── */}

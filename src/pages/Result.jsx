@@ -32,30 +32,92 @@ const FILTER_CLASSES = {
 };
 
 const SOLID_COLORS = [
+  // Basic & Neutral
   "bg-white",
   "bg-black",
+  "bg-gray-200",
+  "bg-slate-800",
+
+  // Pastels
   "bg-[#ffb6c1]",
   "bg-[#add8e6]",
   "bg-[#e6e6fa]",
   "bg-[#fffacd]",
   "bg-[#ffebcd]",
+  "bg-[#ffc0cb]",
+  "bg-rose-100",
+  "bg-purple-100",
+  "bg-green-100",
+  "bg-blue-100",
+  "bg-yellow-100",
+
+  // Deep / Dark Colors
   "bg-[#2e8b57]",
-  "bg-[#808080]",
-  "bg-[#000000]",
   "bg-[#191970]",
   "bg-[#800000]",
-  "bg-[#ffc0cb]",
   "bg-[#3e2723]",
+  "bg-indigo-900",
+  "bg-emerald-900",
+  "bg-rose-900",
+
+  // Vibrant Colors
+  "bg-rose-400",
+  "bg-orange-400",
+  "bg-amber-400",
+  "bg-lime-400",
+  "bg-emerald-400",
+  "bg-teal-400",
+  "bg-cyan-400",
+  "bg-blue-400",
+  "bg-indigo-400",
+  "bg-violet-400",
+  "bg-fuchsia-400",
+  "bg-pink-400",
 ];
 
 const PATTERN_COLORS = [
+  // Pastel Gradients
   "bg-gradient-to-r from-pink-200 to-pink-100",
   "bg-gradient-to-tr from-green-200 to-blue-200",
-  "bg-gradient-to-bl from-gray-700 to-black",
-  "bg-gradient-to-r from-gray-100 to-gray-300",
   "bg-gradient-to-br from-blue-300 to-purple-400",
   "bg-gradient-to-tl from-yellow-200 to-green-200",
   "bg-gradient-to-r from-purple-300 to-pink-300",
+  "bg-gradient-to-bl from-rose-200 to-orange-200",
+  "bg-gradient-to-b from-teal-200 to-emerald-200",
+  "bg-gradient-to-t from-cyan-200 to-blue-200",
+  "bg-gradient-to-r from-fuchsia-200 to-pink-200",
+  "bg-gradient-to-bl from-yellow-100 to-amber-200",
+
+  // Vibrant Gradients
+  "bg-gradient-to-r from-rose-400 to-red-500",
+  "bg-gradient-to-br from-orange-400 to-rose-400",
+  "bg-gradient-to-tr from-yellow-400 to-orange-500",
+  "bg-gradient-to-bl from-lime-400 to-green-500",
+  "bg-gradient-to-r from-emerald-400 to-cyan-400",
+  "bg-gradient-to-b from-cyan-500 to-blue-500",
+  "bg-gradient-to-tl from-indigo-500 to-purple-500",
+  "bg-gradient-to-r from-fuchsia-500 to-pink-500",
+  "bg-gradient-to-bl from-violet-400 to-fuchsia-500",
+
+  // Dark / Elegant Gradients
+  "bg-gradient-to-bl from-gray-700 to-black",
+  "bg-gradient-to-r from-slate-900 to-slate-700",
+  "bg-gradient-to-b from-zinc-800 to-zinc-900",
+  "bg-gradient-to-br from-indigo-900 to-slate-900",
+  "bg-gradient-to-bl from-rose-900 to-black",
+  "bg-gradient-to-tr from-emerald-900 to-black",
+
+  // Monochromatic Gradients
+  "bg-gradient-to-r from-gray-100 to-gray-300",
+  "bg-gradient-to-b from-slate-300 to-slate-400",
+  "bg-gradient-to-tr from-zinc-200 to-zinc-400",
+
+  // Specialty / Aesthetic Mixes (3 Colors)
+  "bg-gradient-to-br from-rose-100 via-purple-200 to-blue-200",
+  "bg-gradient-to-tr from-orange-100 via-rose-100 to-purple-200",
+  "bg-gradient-to-bl from-green-100 via-teal-100 to-cyan-200",
+  "bg-gradient-to-r from-yellow-200 via-pink-200 to-pink-400",
+  "bg-gradient-to-t from-indigo-200 via-purple-200 to-pink-200",
 ];
 
 // ── PATTERN / MOTIF LIST ──
@@ -101,7 +163,6 @@ const PATTERN_LIST = [
 const THEME_META = {
   // Label: "" untuk memberikan nama tema
   midnightGold: {
-    label: "Midnight Gold",
     defaultColor: "bg-[#0d1b2a]",
     thumbnail: "/icon/2-Horizontal/MidnightGold.svg",
     files: { "2-horizontal": "/themes/2-Horizontal/MidnightGold.svg" },
@@ -539,8 +600,10 @@ const Result = () => {
   // ── Bentuk State ──
   const [globalShape, setGlobalShape] = useState("none");
   const [radiusAmount, setRadiusAmount] = useState(16);
+  const [globalScale, setGlobalScale] = useState(100);
   const [perFrameShapes, setPerFrameShapes] = useState({});
   const [perFrameAmounts, setPerFrameAmounts] = useState({});
+  const [perFrameScales, setPerFrameScales] = useState({});
   const [selectedFrame, setSelectedFrame] = useState(null);
 
   const [activeSection, setActiveSection] = useState("desain");
@@ -561,6 +624,11 @@ const Result = () => {
     const amount = frameAmount !== undefined ? frameAmount : radiusAmount;
 
     return getClipPath(shape, amount);
+  };
+
+  const getPhotoScale = (index) => {
+    const frameScale = perFrameScales[index];
+    return frameScale !== undefined ? frameScale : globalScale;
   };
 
   // ── Stiker: Add ──
@@ -670,7 +738,7 @@ const Result = () => {
       const dataUrl = await toPng(el, { pixelRatio: 3 });
       const a = document.createElement("a");
       a.href = dataUrl;
-      a.download = `PicStrip-${Date.now()}.png`;
+      a.download = `PictStrip-${Date.now()}.png`;
       a.click();
     } catch (e) {
       console.error(e);
@@ -796,6 +864,10 @@ const Result = () => {
                       src={src}
                       alt={`Foto ${i + 1}`}
                       className={`w-full h-full object-cover ${FILTER_CLASSES[activeFilter]}`}
+                      style={{
+                        transform: `scale(${getPhotoScale(i) / 100})`,
+                        transformOrigin: "center",
+                      }}
                     />
                   </div>
                 ))}
@@ -1139,6 +1211,30 @@ const Result = () => {
                   </div>
                 </div>
 
+                {/* -- Global Scale -- */}
+                {["love", "star", "hexagon", "circle"].includes(
+                  globalShape,
+                ) && (
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <p className="text-[10px] font-semibold text-rose-300 uppercase tracking-widest">
+                        Zoom / Ukuran Foto
+                      </p>
+                      <span className="text-[11px] font-medium text-rose-400 bg-rose-50 px-2 py-0.5 rounded-full">
+                        {globalScale}%
+                      </span>
+                    </div>
+                    <input
+                      type="range"
+                      min={50}
+                      max={200}
+                      value={globalScale}
+                      onChange={(e) => setGlobalScale(Number(e.target.value))}
+                      className="w-full h-1.5 bg-rose-200 rounded-lg appearance-none cursor-pointer accent-rose-400 hover:accent-rose-500"
+                    />
+                  </div>
+                )}
+
                 {/* -- Per-Frame Shape (kalau lebih dari 1 foto) -- */}
                 {capturedImages.length > 1 && (
                   <div>
@@ -1195,6 +1291,11 @@ const Result = () => {
                                   return next;
                                 });
                                 setPerFrameAmounts((prev) => {
+                                  const next = { ...prev };
+                                  delete next[selectedFrame];
+                                  return next;
+                                });
+                                setPerFrameScales((prev) => {
                                   const next = { ...prev };
                                   delete next[selectedFrame];
                                   return next;
@@ -1267,6 +1368,42 @@ const Result = () => {
                                 }
                                 onChange={(e) => {
                                   setPerFrameAmounts((prev) => ({
+                                    ...prev,
+                                    [selectedFrame]: Number(e.target.value),
+                                  }));
+                                }}
+                                className="w-full h-1.5 bg-rose-200 rounded-lg appearance-none cursor-pointer accent-rose-400 hover:accent-rose-500"
+                              />
+                            </div>
+                          )}
+
+                        {perFrameShapes[selectedFrame] &&
+                          ["love", "star", "hexagon", "circle"].includes(
+                            perFrameShapes[selectedFrame],
+                          ) && (
+                            <div className="bg-rose-50/50 rounded-xl p-3 border border-pink-100 mt-2">
+                              <div className="flex justify-between items-center mb-2">
+                                <p className="text-[10px] font-medium text-rose-400">
+                                  Zoom Foto #{selectedFrame + 1}
+                                </p>
+                                <span className="text-[10px] text-rose-300">
+                                  {perFrameScales[selectedFrame] !== undefined
+                                    ? perFrameScales[selectedFrame]
+                                    : globalScale}
+                                  %
+                                </span>
+                              </div>
+                              <input
+                                type="range"
+                                min="50"
+                                max="200"
+                                value={
+                                  perFrameScales[selectedFrame] !== undefined
+                                    ? perFrameScales[selectedFrame]
+                                    : globalScale
+                                }
+                                onChange={(e) => {
+                                  setPerFrameScales((prev) => ({
                                     ...prev,
                                     [selectedFrame]: Number(e.target.value),
                                   }));

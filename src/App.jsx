@@ -3,7 +3,6 @@ import Home from "./pages/Home";
 import Capture from "./pages/Capture";
 import Result from "./pages/Result";
 import Tentang from "./pages/Tentang";
-import Kontak from "./pages/Kontak";
 import BackToTop from "./components/BackToTop";
 
 export default function App() {
@@ -14,7 +13,6 @@ export default function App() {
         <Route path="/capture" element={<Capture />} />
         <Route path="/result" element={<Result />} />
         <Route path="/tentang" element={<Tentang />} />
-        <Route path="/kontak" element={<Kontak />} />
       </Routes>
       <BackToTop />
     </BrowserRouter>

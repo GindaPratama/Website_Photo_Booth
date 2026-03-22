@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const values = [
   {
     emoji: "💖",
-    title: "Gratis untuk Semua",
-    desc: "Ekspresi diri tidak boleh dibatasi oleh biaya. Seluruh fitur PicStrip dapat dinikmati sepenuhnya secara umum dan gratis.",
+    title: "Gratis",
+    desc: "Ekspresi diri tidak boleh dibatasi oleh biaya. Seluruh fitur PictStrip dapat dinikmati sepenuhnya secara umum dan gratis.",
   },
   {
     emoji: "🔒",
@@ -21,7 +21,7 @@ const values = [
   {
     emoji: "📱",
     title: "Dimana Saja, Kapan Saja",
-    desc: "Mulai dari layar ponsel hingga layar komputer, PicStrip selalu tampil optimal, berjalan mulus, dan siap digunakan kapa pun.",
+    desc: "Mulai dari layar ponsel hingga layar komputer, PictStrip selalu tampil optimal, berjalan mulus, dan siap digunakan kapa pun.",
   },
 ];
 
@@ -51,7 +51,7 @@ const Tentang = () => {
           >
             Potret foto jadi lebih seru dengan{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-pink-500">
-              PicStrip
+              PictStrip
             </span>
           </h1>
 

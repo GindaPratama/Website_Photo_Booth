@@ -2,8 +2,8 @@ import { useState } from "react";
 
 const faqData = [
   {
-    q: "Apa itu PicStrip Online Photobooth?",
-    a: "PicStrip adalah platform photo booth digital berbasis web yang memungkinkan Anda untuk mengambil foto, menggunakan filter, menambahkan stiker, dan memilih bingkai layaknya di studio foto sungguhan, semua dapat diakses langsung dari peramban web (browser) Anda.",
+    q: "Apa itu PictStrip Online Photobooth?",
+    a: "PictStrip adalah platform photo booth digital berbasis web yang memungkinkan Anda untuk mengambil foto, menggunakan filter, menambahkan stiker, dan memilih bingkai layaknya di studio foto sungguhan, semua dapat diakses langsung dari peramban web (browser) Anda.",
     emoji: "✨",
   },
   {
@@ -13,7 +13,7 @@ const faqData = [
   },
   {
     q: "Apakah ada biaya yang dikenakan untuk menggunakan layanan ini?",
-    a: "Layanan PicStrip sepenuhnya gratis. Tidak ada biaya tersembunyi maupun sistem berbayar. Anda bebas untuk mengambil sesi foto dan mengunduh hasilnya sebanyak yang Anda inginkan.",
+    a: "Layanan PictStrip sepenuhnya gratis. Tidak ada biaya tersembunyi maupun sistem berbayar. Anda bebas untuk mengambil sesi foto dan mengunduh hasilnya sebanyak yang Anda inginkan.",
     emoji: "🎁",
   },
   {
@@ -23,7 +23,7 @@ const faqData = [
   },
   {
     q: "Apakah layanan ini dapat diakses melalui ponsel pintar (smartphone)?",
-    a: "Tentu saja. Situs web PicStrip dirancang secara responsif dan kompatibel dengan berbagai tampilan layar. Anda dapat menggunakannya di komputer jinjing (laptop), tablet, maupun ponsel pintar Anda dengan lancar.",
+    a: "Tentu saja. Situs web PictStrip dirancang secara responsif dan kompatibel dengan berbagai tampilan layar. Anda dapat menggunakannya di komputer jinjing (laptop), tablet, maupun ponsel pintar Anda dengan lancar.",
     emoji: "📱",
   },
 ];
@@ -53,7 +53,7 @@ const FAQ = () => {
             Ada Pertanyaan?
           </h2>
           <p className="text-gray-500 text-sm sm:text-base max-w-xs sm:max-w-sm mx-auto">
-            Berikut adalah jawaban untuk beberapa pertanyaan yang paling sering diajukan mengenai layanan PicStrip.
+            Berikut adalah jawaban untuk beberapa pertanyaan yang paling sering diajukan mengenai layanan PictStrip.
           </p>
         </div>
 

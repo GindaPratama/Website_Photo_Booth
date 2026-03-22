@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <!-- Background Gradient (Sesuai request) -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4F4F4" />
+      <stop offset="100%" stop-color="#FF2E93" />
+    </linearGradient>
+
+    <!-- Gradient Atas Kamera (Bubblegum Pink) -->
+    <linearGradient id="cam-top" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF80BF" />
+      <stop offset="100%" stop-color="#FF99CC" />
+    </linearGradient>
+
+    <!-- Gradient Ring Lensa (Vibrant Pink) -->
+    <linearGradient id="lens-ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3385" />
+      <stop offset="100%" stop-color="#FF66B2" />
+    </linearGradient>
+
+    <!-- Drop shadow super smooth untuk Kamera -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#D1005A" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Background Keren -->
+  <rect width="200" height="200" rx="48" fill="url(#bg-grad)" />
+
+  <!-- Aksen Floating Hearts ✨ (Dihapus) -->
+
+  <!-- Camera Group Utama -->
+  <g filter="url(#shadow)">
+    <!-- Tombol Jepret Layar (Yellow Pastel) -->
+    <rect x="130" y="45" width="22" height="15" rx="6" fill="#FFD166" />
+    
+    <!-- Dudukan Viewfinder / Flash Atas -->
+    <rect x="50" y="42" width="46" height="20" rx="10" fill="url(#cam-top)" />
+
+    <!-- Main Camera Body Bawah (Clean White) -->
+    <rect x="35" y="55" width="130" height="90" rx="26" fill="#FFFFFF" />
+
+    <!-- Main Camera Body Atas (Bubblegum Pink Curve) -->
+    <path d="M 35 95 L 35 81 A 26 26 0 0 1 61 55 H 139 A 26 26 0 0 1 165 81 L 165 95 Z" fill="url(#cam-top)" />
+
+    <!-- Garis Pemisah Halus (Highlight Line) -->
+    <line x1="35" y1="95" x2="165" y2="95" stroke="#FFE6F0" stroke-width="2.5" />
+
+    <!-- Cincin Dudukan Flash Cilik Kiri Atas -->
+    <circle cx="65" cy="75" r="9" fill="#FFFFFF" opacity="0.8" />
+    <circle cx="65" cy="75" r="5" fill="#FFD166" /> <!-- Little Flash -->
+
+    <!-- Cute Blush Kawaii (Pipi Merona) -->
+    <ellipse cx="60" cy="115" rx="10" ry="6" fill="#FF80BF" opacity="0.45" />
+    <ellipse cx="140" cy="115" rx="10" ry="6" fill="#FF80BF" opacity="0.45" />
+
+    <!-- Mulut Senyum Kawaii :3 -->
+    <path d="M 93 125 Q 100 132 107 125" stroke="#FF66B2" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+    <!-- Lensa Luar Putih Tebal -->
+    <circle cx="100" cy="100" r="34" fill="#FFFFFF" />
+    
+    <!-- Lensa Ring Tengah Pink -->
+    <circle cx="100" cy="100" r="29" fill="url(#lens-ring)" />
+    
+    <!-- Lensa Kaca Dalam (Cute Dark Plum/Purple) -->
+    <circle cx="100" cy="100" r="21" fill="#4B1E36" />
+
+    <!-- Highlight Mata / Kaca Lensa (Gaya Anime Kawaii) -->
+    <circle cx="92" cy="91" r="7" fill="#FFFFFF" />
+    <circle cx="107" cy="108" r="3" fill="#FFFFFF" />
+
+    <!-- Little Star Kesayangan ✨ -->
+    <path d="M 145 64 L 147 68 L 152 68 L 148 71 L 150 75 L 145 72 L 140 75 L 142 71 L 138 68 L 143 68 Z" fill="#FFFFFF" opacity="0.9" />
+  </g>
+</svg>

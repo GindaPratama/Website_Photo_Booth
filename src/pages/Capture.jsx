@@ -2,8 +2,7 @@
 import { useRef, useState, useCallback, useEffect, useMemo } from "react";
 import Navbar from "../components/Navbar";
 import Webcam from "react-webcam";
-import IconSnap from "../assets/IconSnap.png";
-import Next from "../assets/Next.png";
+import PictStripIcon from "../assets/PictStripIcon.svg";
 import { useNavigate } from "react-router-dom";
 
 const LAYOUT_OPTIONS = [
@@ -469,11 +468,18 @@ const Capture = () => {
                 }
                 className="flex-1 flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 text-white text-sm font-medium hover:opacity-90 transition-opacity shadow-sm shadow-pink-200"
               >
-                <img
-                  src={Next}
-                  alt="Berikutnya"
-                  className="w-4 h-4 object-contain"
-                />
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-4 h-4"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
                 Lanjut ke Hasil
               </button>
             ) : (
@@ -487,9 +493,9 @@ const Capture = () => {
                 }`}
               >
                 <img
-                  src={IconSnap}
+                  src={PictStripIcon}
                   alt="Kamera"
-                  className="w-4 h-4 object-contain"
+                  className="w-5 h-5 object-contain rounded-[4px] shadow-sm"
                 />
                 {isShooting ? "Memotret..." : "Mulai Foto"}
               </button>
