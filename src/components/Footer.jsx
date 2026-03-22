@@ -27,11 +27,11 @@ const Footer = () => (
               className="text-lg font-black text-white tracking-tight"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
-              Beauty<span className="text-rose-400">Snap</span>
+              Pic<span className="text-rose-400">Strip</span>
             </span>
           </Link>
           <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-            Platform photo booth digital yang membantu kamu mengabadikan momen
+            Platform photo booth digital yang membantu mengabadikan momen
             berharga dengan gaya estetik kekinian.
           </p>
         </div>
@@ -42,65 +42,41 @@ const Footer = () => (
             Navigasi
           </h4>
           <ul className="flex flex-col gap-2 sm:gap-3">
-            {["Beranda", "Tentang Kami", "Cara Kerja", "FAQ"].map((item) => (
-              <li key={item}>
-                <a
-                  href="#"
-                  className="text-gray-400 text-sm hover:text-rose-400 transition-colors duration-200 flex items-center gap-2 group"
-                >
-                  <span className="w-1 h-1 rounded-full bg-rose-500/0 group-hover:bg-rose-500 transition-all duration-200" />
-                  {item}
-                </a>
+            {[
+              { label: "Beranda", path: "/" },
+              { label: "Tentang Kami", path: "/tentang" },
+              { label: "Cara Kerja", path: "/#how-it-works" },
+              { label: "FAQ", path: "/#faq" },
+            ].map((item) => (
+              <li key={item.label}>
+                {item.path.startsWith("/#") ? (
+                  <a
+                    href={item.path}
+                    className="text-gray-400 text-sm hover:text-rose-400 transition-colors duration-200 flex items-center gap-2 group"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-rose-500/0 group-hover:bg-rose-500 transition-all duration-200" />
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    to={item.path}
+                    onClick={(e) => {
+                      if (item.path === "/" && window.location.pathname === "/") {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      } else {
+                        window.scrollTo(0, 0); // Reset scroll saat pindah halaman
+                      }
+                    }}
+                    className="text-gray-400 text-sm hover:text-rose-400 transition-colors duration-200 flex items-center gap-2 group"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-rose-500/0 group-hover:bg-rose-500 transition-all duration-200" />
+                    {item.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
-        </div>
-
-        {/* Social */}
-        <div>
-          <h4 className="text-white font-bold text-sm mb-4 sm:mb-5 tracking-wider uppercase">
-            Ikuti Kami
-          </h4>
-          <div className="flex gap-3 mb-5 sm:mb-6">
-            {[
-              { label: "Instagram", icon: "📸" },
-              { label: "TikTok", icon: "🎵" },
-              { label: "Twitter", icon: "🐦" },
-            ].map((s) => (
-              <a
-                key={s.label}
-                href="#"
-                className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-base sm:text-lg hover:bg-rose-500/20 hover:border-rose-500/30 transition-all duration-200 hover:scale-110"
-              >
-                {s.icon}
-              </a>
-            ))}
-          </div>
-          <Link
-            to="/capture"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-rose-500 to-pink-500 text-white text-xs sm:text-sm font-bold px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl shadow-lg shadow-rose-900/30 hover:scale-105 transition-all duration-200"
-          >
-            📸 Mulai Foto Gratis
-          </Link>
-        </div>
-      </div>
-
-      <div className="h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent mb-6 sm:mb-8" />
-
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
-        <p className="text-gray-500 text-xs">
-          © {new Date().getFullYear()} BeautySnap. Made with ❤️ in Indonesia.
-        </p>
-        <div className="flex gap-4 sm:gap-6">
-          {["Privacy Policy", "Terms of Service"].map((item) => (
-            <a
-              key={item}
-              href="#"
-              className="text-gray-500 text-xs hover:text-rose-400 transition-colors duration-200"
-            >
-              {item}
-            </a>
-          ))}
         </div>
       </div>
     </div>

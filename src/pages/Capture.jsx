@@ -3,7 +3,6 @@ import { useRef, useState, useCallback, useEffect, useMemo } from "react";
 import Navbar from "../components/Navbar";
 import Webcam from "react-webcam";
 import IconSnap from "../assets/IconSnap.png";
-import CameraReverse from "../assets/CameraReverse.png";
 import Next from "../assets/Next.png";
 import { useNavigate } from "react-router-dom";
 
@@ -163,6 +162,7 @@ const Capture = () => {
   const [isShooting, setIsShooting] = useState(false);
   const [activeFilter, setActiveFilter] = useState("Normal");
   const [flashEffect, setFlashEffect] = useState(false);
+  const [zoomedImage, setZoomedImage] = useState(null);
 
   const currentLayout = useMemo(
     () => LAYOUT_OPTIONS.find((l) => l.id === layoutId),
@@ -202,6 +202,16 @@ const Capture = () => {
       }
     }
   }, [capturedImages, isShooting, delayTime, currentLayout.max]);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape" && zoomedImage) {
+        setZoomedImage(null);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [zoomedImage]);
 
   const startShooting = () => {
     if (cameraError) {
@@ -450,19 +460,6 @@ const Capture = () => {
 
           {/* Action Buttons */}
           <div className="flex gap-2.5 w-full">
-            {capturedImages.length > 0 && (
-              <button
-                onClick={retake}
-                className="flex items-center justify-center px-4 py-2.5 rounded-xl bg-white border border-pink-100 text-rose-400 hover:border-rose-200 hover:text-rose-500 transition-all duration-150 shadow-sm"
-              >
-                <img
-                  src={CameraReverse}
-                  alt="Ulang"
-                  className="w-4 h-4 object-contain"
-                />
-              </button>
-            )}
-
             {isFinished ? (
               <button
                 onClick={() =>
@@ -497,6 +494,27 @@ const Capture = () => {
                 {isShooting ? "Memotret..." : "Mulai Foto"}
               </button>
             )}
+
+            {capturedImages.length > 0 && (
+              <button
+                onClick={retake}
+                className="flex items-center justify-center px-4 py-2.5 rounded-xl bg-white border border-pink-100 text-rose-500 hover:border-rose-200 hover:text-rose-600 transition-all duration-150 shadow-sm"
+                title="Foto Ulang"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-5 h-5"
+                >
+                  <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                  <path d="M3 3v5h5" />
+                </svg>
+              </button>
+            )}
           </div>
         </div>
 
@@ -507,9 +525,10 @@ const Capture = () => {
             return (
               <div
                 key={index}
+                onClick={() => captured && setZoomedImage(captured)}
                 className={`relative rounded-xl overflow-hidden ${getAspectRatioClass(layoutId)} shrink-0 transition-all duration-300 ${
                   captured
-                    ? "shadow-sm ring-2 ring-pink-200"
+                    ? "shadow-sm ring-2 ring-pink-200 cursor-pointer hover:scale-105"
                     : "border border-dashed border-pink-100 bg-white/60"
                 }`}
               >
@@ -538,6 +557,54 @@ const Capture = () => {
           })}
         </div>
       </main>
+
+      {/* ── ZOOM MODAL ── */}
+      {zoomedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 cursor-zoom-out"
+          onClick={() => setZoomedImage(null)}
+        >
+          <div 
+            className={`relative flex items-center justify-center w-[85vw] ${
+              layoutId === "3-vertical-p" || layoutId === "6-grid" 
+                ? "max-w-[280px] md:max-w-[320px]" 
+                : "max-w-[380px] md:max-w-[440px]"
+            }`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Tutup Button */}
+            <button
+              className="absolute -top-4 -right-4 translate-x-1/2 -translate-y-1/2 bg-white/20 hover:bg-rose-500 text-white rounded-full w-10 h-10 flex items-center justify-center backdrop-blur-md transition-all duration-200 z-10 shadow-lg hover:rotate-90 pointer-events-auto"
+              onClick={(e) => {
+                e.stopPropagation();
+                setZoomedImage(null);
+              }}
+              title="Tutup (Esc)"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-5 h-5"
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </button>
+            
+            <div className={`relative w-full overflow-hidden rounded-2xl shadow-2xl ${getAspectRatioClass(layoutId)}`}>
+              <img
+                src={zoomedImage}
+                alt="Zoomed"
+                className={`w-full h-full object-cover cursor-default pointer-events-auto ${FILTER_CLASSES[activeFilter]}`}
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

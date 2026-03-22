@@ -1,6 +1,6 @@
-import Step1 from "../assets/thumbsnail/Step1.svg";
-// import Step2 from "../assets/thumbsnail/Step2.svg";
-// import Step3 from "../assets/thumbsnail/Step3.svg";
+import step1 from "../assets/Steps/Step1.png";
+import step2 from "../assets/Steps/Step2.png";
+import step3 from "../assets/Steps/Step3.png";
 
 const steps = [
   {
@@ -10,9 +10,9 @@ const steps = [
     bg: "bg-rose-50",
     border: "border-rose-100",
     accent: "text-rose-500",
-    title: "Ambil Foto",
-    desc: "Pilih layout, atur filter favoritmu, lalu tekan Start. Timer 3 detik memberikan kamu waktu berpose. Foto diambil otomatis secara berurutan!",
-    src: Step1,
+    title: "Atur Filter",
+    desc: "Pilih efek visual favoritmu agar hasil foto strip makin catchy dan sesuai ekspektasimu.",
+    src: step1,
   },
   {
     number: "02",
@@ -21,8 +21,9 @@ const steps = [
     bg: "bg-purple-50",
     border: "border-purple-100",
     accent: "text-purple-500",
-    title: "Hias & Gaya",
-    desc: "Pilih warna frame, tambahkan stiker lucu, pilih desain tema, dan buat foto strip kamu jadi makin estetik dan personal.",
+    title: "Tata Letak Layout",
+    desc: "Atur posisi foto, pilih jumlah foto, dan sesuaikan layout sesuai seleramu.",
+    src: step2,
   },
   {
     number: "03",
@@ -31,8 +32,9 @@ const steps = [
     bg: "bg-orange-50",
     border: "border-orange-100",
     accent: "text-orange-500",
-    title: "Unduh & Bagikan",
-    desc: "Klik Unduh dan dapatkan foto strip berkualitas tinggi. Siap dibagikan ke Instagram, TikTok, atau disimpan sebagai kenangan!",
+    title: "Hias & Unduh",
+    desc: "Tambahkan stiker, teks, atau elemen dekoratif lainnya untuk mempercantik foto stripmu, Lalu unduh.",
+    src: step3,
   },
 ];
 

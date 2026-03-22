@@ -6,21 +6,21 @@ const contactMethods = [
   {
     emoji: "📧",
     label: "Email",
-    value: "hello@beautysnap.id",
+    value: "hello@picstrip.id",
     color: "from-rose-400 to-pink-400",
     desc: "Balasan dalam 1×24 jam",
   },
   {
     emoji: "📸",
     label: "Instagram",
-    value: "@beautysnap.id",
+    value: "@picstrip.id",
     color: "from-purple-400 to-pink-400",
     desc: "DM kami kapan saja",
   },
   {
     emoji: "🎵",
     label: "TikTok",
-    value: "@beautysnap",
+    value: "@picstrip",
     color: "from-orange-400 to-rose-400",
     desc: "Follow & tag kami",
   },
@@ -29,7 +29,7 @@ const contactMethods = [
 const faqs = [
   {
     q: "Bagaimana cara melaporkan bug?",
-    a: "Kirim email ke hello@beautysnap.id dengan subject 'Bug Report' dan jelaskan masalahnya secara detail.",
+    a: "Kirim email ke hello@picstrip.id dengan subject 'Bug Report' dan jelaskan masalahnya secara detail.",
   },
   {
     q: "Bisakah saya request fitur baru?",

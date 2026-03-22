@@ -21,7 +21,6 @@ const FILTER_CLASSES = {
   Cinematic: "contrast-125 saturate-50 brightness-90 hue-rotate-15",
   Neon: "saturate-200 contrast-125 hue-rotate-45",
   Sunset: "sepia-[.4] saturate-200 contrast-110 hue-rotate-[-15deg]",
-  // Tambahan filter baru
   Matte: "contrast-90 brightness-105 saturate-75 brightness-95",
   Chrome: "contrast-150 saturate-200 brightness-110",
   Dreamy: "brightness-115 contrast-85 saturate-80 blur-[0.3px]",
@@ -100,210 +99,219 @@ const PATTERN_LIST = [
 ];
 
 const THEME_META = {
-  // ── 2-Horizontal ──
+  // Label: "" untuk memberikan nama tema
   midnightGold: {
     label: "Midnight Gold",
     defaultColor: "bg-[#0d1b2a]",
     thumbnail: "/icon/2-Horizontal/MidnightGold.svg",
     files: { "2-horizontal": "/themes/2-Horizontal/MidnightGold.svg" },
   },
+
   sakuraBlossom: {
-    label: "Sakura",
     defaultColor: "bg-[#fce4ec]",
     thumbnail: "/icon/2-Horizontal/SakuraBlossom.svg",
     files: { "2-horizontal": "/themes/2-Horizontal/SakuraBlossom.svg" },
   },
+
   filmNoir: {
-    label: "Film Noir",
-    defaultColor: "bg-[#111111]",
-    thumbnail: "/icon/2-Horizontal/FilmNoir.svg",
-    files: { "2-horizontal": "/themes/2-Horizontal/FilmNoir.svg" },
+    defaultColor: "bg-[#000000]",
+    thumbnail: "/icon/FilmNoir.png",
+    files: {
+      "2-horizontal": "/themes/2-Horizontal/FilmNoir.svg",
+      "3-vertical": "/themes/3-Vertikal/FilmNoir.svg",
+      "3-vertical-p": "/themes/3-Vertikal-P/FilmsNoir.png",
+    },
   },
+
   summerCoral: {
-    label: "Summer",
     defaultColor: "bg-[#ff7043]",
     thumbnail: "/icon/2-Horizontal/SummerCoral.svg",
     files: { "2-horizontal": "/themes/2-Horizontal/SummerCoral.svg" },
   },
 
-  // ── 3-Vertikal Themes ──
   pinklove: {
-    label: "PinkLove",
     defaultColor: "bg-[#ff9fbb]",
-    thumbnail: "/icon/3-Vertikal/PinkLove.svg",
+    thumbnail: "/icon/PinkLove.png",
     files: {
       "2-horizontal": "/themes/2-Horizontal/PinkLove.png",
       "3-vertical": "/themes/3-Vertikal/PinkLove.svg",
-      "3-vertical-p": "/themes/3-Vertikal-P/PinkLove.svg",
+      "3-vertical-p": "/themes/3-Vertikal-P/PinkLove.png",
+    },
+    background: {
+      "3-vertical-p": "/themes/3-Vertikal-P/MotifPinkLove.svg",
     },
   },
+
   nailong: {
-    label: "Nailong",
     defaultColor: "bg-[#FFDE59]",
-    thumbnail: "/icon/3-Vertikal/Nailong.svg",
+    thumbnail: "/icon/Nailong.png",
     files: {
       "3-vertical": "/themes/3-Vertikal/Nailong.svg",
-      "3-vertical-p": "/themes/3-Vertikal-P/Nailong.svg",
+      "3-vertical-p": "/themes/3-Vertikal-P/Nailong.png",
     },
     background: {
-      "3-vertical-p": "/themes/3-Vertikal-P/BackgroundNailong.svg",
+      "3-vertical-p": "/themes/3-Vertikal-P/MotifNailong.svg",
     },
   },
+
+  crong: {
+    defaultColor: "bg-[#B2D234]",
+    thumbnail: "/icon/Crong.png",
+    files: {
+      "3-vertical-p": "/themes/3-Vertikal-P/Crong.png",
+    },
+    background: {
+      "3-vertical-p": "/themes/3-Vertikal-P/MotifPolkadotCrong.png",
+    },
+  },
+
+  spiderman: {
+    defaultColor: "bg-[#E63234]",
+    thumbnail: "icon/Spiderman.png",
+    files: {
+      "3-vertical-p": "/themes/3-Vertikal-P/Spiderman.png",
+    },
+    background: {
+      "3-vertical-p": "/themes/3-Vertikal-P/MotifMarvel.png",
+    },
+  },
+
+  pinkWhite: {
+    defaultColor: "bg-[#FFC0CB]",
+    thumbnail: "icon/PinkWhite.png",
+    files: {
+      "3-vertical-p": "/themes/3-Vertikal-P/PinkWhite.png",
+    },
+    background: {
+      "3-vertical-p": "/themes/3-Vertikal-P/MotifPinkWhite.png",
+    },
+  },
+
   bemine: {
-    label: "BeMine",
     defaultColor: "bg-[#FFEDEE]",
-    thumbnail: "/icon/3-Vertikal/BeMine.svg",
+    thumbnail: "/icon/BeMine.png",
     files: {
       "3-vertical": "/themes/3-Vertikal/BeMine.svg",
-      "3-vertical-p": "/themes/3-Vertikal-P/BeMine.svg",
+      "3-vertical-p": "/themes/3-Vertikal-P/BeMine.png",
     },
   },
+
   bluepink: {
-    label: "BluePink",
     defaultColor: "bg-[#D6EAF8]",
-    thumbnail: "/icon/3-Vertikal/BluePink.svg",
+    thumbnail: "/icon/BluePink.png",
     files: {
       "3-vertical": "/themes/3-Vertikal/BluePink.svg",
-      "3-vertical-p": "/themes/3-Vertikal-P/BluePink.svg",
+      "3-vertical-p": "/themes/3-Vertikal-P/BluePink.png",
     },
     background: {
-      "3-vertical": "/themes/3-Vertikal/Background.svg",
-      "3-vertical-p": "/themes/3-Vertikal-P/Background.svg",
+      "3-vertical-p": "/themes/3-Vertikal-P/MotifBluePink.png",
     },
   },
-  retro: {
-    label: "Retro",
-    defaultColor: "bg-[#000000]",
-    thumbnail: "/icon/3-Vertikal/Retro.svg",
-    files: {
-      "3-vertical": "/themes/3-Vertikal/Retro.svg",
-      "3-vertical-p": "/themes/3-Vertikal-P/Retro.svg",
-    },
-  },
+
   gold: {
-    label: "Gold",
     defaultColor: "bg-[#FFDE59]",
     thumbnail: "/icon/3-Vertikal/Gold.svg",
     files: {
       "3-vertical": "/themes/3-Vertikal/Gold.svg",
-      "3-vertical-p": "/themes/3-Vertikal-P/Gold.svg",
     },
   },
+
   y2k1: {
-    label: "y2k1",
     defaultColor: "bg-[cyan]",
-    thumbnail: "/icon/3-Vertikal/y2k1.svg",
+    thumbnail: "/icon/Y2K1.png",
     files: {
       "3-vertical": "/themes/3-Vertikal/y2k1.svg",
-      "3-vertical-p": "/themes/3-Vertikal-P/y2k1.svg",
-    },
-    background: {
-      "3-vertical": "/themes/3-Vertikal/Background.svg",
-      "3-vertical-p": "/themes/3-Vertikal-P/Background.svg",
+      "3-vertical-p": "/themes/3-Vertikal-P/Y2K1.png",
     },
   },
+
   starryNight: {
-    label: "Starry Night",
     defaultColor: "bg-[#0d1b2a]",
     thumbnail: "/icon/3-Vertikal/StarryNight.svg",
     files: {
       "3-vertical": "/themes/3-Vertikal/StarryNight.svg",
-      "3-vertical-p": "/themes/3-Vertikal-P/StarryNight.svg",
     },
   },
+
   gardenFloral: {
-    label: "Garden",
     defaultColor: "bg-[#c8e6c9]",
     thumbnail: "/icon/3-Vertikal/GardenFloral.svg",
     files: {
       "3-vertical": "/themes/3-Vertikal/GardenFloral.svg",
-      "3-vertical-p": "/themes/3-Vertikal-P/GardenFloral.svg",
     },
   },
+
   oceanWave: {
-    label: "Ocean",
     defaultColor: "bg-[#006994]",
     thumbnail: "/icon/3-Vertikal/OceanWave.svg",
     files: {
       "3-vertical": "/themes/3-Vertikal/OceanWave.svg",
-      "3-vertical-p": "/themes/3-Vertikal-P/OceanWave.svg",
     },
   },
 
-  // ── 4-Vertikal Themes ──
   purpleMoon: {
-    label: "Purple Moon",
     defaultColor: "bg-[#1a0a2e]",
     thumbnail: "/icon/4-Vertikal/PurpleMoon.svg",
     files: { "4-vertical": "/themes/4-Vertikal/PurpleMoon.svg" },
   },
+
   goldenHour: {
-    label: "Golden Hour",
     defaultColor: "bg-[#ffa000]",
     thumbnail: "/icon/4-Vertikal/GoldenHour.svg",
     files: { "4-vertical": "/themes/4-Vertikal/GoldenHour.svg" },
   },
 
-  // ── Grid 2x2 Themes ──
   pastelPop: {
-    label: "Pastel Pop",
     defaultColor: "bg-[#fce4ec]",
     thumbnail: "/icon/Grid-2x2/PastelPop.svg",
     files: { "4-grid": "/themes/Grid-2x2/PastelPop.svg" },
   },
+
   midnightGridTheme: {
-    label: "Midnight",
     defaultColor: "bg-[#0a0f1e]",
     thumbnail: "/icon/Grid-2x2/MidnightGrid.svg",
     files: { "4-grid": "/themes/Grid-2x2/MidnightGrid.svg" },
   },
 
-  // ── Grid 2x3 Themes ──
   vintageRose: {
-    label: "Vintage Rose",
     defaultColor: "bg-[#efebe9]",
     thumbnail: "/icon/Grid-2x3/VintageRose.svg",
     files: { "6-grid": "/themes/Grid-2x3/VintageRose.svg" },
   },
+
   neonNight: {
-    label: "Neon Night",
     defaultColor: "bg-[#0a0010]",
     thumbnail: "/icon/Grid-2x3/NeonNight.svg",
     files: { "6-grid": "/themes/Grid-2x3/NeonNight.svg" },
   },
 
-  // ── Grid 3x3 Themes ──
   contactSheet: {
-    label: "Film Sheet",
     defaultColor: "bg-[#1a1a1a]",
     thumbnail: "/icon/Grid-3x3/ContactSheet.svg",
     files: { "9-grid": "/themes/Grid-3x3/ContactSheet.svg" },
   },
+
   candyPop: {
-    label: "Candy Pop",
     defaultColor: "bg-[#fce4ec]",
     thumbnail: "/icon/Grid-3x3/CandyPop.svg",
     files: { "9-grid": "/themes/Grid-3x3/CandyPop.svg" },
   },
 
-  // ── Themes dengan Icon Besar ──
   kawaiiPink: {
-    label: "Kawaii",
     defaultColor: "bg-[#fff0f5]",
     thumbnail: "/icon/3-Vertikal/KawaiiPink.svg",
     files: {
       "3-vertical": "/themes/3-Vertikal/KawaiiPink.svg",
-      "3-vertical-p": "/themes/3-Vertikal-P/KawaiiPink.svg",
     },
   },
+
   neon80s: {
-    label: "Neon 80s",
     defaultColor: "bg-[#050010]",
     thumbnail: "/icon/4-Vertikal/Neon80s.svg",
     files: { "4-vertical": "/themes/4-Vertikal/Neon80s.svg" },
   },
+
   auroraGrid: {
-    label: "Aurora",
     defaultColor: "bg-[#1a0533]",
     thumbnail: "/icon/Grid-2x2/AuroraGrid.svg",
     files: { "4-grid": "/themes/Grid-2x2/AuroraGrid.svg" },
@@ -662,7 +670,7 @@ const Result = () => {
       const dataUrl = await toPng(el, { pixelRatio: 3 });
       const a = document.createElement("a");
       a.href = dataUrl;
-      a.download = `BeautySnap-${Date.now()}.png`;
+      a.download = `PicStrip-${Date.now()}.png`;
       a.click();
     } catch (e) {
       console.error(e);
@@ -692,7 +700,7 @@ const Result = () => {
         <p className="text-rose-300">Tidak ada foto. Silakan foto dulu.</p>
         <button
           onClick={() => navigate("/capture")}
-          className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 text-white text-sm font-medium"
+          className="px-6 py-2.5 rounded-xl bg-linear-to-r from-rose-500 to-pink-500 text-white text-sm font-medium"
         >
           Ke Halaman Kamera
         </button>
@@ -769,7 +777,7 @@ const Result = () => {
                 <img
                   src={activePatternMeta.src}
                   alt={activePatternMeta.label}
-                  className="absolute inset-0 w-full h-full pointer-events-none object-cover z-[4]"
+                  className="absolute inset-0 w-full h-full pointer-events-none object-cover z-4"
                   style={{ opacity: patternOpacity / 100 }}
                   onError={(e) => {
                     e.target.style.display = "none";
@@ -1003,7 +1011,7 @@ const Result = () => {
                               e.target.src = "/placeholder-theme.png";
                             }}
                           />
-                          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent py-1">
+                          <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/60 to-transparent py-1">
                             <p className="text-[9px] sm:text-[10px] font-medium text-white text-center drop-shadow-sm">
                               {theme.label}
                             </p>
@@ -1543,7 +1551,7 @@ const Result = () => {
             <button
               onClick={handleDownload}
               disabled={isDownloading}
-              className="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 text-white text-sm font-medium hover:opacity-90 transition-opacity shadow-sm shadow-pink-200 disabled:opacity-60"
+              className="flex-1 py-2.5 rounded-xl bg-linear-to-r from-rose-500 to-pink-500 text-white text-sm font-medium hover:opacity-90 transition-opacity shadow-sm shadow-pink-200 disabled:opacity-60"
             >
               {isDownloading ? "Menyimpan..." : "Unduh"}
             </button>

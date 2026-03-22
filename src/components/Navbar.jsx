@@ -55,7 +55,7 @@ const Navbar = () => {
             <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center shadow-md shadow-rose-200 group-hover:scale-110 transition-transform duration-300">
               <img
                 src={BeautySnapIcon}
-                alt="BeautySnap Logo"
+                alt="PicStrip Logo"
                 className="w-4 h-4 sm:w-5 sm:h-5 object-contain brightness-0 invert"
               />
             </div>
@@ -63,7 +63,7 @@ const Navbar = () => {
               className="text-base sm:text-lg font-black tracking-tight text-gray-900"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
-              Beauty<span className="text-rose-500">Snap</span>
+              Pic<span className="text-rose-500">Strip</span>
             </span>
           </Link>
           {/* ── Desktop Nav Links ── */}

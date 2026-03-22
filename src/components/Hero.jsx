@@ -1,5 +1,5 @@
 import IconSnap from "../assets/IconSnap.png";
-import MockupHero2 from "../assets/MockupHero2.png";
+import MockupHero from "../assets/MockupHero.png";
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
@@ -71,8 +71,8 @@ const Hero = () => {
         className="relative z-10 text-gray-500 text-sm sm:text-lg md:text-xl mb-8 sm:mb-10 max-w-xs sm:max-w-xl mx-auto leading-relaxed font-medium"
         style={{ animation: "fadeInUp 0.7s ease 0.2s both" }}
       >
-        Buat foto strip cantik dalam hitungan menit. Gratis, mudah, dan tanpa
-        perlu aplikasi
+        Buat foto strip seru dalam hitungan menit. Gratis, gampang, dan tanpa
+        perlu download aplikasi!
       </p>
 
       {/* CTA Buttons */}
@@ -114,7 +114,7 @@ const Hero = () => {
           "✨ 15+ Filter Estetik",
           "🎞️ Berbagai Layout",
           "💾 Download Gratis",
-          "🔒 Foto Aman & Privat",
+          "💕 Tanpa Tanda Air",
         ].map((item) => (
           <span
             key={item}
@@ -138,8 +138,8 @@ const Hero = () => {
             }}
           />
           <img
-            src={MockupHero2}
-            alt="BeautySnap Preview"
+            src={MockupHero}
+            alt="PicStrip Preview"
             className="relative mx-auto w-full h-auto object-contain drop-shadow-2xl hover:scale-[1.02] transition-transform duration-700"
           />
         </div>
