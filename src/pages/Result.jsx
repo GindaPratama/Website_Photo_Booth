@@ -14,8 +14,7 @@ const FILTER_CLASSES = {
   "B&W": "grayscale",
   "B&W Dark": "grayscale contrast-125 brightness-75",
   Sepia: "sepia",
-  Retro:
-    "sepia-[.5] hue-rotate-[-30deg] contrast-110 saturate-150 brightness-90",
+  Retro: "sepia-[.5] hue-rotate-[-30deg] contrast-110 saturate-150 brightness-90",
   Faded: "contrast-50 brightness-125 saturate-50",
   Vintage: "sepia-[.4] contrast-125 brightness-90 saturate-50",
   Cinematic: "contrast-125 saturate-50 brightness-90 hue-rotate-15",
@@ -120,44 +119,34 @@ const PATTERN_COLORS = [
   "bg-gradient-to-t from-indigo-200 via-purple-200 to-pink-200",
 ];
 
-// ── PATTERN / MOTIF LIST ──
+// ── MOTIF LIST ──
 const PATTERN_LIST = [
   { id: "hearts", label: "Hearts", src: "/patterns/hearts.svg", emoji: "💗" },
   { id: "stars", label: "Stars", src: "/patterns/stars.svg", emoji: "⭐" },
-  {
-    id: "flowers",
-    label: "Flowers",
-    src: "/patterns/flowers.svg",
-    emoji: "🌸",
-  },
+  { id: "flowers", label: "Flowers", src: "/patterns/flowers.svg", emoji: "🌸" },
   { id: "polka", label: "Polka Dot", src: "/patterns/polka.svg", emoji: "🔵" },
-  {
-    id: "stripes",
-    label: "Stripes",
-    src: "/patterns/stripes.svg",
-    emoji: "〰️",
-  },
+  { id: "stripes", label: "Stripes", src: "/patterns/stripes.svg", emoji: "〰️" },
   { id: "checks", label: "Checks", src: "/patterns/checks.svg", emoji: "🔲" },
-  {
-    id: "snowflakes",
-    label: "Snowflakes",
-    src: "/patterns/snowflakes.svg",
-    emoji: "❄️",
-  },
+  { id: "snowflakes", label: "Snowflakes", src: "/patterns/snowflakes.svg", emoji: "❄️", },
   { id: "zigzag", label: "Zigzag", src: "/patterns/zigzag.svg", emoji: "〽️" },
+  { id: "sparkles", label: "Sparkles", src: "/patterns/sparkles.svg", emoji: "✨" },
+  { id: "bubbles", label: "Bubbles", src: "/patterns/bubbles.svg", emoji: "🫧" },
   {
-    id: "sparkles",
-    label: "Sparkles",
-    src: "/patterns/sparkles.svg",
-    emoji: "✨",
+    id: "clouds", label: "Clouds", src: "/patterns/clouds.svg", emoji: "☁️"
+
   },
   {
-    id: "bubbles",
-    label: "Bubbles",
-    src: "/patterns/bubbles.svg",
-    emoji: "🫧",
+    id: "pororo",
+    label: "Pororo",
+    src: "/patterns/3-Vertikal-P/MotifPororo.png",
+    thumbnail: "/icon/Thumbnail-Motif-Pororo.png"
   },
-  { id: "clouds", label: "Clouds", src: "/patterns/clouds.svg", emoji: "☁️" },
+  {
+    id: "marvel",
+    Label: "Marvel",
+    src: "/patterns/3-Vertikal-P/MotifMarvel.png",
+    thumbnail: "icon/Thumbnail-Motif-Marvel.png"
+  }
 ];
 
 const THEME_META = {
@@ -233,7 +222,7 @@ const THEME_META = {
       "3-vertical-p": "/themes/3-Vertikal-P/Spiderman.png",
     },
     background: {
-      "3-vertical-p": "/themes/3-Vertikal-P/MotifMarvel.png",
+      "3-vertical-p": "/patterns/3-Vertikal-P/MotifMarvel.png",
     },
   },
 
@@ -710,10 +699,10 @@ const Result = () => {
         prev.map((s) =>
           s.id === draggingId
             ? {
-                ...s,
-                left: Math.max(0, Math.min(95, newLeft)),
-                top: Math.max(0, Math.min(95, newTop)),
-              }
+              ...s,
+              left: Math.max(0, Math.min(95, newLeft)),
+              top: Math.max(0, Math.min(95, newTop)),
+            }
             : s,
         ),
       );
@@ -818,9 +807,8 @@ const Result = () => {
             <div
               id="photo-strip"
               ref={stripRef}
-              className={`relative overflow-hidden shadow-md ${
-                frameColor.startsWith("bg-") ? frameColor : ""
-              }`}
+              className={`relative overflow-hidden shadow-md ${frameColor.startsWith("bg-") ? frameColor : ""
+                }`}
               style={{
                 ...getStripContainerStyle(layoutId),
                 ...(!frameColor.startsWith("bg-")
@@ -972,11 +960,10 @@ const Result = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveSection(tab.id)}
-                className={`flex flex-col items-center gap-1 py-3 text-[11px] font-medium transition-all duration-150 ${
-                  activeSection === tab.id
-                    ? "bg-rose-50 text-rose-500 border-b-2 border-rose-400"
-                    : "text-rose-300 hover:text-rose-400 hover:bg-rose-50/50"
-                }`}
+                className={`flex flex-col items-center gap-1 py-3 text-[11px] font-medium transition-all duration-150 ${activeSection === tab.id
+                  ? "bg-rose-50 text-rose-500 border-b-2 border-rose-400"
+                  : "text-rose-300 hover:text-rose-400 hover:bg-rose-50/50"
+                  }`}
               >
                 <span className="text-base leading-none">{tab.icon}</span>
                 {tab.label}
@@ -997,11 +984,10 @@ const Result = () => {
                 <div className="flex flex-wrap gap-2">
                   {/* Color picker */}
                   <div
-                    className={`relative w-8 h-8 rounded-full shadow-sm transition-transform hover:scale-110 shrink-0 cursor-pointer overflow-hidden ${
-                      !frameColor.startsWith("bg-")
-                        ? "ring-2 ring-offset-2 ring-rose-400 scale-110"
-                        : "border border-black/5"
-                    }`}
+                    className={`relative w-8 h-8 rounded-full shadow-sm transition-transform hover:scale-110 shrink-0 cursor-pointer overflow-hidden ${!frameColor.startsWith("bg-")
+                      ? "ring-2 ring-offset-2 ring-rose-400 scale-110"
+                      : "border border-black/5"
+                      }`}
                   >
                     <div
                       className="absolute inset-0 rounded-full pointer-events-none"
@@ -1023,22 +1009,20 @@ const Result = () => {
                     <button
                       key={c}
                       onClick={() => setFrameColor(c)}
-                      className={`w-8 h-8 rounded-full shadow-sm transition-all hover:scale-110 ${c} ${
-                        frameColor === c
-                          ? "ring-2 ring-offset-2 ring-rose-400 scale-110"
-                          : "border border-black/5"
-                      }`}
+                      className={`w-8 h-8 rounded-full shadow-sm transition-all hover:scale-110 ${c} ${frameColor === c
+                        ? "ring-2 ring-offset-2 ring-rose-400 scale-110"
+                        : "border border-black/5"
+                        }`}
                     />
                   ))}
                   {PATTERN_COLORS.map((p, i) => (
                     <button
                       key={i}
                       onClick={() => setFrameColor(p)}
-                      className={`w-8 h-8 rounded-full shadow-sm transition-all hover:scale-110 ${p} ${
-                        frameColor === p
-                          ? "ring-2 ring-offset-2 ring-rose-400 scale-110"
-                          : "border border-black/5"
-                      }`}
+                      className={`w-8 h-8 rounded-full shadow-sm transition-all hover:scale-110 ${p} ${frameColor === p
+                        ? "ring-2 ring-offset-2 ring-rose-400 scale-110"
+                        : "border border-black/5"
+                        }`}
                     />
                   ))}
                 </div>
@@ -1054,11 +1038,10 @@ const Result = () => {
                 <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-2.5 sm:gap-3">
                   <button
                     onClick={() => handleThemeSelect("none")}
-                    className={`aspect-square rounded-xl overflow-hidden border-2 transition-all duration-200 flex items-center justify-center text-xs font-medium ${
-                      activeTheme === "none"
-                        ? "border-rose-400 bg-rose-50 shadow-sm"
-                        : "border-pink-100 hover:border-rose-200 bg-white/60"
-                    }`}
+                    className={`aspect-square rounded-xl overflow-hidden border-2 transition-all duration-200 flex items-center justify-center text-xs font-medium ${activeTheme === "none"
+                      ? "border-rose-400 bg-rose-50 shadow-sm"
+                      : "border-pink-100 hover:border-rose-200 bg-white/60"
+                      }`}
                   >
                     <span className="text-rose-400">None</span>
                   </button>
@@ -1068,11 +1051,10 @@ const Result = () => {
                       <button
                         key={id}
                         onClick={() => handleThemeSelect(id)}
-                        className={`aspect-square rounded-xl overflow-hidden border-2 transition-colors duration-200 ${
-                          activeTheme === id
-                            ? "border-rose-400 shadow-md ring-2 ring-rose-200/50"
-                            : "border-pink-100 hover:border-rose-200"
-                        }`}
+                        className={`aspect-square rounded-xl overflow-hidden border-2 transition-colors duration-200 ${activeTheme === id
+                          ? "border-rose-400 shadow-md ring-2 ring-rose-200/50"
+                          : "border-pink-100 hover:border-rose-200"
+                          }`}
                       >
                         <div className="relative w-full h-full">
                           <img
@@ -1114,15 +1096,27 @@ const Result = () => {
                       <button
                         key={pattern.id}
                         onClick={() => setActivePattern(pattern.id)}
-                        className={`aspect-square flex flex-col items-center justify-center gap-1 rounded-xl transition-all duration-200 border-2 ${
-                          activePattern === pattern.id
-                            ? "bg-rose-50 border-rose-400 shadow-md ring-2 ring-rose-200/50 scale-105"
-                            : "bg-white border-pink-100 hover:border-rose-200 hover:bg-rose-50/50"
-                        }`}
+                        className={`aspect-square flex flex-col items-center justify-center gap-1 rounded-xl transition-all duration-200 border-2 ${activePattern === pattern.id
+                          ? "bg-rose-50 border-rose-400 shadow-md ring-2 ring-rose-200/50 scale-105"
+                          : "bg-white border-pink-100 hover:border-rose-200 hover:bg-rose-50/50"
+                          }`}
                       >
-                        <span className="text-xl">{pattern.emoji}</span>
-                        <span className="text-[9px] font-medium text-rose-400">
-                          {pattern.label}
+                        {pattern.emoji ? (
+                          <span className="text-xl">{pattern.emoji}</span>
+                        ) : pattern.thumbnail ? (
+                          <div className="w-10 h-10 overflow-hidden rounded-lg border border-pink-100 shadow-sm flex items-center justify-center bg-white">
+                            <img
+                              src={pattern.thumbnail}
+                              alt={pattern.label}
+                              className="w-full h-full object-cover"
+                              onError={(e) => {
+                                e.target.style.display = "none";
+                              }}
+                            />
+                          </div>
+                        ) : null}
+                        <span className="text-[9px] font-medium text-rose-400 text-center leading-tight">
+                          {pattern.label || pattern.Label}
                         </span>
                       </button>
                     ))}
@@ -1194,11 +1188,10 @@ const Result = () => {
                       <button
                         key={shape.id}
                         onClick={() => setGlobalShape(shape.id)}
-                        className={`flex flex-col items-center justify-center gap-1 py-3 rounded-xl border-2 transition-all duration-200 ${
-                          globalShape === shape.id
-                            ? "border-rose-400 bg-rose-50 text-rose-500 shadow-md ring-2 ring-rose-200/50 scale-105"
-                            : "border-pink-100 text-rose-300 hover:border-rose-200 hover:bg-rose-50/50"
-                        }`}
+                        className={`flex flex-col items-center justify-center gap-1 py-3 rounded-xl border-2 transition-all duration-200 ${globalShape === shape.id
+                          ? "border-rose-400 bg-rose-50 text-rose-500 shadow-md ring-2 ring-rose-200/50 scale-105"
+                          : "border-pink-100 text-rose-300 hover:border-rose-200 hover:bg-rose-50/50"
+                          }`}
                       >
                         <span className="text-xl leading-none">
                           {shape.icon}
@@ -1215,25 +1208,25 @@ const Result = () => {
                 {["love", "star", "hexagon", "circle"].includes(
                   globalShape,
                 ) && (
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <p className="text-[10px] font-semibold text-rose-300 uppercase tracking-widest">
-                        Zoom / Ukuran Foto
-                      </p>
-                      <span className="text-[11px] font-medium text-rose-400 bg-rose-50 px-2 py-0.5 rounded-full">
-                        {globalScale}%
-                      </span>
+                    <div>
+                      <div className="flex items-center justify-between mb-2">
+                        <p className="text-[10px] font-semibold text-rose-300 uppercase tracking-widest">
+                          Zoom / Ukuran Foto
+                        </p>
+                        <span className="text-[11px] font-medium text-rose-400 bg-rose-50 px-2 py-0.5 rounded-full">
+                          {globalScale}%
+                        </span>
+                      </div>
+                      <input
+                        type="range"
+                        min={50}
+                        max={200}
+                        value={globalScale}
+                        onChange={(e) => setGlobalScale(Number(e.target.value))}
+                        className="w-full h-1.5 bg-rose-200 rounded-lg appearance-none cursor-pointer accent-rose-400 hover:accent-rose-500"
+                      />
                     </div>
-                    <input
-                      type="range"
-                      min={50}
-                      max={200}
-                      value={globalScale}
-                      onChange={(e) => setGlobalScale(Number(e.target.value))}
-                      className="w-full h-1.5 bg-rose-200 rounded-lg appearance-none cursor-pointer accent-rose-400 hover:accent-rose-500"
-                    />
-                  </div>
-                )}
+                  )}
 
                 {/* -- Per-Frame Shape (kalau lebih dari 1 foto) -- */}
                 {capturedImages.length > 1 && (
@@ -1253,11 +1246,10 @@ const Result = () => {
                           onClick={() =>
                             setSelectedFrame(selectedFrame === idx ? null : idx)
                           }
-                          className={`relative w-12 h-12 rounded-lg overflow-hidden border-2 transition-colors duration-150 ${
-                            selectedFrame === idx
-                              ? "border-rose-400 ring-2 ring-rose-200 shadow-md"
-                              : "border-pink-100 hover:border-rose-200"
-                          }`}
+                          className={`relative w-12 h-12 rounded-lg overflow-hidden border-2 transition-colors duration-150 ${selectedFrame === idx
+                            ? "border-rose-400 ring-2 ring-rose-200 shadow-md"
+                            : "border-pink-100 hover:border-rose-200"
+                            }`}
                         >
                           <img
                             src={src}
@@ -1301,11 +1293,10 @@ const Result = () => {
                                   return next;
                                 });
                               }}
-                              className={`flex flex-col items-center gap-1 py-2.5 rounded-xl border-2 text-[9px] font-medium transition-all duration-150 ${
-                                perFrameShapes[selectedFrame] === undefined
-                                  ? "border-rose-400 bg-rose-50 text-rose-500 shadow-sm"
-                                  : "border-pink-100 text-rose-300 hover:border-rose-200"
-                              }`}
+                              className={`flex flex-col items-center gap-1 py-2.5 rounded-xl border-2 text-[9px] font-medium transition-all duration-150 ${perFrameShapes[selectedFrame] === undefined
+                                ? "border-rose-400 bg-rose-50 text-rose-500 shadow-sm"
+                                : "border-pink-100 text-rose-300 hover:border-rose-200"
+                                }`}
                             >
                               <span className="text-base">↩</span>
                               <span>Global</span>
@@ -1326,11 +1317,10 @@ const Result = () => {
                                       [selectedFrame]: 16,
                                     }));
                                   }}
-                                  className={`flex flex-col items-center gap-1 py-2.5 rounded-xl border-2 text-[9px] font-medium transition-all duration-150 ${
-                                    perFrameShapes[selectedFrame] === shape.id
-                                      ? "border-rose-400 bg-rose-50 text-rose-500 shadow-sm"
-                                      : "border-pink-100 text-rose-300 hover:border-rose-200 hover:bg-rose-50/50"
-                                  }`}
+                                  className={`flex flex-col items-center gap-1 py-2.5 rounded-xl border-2 text-[9px] font-medium transition-all duration-150 ${perFrameShapes[selectedFrame] === shape.id
+                                    ? "border-rose-400 bg-rose-50 text-rose-500 shadow-sm"
+                                    : "border-pink-100 text-rose-300 hover:border-rose-200 hover:bg-rose-50/50"
+                                    }`}
                                 >
                                   <span className="text-base leading-none">
                                     {shape.icon}
@@ -1432,11 +1422,10 @@ const Result = () => {
                     <button
                       key={t.id}
                       onClick={() => setStickerTab(t.id)}
-                      className={`flex-1 py-1.5 rounded-lg text-[10px] font-semibold transition-all ${
-                        stickerTab === t.id
-                          ? "bg-white text-rose-500 shadow-sm"
-                          : "text-rose-300 hover:text-rose-400"
-                      }`}
+                      className={`flex-1 py-1.5 rounded-lg text-[10px] font-semibold transition-all ${stickerTab === t.id
+                        ? "bg-white text-rose-500 shadow-sm"
+                        : "text-rose-300 hover:text-rose-400"
+                        }`}
                     >
                       {t.label}
                     </button>
@@ -1588,11 +1577,10 @@ const Result = () => {
                                 : sticker.id,
                             )
                           }
-                          className={`flex items-center gap-2 px-2.5 py-2 rounded-xl border cursor-pointer transition-all ${
-                            selectedStickerId === sticker.id
-                              ? "border-rose-400 bg-rose-50 shadow-sm"
-                              : "border-pink-100 hover:border-rose-200 bg-white/50"
-                          }`}
+                          className={`flex items-center gap-2 px-2.5 py-2 rounded-xl border cursor-pointer transition-all ${selectedStickerId === sticker.id
+                            ? "border-rose-400 bg-rose-50 shadow-sm"
+                            : "border-pink-100 hover:border-rose-200 bg-white/50"
+                            }`}
                         >
                           {/* Preview */}
                           <div className="w-9 h-9 shrink-0 flex items-center justify-center bg-rose-50 rounded-lg overflow-hidden">

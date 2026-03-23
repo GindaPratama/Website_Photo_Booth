@@ -277,63 +277,139 @@ const Capture = () => {
       <main className="flex-1 flex flex-col md:flex-row md:items-start justify-center gap-8 px-4 md:px-10 pt-24 pb-12 max-w-5xl mx-auto w-full">
         {/* ── AREA KAMERA ── */}
         <div className="flex flex-col items-center w-full max-w-xl shrink-0 gap-5">
-          {/* Toolbar: Layout + Delay */}
-          <div className="w-full flex items-center gap-4 bg-white/80 border border-pink-100 rounded-xl px-4 py-3 shadow-sm backdrop-blur-sm">
-            {/* Label Layout */}
-            <span className="text-[10px] font-semibold text-rose-300 uppercase tracking-widest shrink-0">
-              Layout
-            </span>
-            {/* Layout Pills */}
-            <div className="flex overflow-x-auto gap-1.5 flex-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-              {LAYOUT_OPTIONS.map((opt) => {
-                const isActive = layoutId === opt.id;
-                return (
-                  <button
-                    key={opt.id}
-                    onClick={() => {
-                      setLayoutId(opt.id);
+          {/* Toolbar Responsive: Dropdowns (Mobile) & Pills (Desktop) */}
+          <div className="w-full">
+            {/* --- MOBILE: Dropdowns --- */}
+            <div className="w-full grid grid-cols-2 gap-4 md:hidden bg-white/80 border border-pink-100 rounded-xl px-4 py-3.5 shadow-sm backdrop-blur-sm">
+              {/* Layout Dropdown */}
+              <div className="flex flex-col gap-1.5 w-full">
+                <label className="text-[10px] font-bold text-rose-400 uppercase tracking-widest px-1">
+                  Pilih Layout
+                </label>
+                <div className="relative w-full">
+                  <select
+                    value={layoutId}
+                    onChange={(e) => {
+                      setLayoutId(e.target.value);
                       setCapturedImages([]);
                     }}
                     disabled={isShooting}
-                    className={`shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-medium transition-all duration-150 disabled:opacity-30 ${
-                      isActive
-                        ? "bg-gradient-to-r from-rose-500 to-pink-500 text-white shadow-sm shadow-pink-200"
-                        : "bg-rose-50/60 text-rose-400 hover:bg-rose-100/80"
-                    }`}
+                    className="w-full appearance-none bg-rose-50/60 border border-pink-200 text-gray-700 font-semibold text-sm rounded-lg px-3.5 py-2.5 outline-none focus:ring-2 focus:ring-rose-400/50 focus:border-rose-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all cursor-pointer shadow-sm shadow-pink-100/50"
                   >
-                    {getLayoutIcon(opt.id, isActive)}
-                    <span className="whitespace-nowrap">{opt.label}</span>
-                  </button>
-                );
-              })}
+                    {LAYOUT_OPTIONS.map((opt) => (
+                      <option key={opt.id} value={opt.id}>
+                        {opt.label}
+                      </option>
+                    ))}
+                  </select>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-rose-500">
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2.5"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              {/* Delay Dropdown */}
+              <div className="flex flex-col gap-1.5 w-full">
+                <label className="text-[10px] font-bold text-rose-400 uppercase tracking-widest px-1">
+                  Jeda Waktu
+                </label>
+                <div className="relative w-full">
+                  <select
+                    value={delayTime}
+                    onChange={(e) => setDelayTime(Number(e.target.value))}
+                    disabled={isShooting}
+                    className="w-full appearance-none bg-rose-50/60 border border-pink-200 text-gray-700 font-semibold text-sm rounded-lg px-3.5 py-2.5 outline-none focus:ring-2 focus:ring-rose-400/50 focus:border-rose-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all cursor-pointer shadow-sm shadow-pink-100/50"
+                  >
+                    {DELAY_OPTIONS.map((opt) => (
+                      <option key={opt.value} value={opt.value}>
+                        {opt.label}
+                      </option>
+                    ))}
+                  </select>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-rose-500">
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2.5"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Divider */}
-            <div className="h-5 w-px bg-pink-100 shrink-0" />
+            {/* --- DESKTOP: Pills/Sliders --- */}
+            <div className="hidden md:flex w-full items-center gap-4 bg-white/80 border border-pink-100 rounded-xl px-4 py-3 shadow-sm backdrop-blur-sm">
+              <span className="text-[10px] font-semibold text-rose-300 uppercase tracking-widest shrink-0">
+                Layout
+              </span>
+              <div className="flex overflow-x-auto gap-1.5 flex-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                {LAYOUT_OPTIONS.map((opt) => {
+                  const isActive = layoutId === opt.id;
+                  return (
+                    <button
+                      key={opt.id}
+                      onClick={() => {
+                        setLayoutId(opt.id);
+                        setCapturedImages([]);
+                      }}
+                      disabled={isShooting}
+                      className={`shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-medium transition-all duration-150 disabled:opacity-30 ${
+                        isActive
+                          ? "bg-gradient-to-r from-rose-500 to-pink-500 text-white shadow-sm shadow-pink-200"
+                          : "bg-rose-50/60 text-rose-400 hover:bg-rose-100/80"
+                      }`}
+                    >
+                      {getLayoutIcon(opt.id, isActive)}
+                      <span className="whitespace-nowrap">{opt.label}</span>
+                    </button>
+                  );
+                })}
+              </div>
 
-            {/* Label Delay */}
-            <span className="text-[10px] font-semibold text-rose-300 uppercase tracking-widest shrink-0">
-              Jeda
-            </span>
-            {/* Delay Pills */}
-            <div className="flex gap-1.5 shrink-0">
-              {DELAY_OPTIONS.map((opt) => {
-                const isActive = delayTime === opt.value;
-                return (
-                  <button
-                    key={opt.value}
-                    onClick={() => setDelayTime(opt.value)}
-                    disabled={isShooting}
-                    className={`shrink-0 px-3 py-1.5 rounded-lg text-[11px] font-medium transition-all duration-150 disabled:opacity-30 ${
-                      isActive
-                        ? "bg-gradient-to-r from-rose-500 to-pink-500 text-white shadow-sm shadow-pink-200"
-                        : "bg-rose-50/60 text-rose-400 hover:bg-rose-100/80"
-                    }`}
-                  >
-                    {opt.label}
-                  </button>
-                );
-              })}
+              <div className="h-5 w-px bg-pink-100 shrink-0" />
+
+              <span className="text-[10px] font-semibold text-rose-300 uppercase tracking-widest shrink-0">
+                Jeda
+              </span>
+              <div className="flex gap-1.5 shrink-0">
+                {DELAY_OPTIONS.map((opt) => {
+                  const isActive = delayTime === opt.value;
+                  return (
+                    <button
+                      key={opt.value}
+                      onClick={() => setDelayTime(opt.value)}
+                      disabled={isShooting}
+                      className={`shrink-0 px-3 py-1.5 rounded-lg text-[11px] font-medium transition-all duration-150 disabled:opacity-30 ${
+                        isActive
+                          ? "bg-gradient-to-r from-rose-500 to-pink-500 text-white shadow-sm shadow-pink-200"
+                          : "bg-rose-50/60 text-rose-400 hover:bg-rose-100/80"
+                      }`}
+                    >
+                      {opt.label}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
 
@@ -570,10 +646,10 @@ const Capture = () => {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 cursor-zoom-out"
           onClick={() => setZoomedImage(null)}
         >
-          <div 
+          <div
             className={`relative flex items-center justify-center w-[85vw] ${
-              layoutId === "3-vertical-p" || layoutId === "6-grid" 
-                ? "max-w-[280px] md:max-w-[320px]" 
+              layoutId === "3-vertical-p" || layoutId === "6-grid"
+                ? "max-w-[280px] md:max-w-[320px]"
                 : "max-w-[380px] md:max-w-[440px]"
             }`}
             onClick={(e) => e.stopPropagation()}
@@ -600,8 +676,10 @@ const Capture = () => {
                 <path d="m6 6 12 12" />
               </svg>
             </button>
-            
-            <div className={`relative w-full overflow-hidden rounded-2xl shadow-2xl ${getAspectRatioClass(layoutId)}`}>
+
+            <div
+              className={`relative w-full overflow-hidden rounded-2xl shadow-2xl ${getAspectRatioClass(layoutId)}`}
+            >
               <img
                 src={zoomedImage}
                 alt="Zoomed"
