@@ -7,7 +7,8 @@ export const FILTER_CLASSES = {
   "B&W": "grayscale",
   "B&W Dark": "grayscale contrast-125 brightness-75",
   Sepia: "sepia",
-  Retro: "sepia-[.5] hue-rotate-[-30deg] contrast-110 saturate-150 brightness-90",
+  Retro:
+    "sepia-[.5] hue-rotate-[-30deg] contrast-110 saturate-150 brightness-90",
   Faded: "contrast-50 brightness-125 saturate-50",
   Vintage: "sepia-[.4] contrast-125 brightness-90 saturate-50",
   Cinematic: "contrast-125 saturate-50 brightness-90 hue-rotate-15",
@@ -115,60 +116,274 @@ export const PATTERN_COLORS = [
 export const PATTERN_LIST = [
   { id: "hearts", label: "Hearts", src: "/patterns/hearts.svg", emoji: "💗" },
   { id: "stars", label: "Stars", src: "/patterns/stars.svg", emoji: "⭐" },
-  { id: "flowers", label: "Flowers", src: "/patterns/flowers.svg", emoji: "🌸" },
+  {
+    id: "flowers",
+    label: "Flowers",
+    src: "/patterns/flowers.svg",
+    emoji: "🌸",
+  },
   { id: "polka", label: "Polka Dot", src: "/patterns/polka.svg", emoji: "🔵" },
-  { id: "stripes", label: "Stripes", src: "/patterns/stripes.svg", emoji: "〰️" },
+  {
+    id: "stripes",
+    label: "Stripes",
+    src: "/patterns/stripes.svg",
+    emoji: "〰️",
+  },
   { id: "checks", label: "Checks", src: "/patterns/checks.svg", emoji: "🔲" },
-  { id: "snowflakes", label: "Snowflakes", src: "/patterns/snowflakes.svg", emoji: "❄️" },
+  {
+    id: "snowflakes",
+    label: "Snowflakes",
+    src: "/patterns/snowflakes.svg",
+    emoji: "❄️",
+  },
   { id: "zigzag", label: "Zigzag", src: "/patterns/zigzag.svg", emoji: "〽️" },
-  { id: "sparkles", label: "Sparkles", src: "/patterns/sparkles.svg", emoji: "✨" },
-  { id: "bubbles", label: "Bubbles", src: "/patterns/bubbles.svg", emoji: "🫧" },
+  {
+    id: "sparkles",
+    label: "Sparkles",
+    src: "/patterns/sparkles.svg",
+    emoji: "✨",
+  },
+  {
+    id: "bubbles",
+    label: "Bubbles",
+    src: "/patterns/bubbles.svg",
+    emoji: "🫧",
+  },
   { id: "clouds", label: "Clouds", src: "/patterns/clouds.svg", emoji: "☁️" },
-  { id: "pororo", label: "Pororo", src: "/patterns/3-Vertikal-P/MotifPororo.png", thumbnail: "/icon/Thumbnail-Motif-Pororo.png" },
-  { id: "marvel", Label: "Marvel", src: "/patterns/3-Vertikal-P/MotifMarvel.png", thumbnail: "icon/Thumbnail-Motif-Marvel.png" },
-  { id: "bluepink", Label: "BluePink", src: "/patterns/3-Vertikal-P/MotifBluePink.png", thumbnail: "/icon/BluePink.png" },
-  { id: "nailong", Label: "Nailong", src: "/patterns/3-Vertikal-P/MotifNailong.png", thumbnail: "/icon/Nailong.png" },
-  { id: "pinkwhite", Label: "PinkWhite", src: "/patterns/3-Vertikal-P/MotifPinkWhite.png", thumbnail: "/icon/PinkWhite.png" },
-  { id: "polkadotcrong", Label: "PolkadotCrong", src: "/patterns/3-Vertikal-P/MotifPolkadotCrong.png", thumbnail: "/icon/Crong.png" },
+  {
+    id: "pororo",
+    label: "Pororo",
+    src: "/patterns/3-Vertikal-P/MotifPororo.png",
+    thumbnail: "/icon/Thumbnail-Motif-Pororo.png",
+  },
+  {
+    id: "marvel",
+    Label: "Marvel",
+    src: "/patterns/3-Vertikal-P/MotifMarvel.png",
+    thumbnail: "icon/Thumbnail-Motif-Marvel.png",
+  },
+  {
+    id: "bluepink",
+    Label: "BluePink",
+    src: "/patterns/3-Vertikal-P/MotifBluePink.png",
+    thumbnail: "/icon/BluePink.png",
+  },
+  {
+    id: "nailong",
+    Label: "Nailong",
+    src: "/patterns/3-Vertikal-P/MotifNailong.png",
+    thumbnail: "/icon/Nailong.png",
+  },
+  {
+    id: "pinkwhite",
+    Label: "PinkWhite",
+    src: "/patterns/3-Vertikal-P/MotifPinkWhite.png",
+    thumbnail: "/icon/PinkWhite.png",
+  },
+  {
+    id: "polkadotcrong",
+    Label: "PolkadotCrong",
+    src: "/patterns/3-Vertikal-P/MotifPolkadotCrong.png",
+    thumbnail: "/icon/Crong.png",
+  },
 ];
 
 export const THEME_META = {
-  midnightGold: { defaultColor: "bg-[#0d1b2a]", thumbnail: "/icon/2-Horizontal/MidnightGold.svg", files: { "2-horizontal": "/themes/2-Horizontal/MidnightGold.svg" } },
-  sakuraBlossom: { defaultColor: "bg-[#fce4ec]", thumbnail: "/icon/2-Horizontal/SakuraBlossom.svg", files: { "2-horizontal": "/themes/2-Horizontal/SakuraBlossom.svg" } },
-  filmNoir: { defaultColor: "bg-[#000000]", thumbnail: "/icon/FilmNoir.png", files: { "2-horizontal": "/themes/2-Horizontal/FilmNoir.svg", "3-vertical": "/themes/3-Vertikal/FilmNoir.svg", "3-vertical-p": "/themes/3-Vertikal-P/FilmsNoir.png" } },
-  summerCoral: { defaultColor: "bg-[#ff7043]", thumbnail: "/icon/2-Horizontal/SummerCoral.svg", files: { "2-horizontal": "/themes/2-Horizontal/SummerCoral.svg" } },
-  pinklove: { defaultColor: "bg-[#ff9fbb]", thumbnail: "/icon/PinkLove.png", files: { "2-horizontal": "/themes/2-Horizontal/PinkLove.png", "3-vertical": "/themes/3-Vertikal/PinkLove.svg", "3-vertical-p": "/themes/3-Vertikal-P/PinkLove.png" }, background: { "3-vertical-p": "/themes/3-Vertikal-P/MotifPinkLove.svg" } },
-  nailong: { defaultColor: "bg-[#FFDE59]", thumbnail: "/icon/Nailong.png", files: { "3-vertical": "/themes/3-Vertikal/Nailong.svg", "3-vertical-p": "/themes/3-Vertikal-P/Nailong.png" }, background: { "3-vertical-p": "/patterns/3-Vertikal-P/MotifNailong.png" } },
-  crong: { defaultColor: "bg-[#B2D234]", thumbnail: "/icon/Crong.png", files: { "3-vertical-p": "/themes/3-Vertikal-P/Crong.png" }, background: { "3-vertical-p": "/patterns/3-Vertikal-P/MotifPolkadotCrong.png" } },
-  spiderman: { defaultColor: "bg-[#E63234]", thumbnail: "icon/Spiderman.png", files: { "3-vertical-p": "/themes/3-Vertikal-P/Spiderman.png" }, background: { "3-vertical-p": "/patterns/3-Vertikal-P/MotifMarvel.png" } },
-  pinkWhite: { defaultColor: "bg-[#FFC0CB]", thumbnail: "icon/PinkWhite.png", files: { "3-vertical-p": "/themes/3-Vertikal-P/PinkWhite.png" }, background: { "3-vertical-p": "/patterns/3-Vertikal-P/MotifPinkWhite.png" } },
-  bemine: { defaultColor: "bg-[#FFEDEE]", thumbnail: "/icon/BeMine.png", files: { "3-vertical": "/themes/3-Vertikal/BeMine.svg", "3-vertical-p": "/themes/3-Vertikal-P/BeMine.png" } },
-  bluepink: { defaultColor: "bg-[#D6EAF8]", thumbnail: "/icon/BluePink.png", files: { "3-vertical": "/themes/3-Vertikal/BluePink.svg", "3-vertical-p": "/themes/3-Vertikal-P/BluePink.png" }, background: { "3-vertical-p": "/patterns/3-Vertikal-P/MotifBluePink.png" } },
-  gold: { defaultColor: "bg-[#FFDE59]", thumbnail: "/icon/3-Vertikal/Gold.svg", files: { "3-vertical": "/themes/3-Vertikal/Gold.svg" } },
-  y2k1: { defaultColor: "bg-[cyan]", thumbnail: "/icon/Y2K1.png", files: { "3-vertical": "/themes/3-Vertikal/y2k1.svg", "3-vertical-p": "/themes/3-Vertikal-P/Y2K1.png" } },
-  starryNight: { defaultColor: "bg-[#0d1b2a]", thumbnail: "/icon/3-Vertikal/StarryNight.svg", files: { "3-vertical": "/themes/3-Vertikal/StarryNight.svg" } },
-  gardenFloral: { defaultColor: "bg-[#c8e6c9]", thumbnail: "/icon/3-Vertikal/GardenFloral.svg", files: { "3-vertical": "/themes/3-Vertikal/GardenFloral.svg" } },
-  oceanWave: { defaultColor: "bg-[#006994]", thumbnail: "/icon/3-Vertikal/OceanWave.svg", files: { "3-vertical": "/themes/3-Vertikal/OceanWave.svg" } },
-  purpleMoon: { defaultColor: "bg-[#1a0a2e]", thumbnail: "/icon/4-Vertikal/PurpleMoon.svg", files: { "4-vertical": "/themes/4-Vertikal/PurpleMoon.svg" } },
-  goldenHour: { defaultColor: "bg-[#ffa000]", thumbnail: "/icon/4-Vertikal/GoldenHour.svg", files: { "4-vertical": "/themes/4-Vertikal/GoldenHour.svg" } },
-  pastelPop: { defaultColor: "bg-[#fce4ec]", thumbnail: "/icon/Grid-2x2/PastelPop.svg", files: { "4-grid": "/themes/Grid-2x2/PastelPop.svg" } },
-  midnightGridTheme: { defaultColor: "bg-[#0a0f1e]", thumbnail: "/icon/Grid-2x2/MidnightGrid.svg", files: { "4-grid": "/themes/Grid-2x2/MidnightGrid.svg" } },
-  vintageRose: { defaultColor: "bg-[#efebe9]", thumbnail: "/icon/Grid-2x3/VintageRose.svg", files: { "6-grid": "/themes/Grid-2x3/VintageRose.svg" } },
-  neonNight: { defaultColor: "bg-[#0a0010]", thumbnail: "/icon/Grid-2x3/NeonNight.svg", files: { "6-grid": "/themes/Grid-2x3/NeonNight.svg" } },
-  contactSheet: { defaultColor: "bg-[#1a1a1a]", thumbnail: "/icon/Grid-3x3/ContactSheet.svg", files: { "9-grid": "/themes/Grid-3x3/ContactSheet.svg" } },
-  candyPop: { defaultColor: "bg-[#fce4ec]", thumbnail: "/icon/Grid-3x3/CandyPop.svg", files: { "9-grid": "/themes/Grid-3x3/CandyPop.svg" } },
-  kawaiiPink: { defaultColor: "bg-[#fff0f5]", thumbnail: "/icon/3-Vertikal/KawaiiPink.svg", files: { "3-vertical": "/themes/3-Vertikal/KawaiiPink.svg" } },
-  neon80s: { defaultColor: "bg-[#050010]", thumbnail: "/icon/4-Vertikal/Neon80s.svg", files: { "4-vertical": "/themes/4-Vertikal/Neon80s.svg" } },
-  auroraGrid: { defaultColor: "bg-[#1a0533]", thumbnail: "/icon/Grid-2x2/AuroraGrid.svg", files: { "4-grid": "/themes/Grid-2x2/AuroraGrid.svg" } },
+  filmNoir: {
+    defaultColor: "bg-[#000000]",
+    thumbnail: "/icon/FilmNoir.png",
+    files: {
+      "2-horizontal": "/themes/2-Horizontal/FilmNoir.svg",
+      "3-vertical": "/themes/3-Vertikal/FilmNoir.svg",
+      "3-vertical-p": "/themes/3-Vertikal-P/FilmsNoir.png",
+    },
+  },
+  pinklove: {
+    defaultColor: "bg-[#ff9fbb]",
+    thumbnail: "/icon/PinkLove.png",
+    files: {
+      "2-horizontal": "/themes/2-Horizontal/PinkLove.png",
+      "3-vertical": "/themes/3-Vertikal/PinkLove.svg",
+      "3-vertical-p": "/themes/3-Vertikal-P/PinkLove.png",
+    },
+    background: { "3-vertical-p": "/themes/3-Vertikal-P/MotifPinkLove.svg" },
+  },
+  nailong: {
+    defaultColor: "bg-[#FFDE59]",
+    thumbnail: "/icon/Nailong.png",
+    files: {
+      "3-vertical": "/themes/3-Vertikal/Nailong.svg",
+      "3-vertical-p": "/themes/3-Vertikal-P/Nailong.png",
+    },
+    background: { "3-vertical-p": "/patterns/3-Vertikal-P/MotifNailong.png" },
+  },
+  crong: {
+    defaultColor: "bg-[#B2D234]",
+    thumbnail: "/icon/Crong.png",
+    files: { "3-vertical-p": "/themes/3-Vertikal-P/Crong.png" },
+    background: {
+      "3-vertical-p": "/patterns/3-Vertikal-P/MotifPolkadotCrong.png",
+    },
+  },
+  spiderman: {
+    defaultColor: "bg-[#E63234]",
+    thumbnail: "icon/Spiderman.png",
+    files: { "3-vertical-p": "/themes/3-Vertikal-P/Spiderman.png" },
+    background: { "3-vertical-p": "/patterns/3-Vertikal-P/MotifMarvel.png" },
+  },
+  pinkWhite: {
+    defaultColor: "bg-[#FFC0CB]",
+    thumbnail: "icon/PinkWhite.png",
+    files: { "3-vertical-p": "/themes/3-Vertikal-P/PinkWhite.png" },
+    background: { "3-vertical-p": "/patterns/3-Vertikal-P/MotifPinkWhite.png" },
+  },
+  bemine: {
+    defaultColor: "bg-[#FFEDEE]",
+    thumbnail: "/icon/BeMine.png",
+    files: {
+      "3-vertical": "/themes/3-Vertikal/BeMine.svg",
+      "3-vertical-p": "/themes/3-Vertikal-P/BeMine.png",
+    },
+  },
+  bluepink: {
+    defaultColor: "bg-[#D6EAF8]",
+    thumbnail: "/icon/BluePink.png",
+    files: {
+      "3-vertical": "/themes/3-Vertikal/BluePink.svg",
+      "3-vertical-p": "/themes/3-Vertikal-P/BluePink.png",
+    },
+    background: { "3-vertical-p": "/patterns/3-Vertikal-P/MotifBluePink.png" },
+  },
+  gold: {
+    defaultColor: "bg-[#FFDE59]",
+    thumbnail: "/icon/3-Vertikal/Gold.svg",
+    files: { "3-vertical": "/themes/3-Vertikal/Gold.svg" },
+  },
+  y2k1: {
+    defaultColor: "bg-[cyan]",
+    thumbnail: "/icon/Y2K1.png",
+    files: {
+      "3-vertical": "/themes/3-Vertikal/y2k1.svg",
+      "3-vertical-p": "/themes/3-Vertikal-P/Y2K1.png",
+    },
+  },
+  starryNight: {
+    defaultColor: "bg-[#0d1b2a]",
+    thumbnail: "/icon/3-Vertikal/StarryNight.svg",
+    files: { "3-vertical": "/themes/3-Vertikal/StarryNight.svg" },
+  },
+  gardenFloral: {
+    defaultColor: "bg-[#c8e6c9]",
+    thumbnail: "/icon/3-Vertikal/GardenFloral.svg",
+    files: { "3-vertical": "/themes/3-Vertikal/GardenFloral.svg" },
+  },
+  oceanWave: {
+    defaultColor: "bg-[#006994]",
+    thumbnail: "/icon/3-Vertikal/OceanWave.svg",
+    files: { "3-vertical": "/themes/3-Vertikal/OceanWave.svg" },
+  },
+  purpleMoon: {
+    defaultColor: "bg-[#1a0a2e]",
+    thumbnail: "/icon/4-Vertikal/PurpleMoon.svg",
+    files: { "4-vertical": "/themes/4-Vertikal/PurpleMoon.svg" },
+  },
+  goldenHour: {
+    defaultColor: "bg-[#ffa000]",
+    thumbnail: "/icon/4-Vertikal/GoldenHour.svg",
+    files: { "4-vertical": "/themes/4-Vertikal/GoldenHour.svg" },
+  },
+  pastelPop: {
+    defaultColor: "bg-[#fce4ec]",
+    thumbnail: "/icon/Grid-2x2/PastelPop.svg",
+    files: { "4-grid": "/themes/Grid-2x2/PastelPop.svg" },
+  },
+  midnightGridTheme: {
+    defaultColor: "bg-[#0a0f1e]",
+    thumbnail: "/icon/Grid-2x2/MidnightGrid.svg",
+    files: { "4-grid": "/themes/Grid-2x2/MidnightGrid.svg" },
+  },
+  vintageRose: {
+    defaultColor: "bg-[#efebe9]",
+    thumbnail: "/icon/Grid-2x3/VintageRose.svg",
+    files: { "6-grid": "/themes/Grid-2x3/VintageRose.svg" },
+  },
+  neonNight: {
+    defaultColor: "bg-[#0a0010]",
+    thumbnail: "/icon/Grid-2x3/NeonNight.svg",
+    files: { "6-grid": "/themes/Grid-2x3/NeonNight.svg" },
+  },
+  contactSheet: {
+    defaultColor: "bg-[#1a1a1a]",
+    thumbnail: "/icon/Grid-3x3/ContactSheet.svg",
+    files: { "9-grid": "/themes/Grid-3x3/ContactSheet.svg" },
+  },
+  candyPop: {
+    defaultColor: "bg-[#fce4ec]",
+    thumbnail: "/icon/Grid-3x3/CandyPop.svg",
+    files: { "9-grid": "/themes/Grid-3x3/CandyPop.svg" },
+  },
+  kawaiiPink: {
+    defaultColor: "bg-[#fff0f5]",
+    thumbnail: "/icon/3-Vertikal/KawaiiPink.svg",
+    files: { "3-vertical": "/themes/3-Vertikal/KawaiiPink.svg" },
+  },
+  neon80s: {
+    defaultColor: "bg-[#050010]",
+    thumbnail: "/icon/4-Vertikal/Neon80s.svg",
+    files: { "4-vertical": "/themes/4-Vertikal/Neon80s.svg" },
+  },
+  auroraGrid: {
+    defaultColor: "bg-[#1a0533]",
+    thumbnail: "/icon/Grid-2x2/AuroraGrid.svg",
+    files: { "4-grid": "/themes/Grid-2x2/AuroraGrid.svg" },
+  },
 };
 
 export const EMOJI_STICKERS = [
-  "❤️", "🎀", "✨", "🌸", "🦋", "🧸", "🐶", "🐱", "🐰", "🐻", "🍓", "🍉", "🌈", "🔥", "😍",
-  "💋", "🎉", "👑", "🍀", "💎", "⭐", "🎵", "🎧", "💙", "❄️", "🩷", "💌", "🌙", "🌺", "🌻",
-  "🦄", "🎠", "🍭", "🧁", "🎪", "💫", "🌟", "🎆", "🍒", "🏵️",
+  "❤️",
+  "🎀",
+  "✨",
+  "🌸",
+  "🦋",
+  "🧸",
+  "🐶",
+  "🐱",
+  "🐰",
+  "🐻",
+  "🍓",
+  "🍉",
+  "🌈",
+  "🔥",
+  "😍",
+  "💋",
+  "🎉",
+  "👑",
+  "🍀",
+  "💎",
+  "⭐",
+  "🎵",
+  "🎧",
+  "💙",
+  "❄️",
+  "🩷",
+  "💌",
+  "🌙",
+  "🌺",
+  "🌻",
+  "🦄",
+  "🎠",
+  "🍭",
+  "🧁",
+  "🎪",
+  "💫",
+  "🌟",
+  "🎆",
+  "🍒",
+  "🏵️",
 ];
 
-export const TWEMOJI_BASE = "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72";
+export const TWEMOJI_BASE =
+  "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72";
 export const IMAGE_STICKERS = [
   { label: "Crown", src: `${TWEMOJI_BASE}/1f451.png` },
   { label: "Diamond", src: `${TWEMOJI_BASE}/1f48e.png` },
@@ -187,11 +402,31 @@ export const IMAGE_STICKERS = [
 ];
 
 export const LOCAL_PROJECT_STICKERS = [
-  { label: "Spiderman", src: "/stickers/Spiderman1.png", thumbnail: "/icon/Spiderman.png" },
-  { label: "Spiderman", src: "/stickers/Spiderman2.png", thumbnail: "/icon/Spiderman.png" },
-  { label: "Spiderman", src: "/stickers/Spiderman3.png", thumbnail: "/icon/Spiderman.png" },
-  { label: "Spiderman", src: "/stickers/Spiderman4.png", thumbnail: "/icon/Spiderman.png" },
-  { label: "JaringSpiderman", src: "/stickers/JaringSpiderman1.png", thumbnail: "/icon/Spiderman.png" },
+  {
+    label: "Spiderman",
+    src: "/stickers/Spiderman1.png",
+    thumbnail: "/icon/Spiderman.png",
+  },
+  {
+    label: "Spiderman",
+    src: "/stickers/Spiderman2.png",
+    thumbnail: "/icon/Spiderman.png",
+  },
+  {
+    label: "Spiderman",
+    src: "/stickers/Spiderman3.png",
+    thumbnail: "/icon/Spiderman.png",
+  },
+  {
+    label: "Spiderman",
+    src: "/stickers/Spiderman4.png",
+    thumbnail: "/icon/Spiderman.png",
+  },
+  {
+    label: "JaringSpiderman",
+    src: "/stickers/JaringSpiderman1.png",
+    thumbnail: "/icon/Spiderman.png",
+  },
 
   { label: "Crong", src: "/stickers/Crong1.png" },
   { label: "Crong", src: "/stickers/Crong2.png" },
@@ -248,12 +483,14 @@ export const getClipPath = (shape, radius = 16) => {
     case "star":
       return {
         borderRadius: 0,
-        clipPath: "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)",
+        clipPath:
+          "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)",
       };
     case "hexagon":
       return {
         borderRadius: 0,
-        clipPath: "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
+        clipPath:
+          "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
       };
     default:
       return { borderRadius: 0, clipPath: "none" };
@@ -267,7 +504,8 @@ export const getStripContainerStyle = (layoutId) => {
 
 export const getPhotosGridStyle = (layoutId) => {
   const s = STRIP_SIZES[layoutId] || STRIP_SIZES["3-vertical"];
-  if (s.cols === 1) return { display: "flex", flexDirection: "column", gap: `${s.gap}px` };
+  if (s.cols === 1)
+    return { display: "flex", flexDirection: "column", gap: `${s.gap}px` };
   return {
     display: "grid",
     gridTemplateColumns: `repeat(${s.cols}, 1fr)`,

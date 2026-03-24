@@ -14,7 +14,7 @@ import React from "react";
 export default function Themes({ activeTheme, themeMeta, layoutId }) {
   if (activeTheme === "none" || !themeMeta) return null;
 
-  const bgSrc      = themeMeta.background?.[layoutId];
+  const bgSrc = themeMeta.background?.[layoutId];
   const overlaySrc = themeMeta.files?.[layoutId];
 
   // Tidak ada layer sama sekali untuk layout ini → tidak tampil

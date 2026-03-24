@@ -220,7 +220,7 @@ const SidebarStickers = ({
                         onClick={(e) => {
                           e.stopPropagation();
                           setCustomStickers((p) =>
-                            p.filter((_, idx) => idx !== i)
+                            p.filter((_, idx) => idx !== i),
                           );
                         }}
                         className="absolute top-0.5 right-0.5 w-4 h-4 bg-red-500 text-white rounded-full text-[9px] font-bold hidden group-hover:flex items-center justify-center z-10"
@@ -260,7 +260,7 @@ const SidebarStickers = ({
                 key={sticker.id}
                 onClick={() =>
                   setSelectedStickerId(
-                    sticker.id === selectedStickerId ? null : sticker.id
+                    sticker.id === selectedStickerId ? null : sticker.id,
                   )
                 }
                 className={`flex items-center gap-2 px-2.5 py-2 rounded-xl border cursor-pointer transition-all ${
