@@ -114,29 +114,54 @@ export const PATTERN_COLORS = [
 ];
 
 export const PATTERN_LIST = [
-  { id: "hearts", label: "Hearts", src: "/patterns/hearts.svg", emoji: "💗" },
-  { id: "stars", label: "Stars", src: "/patterns/stars.svg", emoji: "⭐" },
+  {
+    id: "hearts",
+    label: "Hearts",
+    src: "/patterns/hearts.svg",
+    emoji: "💗",
+  },
+  {
+    id: "stars",
+    label: "Stars",
+    src: "/patterns/stars.svg",
+    emoji: "⭐",
+  },
   {
     id: "flowers",
     label: "Flowers",
     src: "/patterns/flowers.svg",
     emoji: "🌸",
   },
-  { id: "polka", label: "Polka Dot", src: "/patterns/polka.svg", emoji: "🔵" },
+  {
+    id: "polka",
+    label: "Polka Dot",
+    src: "/patterns/polka.svg",
+    emoji: "🔵",
+  },
   {
     id: "stripes",
     label: "Stripes",
     src: "/patterns/stripes.svg",
     emoji: "〰️",
   },
-  { id: "checks", label: "Checks", src: "/patterns/checks.svg", emoji: "🔲" },
+  {
+    id: "checks",
+    label: "Checks",
+    src: "/patterns/checks.svg",
+    emoji: "🔲",
+  },
   {
     id: "snowflakes",
     label: "Snowflakes",
     src: "/patterns/snowflakes.svg",
     emoji: "❄️",
   },
-  { id: "zigzag", label: "Zigzag", src: "/patterns/zigzag.svg", emoji: "〽️" },
+  {
+    id: "zigzag",
+    label: "Zigzag",
+    src: "/patterns/zigzag.svg",
+    emoji: "〽️",
+  },
   {
     id: "sparkles",
     label: "Sparkles",
@@ -149,41 +174,70 @@ export const PATTERN_LIST = [
     src: "/patterns/bubbles.svg",
     emoji: "🫧",
   },
-  { id: "clouds", label: "Clouds", src: "/patterns/clouds.svg", emoji: "☁️" },
+  {
+    id: "clouds",
+    label: "Clouds",
+    src: "/patterns/clouds.svg",
+    emoji: "☁️",
+  },
   {
     id: "pororo",
     label: "Pororo",
-    src: "/patterns/3-Vertikal-P/MotifPororo.png",
+    src: {
+      "3-vertical-p": "/patterns/3-Vertikal-P/MotifPororo.png",
+      "2-horizontal": "/patterns/2-Horizontal/MotifPororo.png",
+      default: "/patterns/3-Vertikal-P/MotifPororo.png",
+    },
     thumbnail: "/icon/Thumbnail-Motif-Pororo.png",
   },
   {
     id: "marvel",
-    Label: "Marvel",
-    src: "/patterns/3-Vertikal-P/MotifMarvel.png",
+    label: "Marvel",
+    src: {
+      "3-vertical-p": "/patterns/3-Vertikal-P/MotifMarvel.png",
+      "2-horizontal": "/patterns/2-Horizontal/MotifMarvel.png",
+      default: "/patterns/3-Vertikal-P/MotifMarvel.png",
+    },
     thumbnail: "icon/Thumbnail-Motif-Marvel.png",
   },
   {
     id: "bluepink",
-    Label: "BluePink",
-    src: "/patterns/3-Vertikal-P/MotifBluePink.png",
+    label: "BluePink",
+    src: {
+      "3-vertical-p": "/patterns/3-Vertikal-P/MotifBluePink.png",
+      "2-horizontal": "/patterns/2-Horizontal/MotifBluePink.png",
+      default: "/patterns/3-Vertikal-P/MotifBluePink.png",
+    },
     thumbnail: "/icon/BluePink.png",
   },
   {
     id: "nailong",
-    Label: "Nailong",
-    src: "/patterns/3-Vertikal-P/MotifNailong.png",
+    label: "Nailong",
+    src: {
+      "3-vertical-p": "/patterns/3-Vertikal-P/MotifNailong.png",
+      "2-horizontal": "/patterns/2-Horizontal/MotifNailong.png",
+      default: "/patterns/3-Vertikal-P/MotifNailong.png",
+    },
     thumbnail: "/icon/Nailong.png",
   },
   {
     id: "pinkwhite",
-    Label: "PinkWhite",
-    src: "/patterns/3-Vertikal-P/MotifPinkWhite.png",
+    label: "PinkWhite",
+    src: {
+      "3-vertical-p": "/patterns/3-Vertikal-P/MotifPinkWhite.png",
+      "2-horizontal": "/patterns/2-Horizontal/MotifPinkWhite.png",
+      default: "/patterns/3-Vertikal-P/MotifPinkWhite.png",
+    },
     thumbnail: "/icon/PinkWhite.png",
   },
   {
     id: "polkadotcrong",
-    Label: "PolkadotCrong",
-    src: "/patterns/3-Vertikal-P/MotifPolkadotCrong.png",
+    label: "PolkadotCrong",
+    src: {
+      "3-vertical-p": "/patterns/3-Vertikal-P/MotifPolkadotCrong.png",
+      "2-horizontal": "/patterns/2-Horizontal/MotifPolkadotCrong.png",
+      default: "/patterns/3-Vertikal-P/MotifPolkadotCrong.png",
+    },
     thumbnail: "/icon/Crong.png",
   },
 ];
@@ -212,6 +266,7 @@ export const THEME_META = {
     defaultColor: "bg-[#FFDE59]",
     thumbnail: "/icon/Nailong.png",
     files: {
+      "2-horizontal": "/themes/2-Horizontal/2Horizontal-Nailong.png",
       "3-vertical": "/themes/3-Vertikal/Nailong.svg",
       "3-vertical-p": "/themes/3-Vertikal-P/Nailong.png",
     },

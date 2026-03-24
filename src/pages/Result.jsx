@@ -376,10 +376,15 @@ const Result = () => {
               {/* ── PATTERN MOTIF LAYER (di bawah foto, di atas frame color) ── */}
               {activePatternMeta && (
                 <img
-                  src={activePatternMeta.src}
-                  alt={activePatternMeta.label}
+                  key={activePattern}
+                  src={
+                    typeof activePatternMeta.src === "string"
+                      ? activePatternMeta.src
+                      : activePatternMeta.src[layoutId] || activePatternMeta.src.default
+                  }
+                  alt={activePatternMeta.label || activePatternMeta.Label}
                   className="absolute inset-0 w-full h-full pointer-events-none object-cover z-4"
-                  style={{ opacity: patternOpacity / 100 }}
+                  style={{ opacity: patternOpacity / 100, display: "block" }}
                   onError={(e) => {
                     e.target.style.display = "none";
                   }}
