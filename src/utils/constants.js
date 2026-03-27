@@ -100,7 +100,7 @@ export const PATTERN_COLORS = [
   "bg-gradient-to-bl from-rose-900 to-black",
   "bg-gradient-to-tr from-emerald-900 to-black",
 
-  // Monochromatic Gradients
+  // Monochromatin Gradients
   "bg-gradient-to-r from-gray-100 to-gray-300",
   "bg-gradient-to-b from-slate-300 to-slate-400",
   "bg-gradient-to-tr from-zinc-200 to-zinc-400",
@@ -247,146 +247,195 @@ export const THEME_META = {
     defaultColor: "bg-[#000000]",
     thumbnail: "/icon/FilmNoir.png",
     files: {
-      "2-horizontal": "/themes/2-Horizontal/FilmNoir.svg",
-      "3-vertical": "/themes/3-Vertikal/FilmNoir.svg",
-      "3-vertical-p": "/themes/3-Vertikal-P/FilmsNoir.png",
+      "3-vertical": "/themes/3-Vertikal/3Vertikal-FilmNoir.png",
+      "3-vertical-p": "/themes/3-Vertikal-P/3VertikalP-FilmNoir.png",
     },
   },
+
   pinklove: {
     defaultColor: "bg-[#ff9fbb]",
     thumbnail: "/icon/PinkLove.png",
     files: {
-      "2-horizontal": "/themes/2-Horizontal/PinkLove.png",
-      "3-vertical": "/themes/3-Vertikal/PinkLove.svg",
+      "2-horizontal": "/themes/2-Horizontal/2Horizontal-PinkLove.png",
+      "3-vertical": "/themes/3-Vertikal/3Vertikal-PinkLove.png",
       "3-vertical-p": "/themes/3-Vertikal-P/PinkLove.png",
     },
-    background: { "3-vertical-p": "/themes/3-Vertikal-P/MotifPinkLove.svg" },
   },
+
   nailong: {
     defaultColor: "bg-[#FFDE59]",
     thumbnail: "/icon/Nailong.png",
     files: {
       "2-horizontal": "/themes/2-Horizontal/2Horizontal-Nailong.png",
-      "3-vertical": "/themes/3-Vertikal/Nailong.svg",
-      "3-vertical-p": "/themes/3-Vertikal-P/Nailong.png",
+      "3-vertical": "/themes/3-Vertikal/3Vertikal-Nailong.png",
+      "3-vertical-p": "/themes/3-Vertikal-P/3VertikalP-Nailong.png",
     },
-    background: { "3-vertical-p": "/patterns/3-Vertikal-P/MotifNailong.png" },
+    background: {
+      "2-horizontal": "/patterns/2-Horizontal/2Horizontal-MotifNailong.png",
+      "3-vertical": "/patterns/3-Vertikal/3Vertikal-MotifNailong.png",
+      "3-vertical-p": "/patterns/3-Vertikal-P/3VertikalP-MotifNailong.png",
+    },
   },
+
   crong: {
     defaultColor: "bg-[#B2D234]",
     thumbnail: "/icon/Crong.png",
-    files: { "3-vertical-p": "/themes/3-Vertikal-P/Crong.png" },
+    files: {
+      "2-horizontal": "/themes/2-Horizontal/2Horizontal-Crong.png",
+      "3-vertical": "/themes/3-Vertikal/3Vertikal-Crong.png",
+      "3-vertical-p": "/themes/3-Vertikal-P/3VertikalP-Crong.png",
+    },
     background: {
-      "3-vertical-p": "/patterns/3-Vertikal-P/MotifPolkadotCrong.png",
+      "2-horizontal":
+        "/patterns/2-Horizontal/2Horizontal-MotifPolkadotCrong.png",
+      "3-vertical": "/patterns/3-Vertikal/3Vertikal-MotifPolkadotCrong.png",
+      "3-vertical-p":
+        "/patterns/3-Vertikal-P/3VertikalP-MotifPolkadotCrong.png",
     },
   },
+
   spiderman: {
     defaultColor: "bg-[#E63234]",
     thumbnail: "icon/Spiderman.png",
-    files: { "3-vertical-p": "/themes/3-Vertikal-P/Spiderman.png" },
-    background: { "3-vertical-p": "/patterns/3-Vertikal-P/MotifMarvel.png" },
+    files: {
+      "2-horizontal": "/themes/2-Horizontal/2Horizontal-Spiderman.png",
+      "3-vertical-p": "/themes/3-Vertikal-P/3VertikalP-Spiderman.png",
+    },
+    background: {
+      "2-horizontal": "/patterns/2-Horizontal/2Horizontal-MotifMarvel.png",
+      "3-vertical-p": "/patterns/3-Vertikal-P/3VertikalP-MotifMarvel.png",
+    },
   },
+
   pinkWhite: {
     defaultColor: "bg-[#FFC0CB]",
     thumbnail: "icon/PinkWhite.png",
-    files: { "3-vertical-p": "/themes/3-Vertikal-P/PinkWhite.png" },
-    background: { "3-vertical-p": "/patterns/3-Vertikal-P/MotifPinkWhite.png" },
+    files: {
+      "2-horizontal": "/themes/2-Horizontal/2Horizontal-PinkWhite.png",
+      "3-vertical": "/themes/3-Vertikal/3Vertikal-PinkWhite.png",
+      "3-vertical-p": "/themes/3-Vertikal-P/3Vertikal-PinkWhite.png",
+    },
+    background: {
+      "2-horizontal": "/patterns/2-Horizontal/2Horizontal-MotifPinkWhite.png",
+      "3-vertical": "/patterns/3-Vertikal/3Vertikal-MotifPinkWhite.png",
+      "3-vertical-p": "/patterns/3-Vertikal-P/3VertikalP-MotifPinkWhite.png",
+    },
   },
+
   bemine: {
     defaultColor: "bg-[#FFEDEE]",
     thumbnail: "/icon/BeMine.png",
     files: {
-      "3-vertical": "/themes/3-Vertikal/BeMine.svg",
-      "3-vertical-p": "/themes/3-Vertikal-P/BeMine.png",
+      "2-horizontal": "/themes/2-Horizontal/2Horizontal-BeMine.png",
+      "3-vertical": "/themes/3-Vertikal/3Vertikal-BeMine.png",
+      "3-vertical-p": "/themes/3-Vertikal-P/3VertikalP-BeMine.png",
     },
   },
+
   bluepink: {
     defaultColor: "bg-[#D6EAF8]",
     thumbnail: "/icon/BluePink.png",
     files: {
-      "3-vertical": "/themes/3-Vertikal/BluePink.svg",
-      "3-vertical-p": "/themes/3-Vertikal-P/BluePink.png",
+      "2-horizontal": "/themes/2-Horizontal/2Horizontal-BluePink.png",
+      "3-vertical": "/themes/3-Vertikal/3Vertikal-BluePink.png",
+      "3-vertical-p": "/themes/3-Vertikal-P/3VertikalP-BluePink.png",
     },
-    background: { "3-vertical-p": "/patterns/3-Vertikal-P/MotifBluePink.png" },
+    background: {
+      "2-horizontal": "/patterns/2-Horizontal/2Horizontal-BluePink.png",
+      "3-horizontal": "/patterns/3-Vertikal/MotifBluePink.png",
+      "3-vertical-p": "/patterns/3-Vertikal-P/MotifBluePink.png",
+    },
   },
-  gold: {
-    defaultColor: "bg-[#FFDE59]",
-    thumbnail: "/icon/3-Vertikal/Gold.svg",
-    files: { "3-vertical": "/themes/3-Vertikal/Gold.svg" },
-  },
+
   y2k1: {
     defaultColor: "bg-[cyan]",
     thumbnail: "/icon/Y2K1.png",
     files: {
-      "3-vertical": "/themes/3-Vertikal/y2k1.svg",
-      "3-vertical-p": "/themes/3-Vertikal-P/Y2K1.png",
+      "2-horizontal": "/themes/2-Horizontal/2Horizontal-Y2K1.png",
+      "3-vertical": "/themes/3-Vertikal/3Vertikal-Y2K1.png",
+      "3-vertical-p": "/themes/3-Vertikal-P/3VertikalP-Y2K1.png",
     },
   },
-  starryNight: {
-    defaultColor: "bg-[#0d1b2a]",
-    thumbnail: "/icon/3-Vertikal/StarryNight.svg",
-    files: { "3-vertical": "/themes/3-Vertikal/StarryNight.svg" },
+
+  oceanwave: {
+    defaultColor: "bg-[blue]",
+    thumbnail: "/icon/OceanWave.png",
+    files: {
+      "3-vertikal": "/themes/3-Vertikal/3Vertikal-OceanWave.png",
+    },
   },
+
   gardenFloral: {
-    defaultColor: "bg-[#c8e6c9]",
+    defaultColor: "bg-gradient-to-br from-blue-300 to-purple-400",
     thumbnail: "/icon/3-Vertikal/GardenFloral.svg",
-    files: { "3-vertical": "/themes/3-Vertikal/GardenFloral.svg" },
+    files: {
+      "2-horizontal": "/themes/2-Horizontal/2Horizontal-GardenFloral.png",
+    },
   },
-  oceanWave: {
-    defaultColor: "bg-[#006994]",
-    thumbnail: "/icon/3-Vertikal/OceanWave.svg",
-    files: { "3-vertical": "/themes/3-Vertikal/OceanWave.svg" },
-  },
+
   purpleMoon: {
     defaultColor: "bg-[#1a0a2e]",
     thumbnail: "/icon/4-Vertikal/PurpleMoon.svg",
     files: { "4-vertical": "/themes/4-Vertikal/PurpleMoon.svg" },
   },
+
   goldenHour: {
     defaultColor: "bg-[#ffa000]",
     thumbnail: "/icon/4-Vertikal/GoldenHour.svg",
     files: { "4-vertical": "/themes/4-Vertikal/GoldenHour.svg" },
   },
+
   pastelPop: {
     defaultColor: "bg-[#fce4ec]",
     thumbnail: "/icon/Grid-2x2/PastelPop.svg",
     files: { "4-grid": "/themes/Grid-2x2/PastelPop.svg" },
   },
+
   midnightGridTheme: {
     defaultColor: "bg-[#0a0f1e]",
     thumbnail: "/icon/Grid-2x2/MidnightGrid.svg",
     files: { "4-grid": "/themes/Grid-2x2/MidnightGrid.svg" },
   },
+
   vintageRose: {
     defaultColor: "bg-[#efebe9]",
     thumbnail: "/icon/Grid-2x3/VintageRose.svg",
     files: { "6-grid": "/themes/Grid-2x3/VintageRose.svg" },
   },
+
   neonNight: {
     defaultColor: "bg-[#0a0010]",
     thumbnail: "/icon/Grid-2x3/NeonNight.svg",
     files: { "6-grid": "/themes/Grid-2x3/NeonNight.svg" },
   },
+
   contactSheet: {
     defaultColor: "bg-[#1a1a1a]",
     thumbnail: "/icon/Grid-3x3/ContactSheet.svg",
     files: { "9-grid": "/themes/Grid-3x3/ContactSheet.svg" },
   },
+
   candyPop: {
     defaultColor: "bg-[#fce4ec]",
     thumbnail: "/icon/Grid-3x3/CandyPop.svg",
     files: { "9-grid": "/themes/Grid-3x3/CandyPop.svg" },
   },
+
   kawaiiPink: {
     defaultColor: "bg-[#fff0f5]",
     thumbnail: "/icon/3-Vertikal/KawaiiPink.svg",
-    files: { "3-vertical": "/themes/3-Vertikal/KawaiiPink.svg" },
+    files: {
+      "2-horizontal": "/themes/2-Horizontal/2Horizontal-KawaiPink.png",
+      "3-vertical": "/themes/3-Vertikal/3Vertikal-KawaiiPink.png",
+    },
   },
+
   neon80s: {
     defaultColor: "bg-[#050010]",
     thumbnail: "/icon/4-Vertikal/Neon80s.svg",
     files: { "4-vertical": "/themes/4-Vertikal/Neon80s.svg" },
   },
+
   auroraGrid: {
     defaultColor: "bg-[#1a0533]",
     thumbnail: "/icon/Grid-2x2/AuroraGrid.svg",
@@ -507,13 +556,13 @@ export const LOCAL_PROJECT_STICKERS = [
 
 export const STRIP_PAD = 12;
 export const STRIP_SIZES = {
-  "2-horizontal": { w: 300, cols: 2, gap: 8 },
+  "2-horizontal": { w: 304, cols: 2, gap: 8 },
   "3-vertical": { w: 180, cols: 1, gap: 6 },
-  "3-vertical-p": { w: 140, cols: 1, gap: 6 },
+  "3-vertical-p": { w: 144, cols: 1, gap: 6 },
   "4-vertical": { w: 180, cols: 1, gap: 6 },
   "4-grid": { w: 240, cols: 2, gap: 6 },
   "6-grid": { w: 240, cols: 2, gap: 6 },
-  "9-grid": { w: 280, cols: 3, gap: 4 },
+  "9-grid": { w: 284, cols: 3, gap: 4 },
 };
 
 export const GLOBAL_SHAPES = [
